@@ -2,16 +2,25 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
         name="description"
-        content="Qingqiao Cai - Biomedical Engineering undergraduate researcher working on wearable bioelectronics, biosensing, electrophysiology, and neural interfaces."
+        content="Qingqiao Cai - Biomedical Engineering undergraduate researcher working on wearable bioelectronics, biosensing, electrophysiological systems, and brain-computer interfaces."
     >
 
+    <meta
+        name="keywords"
+        content="Qingqiao Cai, Biomedical Engineering, Wearable Bioelectronics, Biosensing, EEG, EOG, Brain-Computer Interface, BCI, Electrochemical Sensing"
+    >
+
+    <meta name="author" content="Qingqiao Cai">
+
     <title>Qingqiao Cai | Biomedical Engineering</title>
+
 
     <style>
 
@@ -28,6 +37,7 @@
         }
 
         body {
+
             margin: 0;
             padding: 0;
 
@@ -41,34 +51,52 @@
                 sans-serif;
 
             color: #222;
+
             background-color: #ffffff;
 
-            line-height: 1.65;
+            line-height: 1.68;
+
         }
+
 
         a {
+
             color: #1f5f99;
+
             text-decoration: none;
+
         }
+
 
         a:hover {
+
             text-decoration: underline;
+
         }
 
+
         img {
+
             max-width: 100%;
+
         }
+
 
 
         /* =========================================================
-           MAIN PAGE WIDTH
+           PAGE WIDTH
            ========================================================= */
 
         .container {
-            max-width: 1050px;
+
+            max-width: 1080px;
+
             margin: 0 auto;
-            padding: 0 30px;
+
+            padding: 0 32px;
+
         }
+
 
 
         /* =========================================================
@@ -76,195 +104,392 @@
            ========================================================= */
 
         header {
+
             border-bottom: 1px solid #e5e5e5;
+
             background: rgba(255, 255, 255, 0.96);
 
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
+
+            backdrop-filter: blur(8px);
+
         }
 
+
         .navbar {
+
             min-height: 72px;
 
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
         }
+
 
         .site-name {
+
             font-size: 1.35rem;
+
             font-weight: 650;
+
             color: #111;
+
             letter-spacing: 0.2px;
+
         }
+
+
+        .site-name:hover {
+
+            text-decoration: none;
+
+        }
+
 
         .nav-links {
+
             display: flex;
-            gap: 28px;
+
+            gap: 27px;
+
+            align-items: center;
+
         }
 
+
         .nav-links a {
+
             color: #333;
-            font-size: 0.96rem;
+
+            font-size: 0.95rem;
+
             font-weight: 500;
+
         }
+
 
 
         /* =========================================================
-           INTRO / PROFILE SECTION
+           INTRODUCTION
            ========================================================= */
 
         .intro {
-            display: grid;
-            grid-template-columns: 230px 1fr;
-            gap: 55px;
 
-            padding-top: 70px;
-            padding-bottom: 62px;
+            display: grid;
+
+            grid-template-columns: 225px 1fr;
+
+            gap: 58px;
+
+            padding-top: 72px;
+
+            padding-bottom: 68px;
 
             align-items: start;
+
         }
+
 
         .profile-column {
+
             text-align: center;
+
         }
 
+
         .profile-photo {
+
             width: 205px;
+
             height: 205px;
 
             border-radius: 50%;
+
             object-fit: cover;
 
-            border: 1px solid #ddd;
+            border: 1px solid #dedede;
+
+            display: block;
+
+            margin: 0 auto;
+
         }
 
-        .profile-name-mobile {
-            display: none;
-        }
 
-        .location {
+        .profile-info {
+
             margin-top: 20px;
+
             color: #666;
-            font-size: 0.92rem;
-            line-height: 1.55;
+
+            font-size: 0.91rem;
+
+            line-height: 1.6;
+
         }
+
 
         .intro-text h1 {
-            margin-top: 0;
-            margin-bottom: 8px;
 
-            font-size: 2.5rem;
-            line-height: 1.2;
+            margin-top: 0;
+
+            margin-bottom: 9px;
+
+            font-size: 2.55rem;
+
+            line-height: 1.18;
+
             font-weight: 650;
+
             color: #111;
+
         }
 
-        .intro-text .subtitle {
-            margin-bottom: 25px;
+
+        .subtitle {
+
+            margin-bottom: 27px;
 
             color: #555;
-            font-size: 1.08rem;
+
+            font-size: 1.07rem;
+
+            line-height: 1.55;
+
         }
+
 
         .intro-text p {
-            font-size: 1.02rem;
+
             margin-top: 0;
+
             margin-bottom: 18px;
+
+            font-size: 1.01rem;
+
         }
 
+
         .research-highlight {
+
             font-weight: 550;
+
+            color: #222;
+
         }
+
+
+        .ranking-link {
+
+            white-space: nowrap;
+
+            font-size: 0.93em;
+
+        }
+
 
 
         /* =========================================================
-           PROFILE LINKS
+           PROFILE BUTTONS
            ========================================================= */
 
         .social-links {
-            margin-top: 26px;
+
+            margin-top: 28px;
 
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 10px;
+
         }
+
 
         .social-links a {
+
             display: inline-block;
 
-            padding: 7px 13px;
+            padding: 7px 14px;
 
-            border: 1px solid #d7d7d7;
+            border: 1px solid #d6d6d6;
+
             border-radius: 5px;
 
-            color: #333;
             background: #fafafa;
 
-            font-size: 0.9rem;
+            color: #333;
+
+            font-size: 0.90rem;
+
+            transition:
+                background 0.15s ease,
+                border-color 0.15s ease;
+
         }
 
+
         .social-links a:hover {
-            background: #f0f0f0;
+
+            background: #f1f1f1;
+
+            border-color: #c6c6c6;
+
             text-decoration: none;
+
         }
+
 
 
         /* =========================================================
-           GENERAL SECTION STYLE
+           GENERAL SECTION SETTINGS
            ========================================================= */
 
         section {
+
             padding-top: 58px;
+
             padding-bottom: 58px;
 
             border-top: 1px solid #ececec;
+
+            scroll-margin-top: 85px;
+
         }
 
+
         .section-title {
+
             margin-top: 0;
+
             margin-bottom: 32px;
 
-            font-size: 1.75rem;
+            font-size: 1.78rem;
+
             font-weight: 650;
 
             color: #111;
+
         }
 
+
         .section-description {
-            max-width: 800px;
-            margin-top: -15px;
+
+            max-width: 830px;
+
+            margin-top: -14px;
+
             margin-bottom: 38px;
 
             color: #555;
+
         }
+
 
 
         /* =========================================================
-           NEWS
+           EDUCATION
            ========================================================= */
 
-        .news-list {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+        .education-item {
 
-        .news-item {
             display: grid;
-            grid-template-columns: 110px 1fr;
-            gap: 20px;
+
+            grid-template-columns: 1fr auto;
+
+            gap: 30px;
+
+            padding: 5px 0;
+
         }
 
-        .news-date {
-            color: #777;
-            font-size: 0.94rem;
+
+        .education-school {
+
+            margin-bottom: 5px;
+
+            font-size: 1.16rem;
+
+            font-weight: 650;
+
         }
 
-        .news-content {
+
+        .education-school a {
+
+            color: #222;
+
+        }
+
+
+        .education-school a:hover {
+
+            color: #1f5f99;
+
+        }
+
+
+        .education-degree {
+
+            margin-bottom: 8px;
+
             color: #333;
+
+            font-weight: 500;
+
         }
+
+
+        .education-details {
+
+            color: #555;
+
+            font-size: 0.96rem;
+
+            line-height: 1.75;
+
+        }
+
+
+        .education-date {
+
+            color: #666;
+
+            font-size: 0.94rem;
+
+            text-align: right;
+
+            white-space: nowrap;
+
+        }
+
+
+        .education-location {
+
+            margin-top: 4px;
+
+            color: #777;
+
+        }
+
+
+        .ranking-note {
+
+            margin-top: 18px;
+
+            color: #666;
+
+            font-size: 0.90rem;
+
+        }
+
 
 
         /* =========================================================
@@ -272,127 +497,225 @@
            ========================================================= */
 
         .research-grid {
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
 
-            gap: 26px;
+            gap: 25px;
+
         }
+
 
         .research-card {
+
+            padding: 25px;
+
             border: 1px solid #e1e1e1;
+
             border-radius: 7px;
 
-            padding: 24px;
-
             background: #fff;
+
         }
+
 
         .research-card h3 {
+
             margin-top: 0;
+
             margin-bottom: 14px;
 
-            font-size: 1.15rem;
-            line-height: 1.35;
+            font-size: 1.14rem;
+
+            line-height: 1.4;
+
+            color: #222;
+
         }
+
 
         .research-card p {
+
             margin: 0;
 
-            font-size: 0.95rem;
             color: #555;
+
+            font-size: 0.94rem;
+
         }
+
 
 
         /* =========================================================
-           RESEARCH OVERVIEW IMAGE
+           OPTIONAL RESEARCH OVERVIEW FIGURE
            ========================================================= */
 
         .overview-container {
-            margin-top: 45px;
+
+            margin-top: 48px;
+
         }
+
 
         .overview-container h3 {
-            font-size: 1.2rem;
+
             margin-bottom: 18px;
+
+            font-size: 1.2rem;
+
         }
+
 
         .overview-image {
+
             width: 100%;
 
-            border: 1px solid #e2e2e2;
-            border-radius: 6px;
+            max-height: 620px;
+
+            object-fit: contain;
 
             display: block;
+
+            padding: 8px;
+
+            border: 1px solid #e2e2e2;
+
+            border-radius: 6px;
+
+            background: #fff;
+
         }
 
+
         .figure-caption {
+
             margin-top: 10px;
 
             color: #777;
+
             font-size: 0.88rem;
 
             text-align: center;
+
         }
 
 
+
         /* =========================================================
-           SELECTED PROJECTS
+           PROJECTS
            ========================================================= */
 
         .project {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 34px;
 
-            padding: 32px 0;
+            display: grid;
+
+            grid-template-columns: 330px 1fr;
+
+            gap: 38px;
+
+            padding: 36px 0;
 
             border-bottom: 1px solid #ececec;
 
             align-items: start;
+
         }
+
 
         .project:last-child {
+
             border-bottom: none;
+
         }
+
+
+        .project-image-link {
+
+            display: block;
+
+        }
+
 
         .project-image {
-            width: 100%;
-            height: 190px;
 
-            object-fit: cover;
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: contain;
+
+            padding: 7px;
 
             border-radius: 6px;
-            border: 1px solid #ddd;
 
-            background: #f6f6f6;
+            border: 1px solid #dddddd;
+
+            background: #ffffff;
+
+            display: block;
+
         }
+
+
+        .project-image-link:hover {
+
+            text-decoration: none;
+
+        }
+
 
         .project h3 {
+
             margin-top: 0;
+
             margin-bottom: 7px;
 
-            font-size: 1.2rem;
-            line-height: 1.4;
+            font-size: 1.21rem;
+
+            line-height: 1.42;
+
+            color: #222;
+
         }
+
 
         .project-meta {
-            margin-bottom: 13px;
+
+            margin-bottom: 14px;
 
             color: #777;
-            font-size: 0.9rem;
+
+            font-size: 0.90rem;
+
         }
+
 
         .project p {
+
             margin-top: 0;
-            margin-bottom: 12px;
+
+            margin-bottom: 13px;
 
             color: #444;
+
+            font-size: 0.97rem;
+
         }
 
+
         .project-keywords {
+
+            margin-top: 16px;
+
             color: #666;
-            font-size: 0.9rem;
+
+            font-size: 0.89rem;
+
+            line-height: 1.6;
+
         }
+
 
 
         /* =========================================================
@@ -400,33 +723,68 @@
            ========================================================= */
 
         .publication {
+
             display: grid;
+
             grid-template-columns: 70px 1fr;
+
             gap: 25px;
 
             margin-bottom: 28px;
+
         }
+
 
         .publication-year {
+
             color: #777;
+
             font-weight: 600;
+
         }
+
 
         .publication-title {
+
+            margin-bottom: 6px;
+
             font-weight: 600;
+
             color: #222;
-            margin-bottom: 5px;
+
+            line-height: 1.5;
+
         }
+
 
         .publication-authors {
+
+            margin-bottom: 5px;
+
             color: #555;
-            margin-bottom: 4px;
+
+            font-size: 0.95rem;
+
         }
 
+
         .publication-journal {
+
             color: #666;
+
             font-style: italic;
+
         }
+
+
+        .publication-links {
+
+            margin-top: 7px;
+
+            font-size: 0.92rem;
+
+        }
+
 
 
         /* =========================================================
@@ -434,12 +792,27 @@
            ========================================================= */
 
         .contact-box {
-            max-width: 730px;
+
+            max-width: 760px;
+
         }
 
+
         .contact-box p {
+
+            margin-top: 0;
+
             margin-bottom: 12px;
+
         }
+
+
+        .email-address {
+
+            font-weight: 500;
+
+        }
+
 
 
         /* =========================================================
@@ -447,127 +820,210 @@
            ========================================================= */
 
         footer {
-            padding: 32px 0 42px;
+
+            padding: 33px 0 43px;
 
             border-top: 1px solid #ececec;
 
+            color: #888;
+
             text-align: center;
 
-            color: #888;
-            font-size: 0.88rem;
+            font-size: 0.87rem;
+
         }
+
 
 
         /* =========================================================
-           MOBILE VERSION
+           TABLET / MOBILE
            ========================================================= */
 
-        @media (max-width: 800px) {
+        @media (max-width: 820px) {
 
             .container {
-                padding: 0 20px;
+
+                padding: 0 22px;
+
             }
+
 
             .navbar {
-                min-height: 62px;
+
+                min-height: 65px;
+
             }
+
 
             .site-name {
-                font-size: 1.1rem;
+
+                font-size: 1.12rem;
+
             }
+
 
             .nav-links {
+
                 gap: 15px;
+
             }
+
 
             .nav-links a {
+
                 font-size: 0.84rem;
+
             }
+
 
             .intro {
+
                 grid-template-columns: 1fr;
 
-                gap: 28px;
+                gap: 30px;
 
-                padding-top: 45px;
+                padding-top: 48px;
+
             }
+
 
             .profile-photo {
-                width: 170px;
-                height: 170px;
+
+                width: 175px;
+
+                height: 175px;
+
             }
+
 
             .intro-text h1 {
-                font-size: 2rem;
+
+                font-size: 2.1rem;
+
             }
+
 
             .research-grid {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .project {
+
                 grid-template-columns: 1fr;
+
+                gap: 24px;
+
             }
 
+
             .project-image {
+
                 height: auto;
-                max-height: 320px;
+
+                max-height: 420px;
+
             }
 
         }
 
 
-        @media (max-width: 550px) {
+
+        @media (max-width: 600px) {
 
             .navbar {
+
                 display: block;
-                padding: 15px 0;
+
+                padding: 14px 0;
+
             }
+
 
             .site-name {
+
+                display: block;
+
                 margin-bottom: 10px;
+
             }
+
 
             .nav-links {
+
+                display: flex;
+
                 flex-wrap: wrap;
-                gap: 10px 18px;
+
+                gap: 8px 16px;
+
             }
 
-            .news-item {
+
+            .education-item {
+
                 grid-template-columns: 1fr;
-                gap: 3px;
+
+                gap: 5px;
+
             }
+
+
+            .education-date {
+
+                text-align: left;
+
+            }
+
 
             .publication {
+
                 grid-template-columns: 1fr;
+
                 gap: 4px;
+
+            }
+
+
+            .social-links {
+
+                gap: 8px;
+
             }
 
         }
 
     </style>
+
 </head>
+
 
 
 <body>
 
 
     <!-- =========================================================
-         NAVIGATION BAR
+         NAVIGATION
          ========================================================= -->
 
     <header>
 
         <div class="container navbar">
 
-            <a class="site-name" href="#">
+            <a
+                class="site-name"
+                href="#"
+            >
                 Qingqiao Cai
             </a>
 
+
             <nav class="nav-links">
 
-                <a href="#news">
-                    News
+                <a href="#education">
+                    Education
                 </a>
 
                 <a href="#research">
@@ -580,6 +1036,10 @@
 
                 <a href="#publications">
                     Publications
+                </a>
+
+                <a href="#contact">
+                    Contact
                 </a>
 
             </nav>
@@ -600,7 +1060,7 @@
         <div class="intro">
 
 
-            <!-- LEFT SIDE -->
+            <!-- PROFILE PHOTO -->
 
             <div class="profile-column">
 
@@ -610,11 +1070,14 @@
                     class="profile-photo"
                 >
 
-                <div class="location">
 
-                    Biomedical Engineering<br>
+                <div class="profile-info">
 
-                    Sun Yat-sen University<br>
+                    Biomedical Engineering
+                    <br>
+
+                    Sun Yat-sen University
+                    <br>
 
                     Shenzhen, China
 
@@ -624,98 +1087,152 @@
 
 
 
-            <!-- RIGHT SIDE -->
+            <!-- INTRODUCTION TEXT -->
 
             <div class="intro-text">
+
 
                 <h1>
                     Qingqiao Cai
                 </h1>
 
+
                 <div class="subtitle">
 
-                    Undergraduate Researcher in Biomedical Engineering<br>
+                    Undergraduate Student in Biomedical Engineering
+                    <br>
 
-                    Sun Yat-sen University · Visiting Student Researcher at the University of Notre Dame
+                    Sun Yat-sen University
+
+                    &nbsp;·&nbsp;
+
+                    Visiting Student Researcher at the University of Notre Dame
 
                 </div>
+
 
 
                 <p>
 
                     I am an undergraduate student majoring in Biomedical Engineering at
-                    <a href="https://www.sysu.edu.cn/" target="_blank" rel="noopener noreferrer">
-    <strong>Sun Yat-sen University</strong>
-                    </a>
-and currently a visiting student researcher at the
-<a href="https://www.nd.edu/" target="_blank" rel="noopener noreferrer">
-    <strong>University of Notre Dame</strong>
-</a>.
+
+                    <a
+                        href="https://www.sysu.edu.cn/sysuen/index.htm"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <strong>Sun Yat-sen University</strong>
+                    </a>,
+
+                    ranked
+
+                    <a
+                        class="ranking-link"
+                        href="https://www.shanghairanking.com/rankings/bcur/2026"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <strong>#13 in China in the 2026 ShanghaiRanking Best Chinese Universities Ranking</strong>
+                    </a>.
+
+                    I am currently a visiting student researcher at the
+
+                    <a
+                        href="https://www.nd.edu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <strong>University of Notre Dame</strong>
+                    </a>.
 
                 </p>
 
 
+
                 <p>
 
-                    My research interests lie at the intersection of
+                    My research interests focus on
+
                     <span class="research-highlight">
-                        wearable bioelectronics, biosensing, electrophysiological interfaces,
-                        and neural engineering
+                        wearable bioelectronics,
+                        biosensing,
+                        electrophysiological systems,
+                        and brain–computer interfaces
                     </span>.
 
-                    I am particularly interested in developing integrated wearable systems
-                    that combine physiological and biochemical sensing for continuous,
-                    long-term, and personalized health monitoring.
+                    I am particularly interested in developing integrated
+                    bioelectronic platforms that combine biochemical and
+                    electrophysiological sensing for continuous, long-term,
+                    and personalized health monitoring.
 
                 </p>
+
 
 
                 <p>
 
-                    My undergraduate research has progressively explored several components
-                    of this vision, including neural interfaces, wearable EEG–EOG acquisition,
-                    electrochemical biosensing, and microneedle-based wearable electronics.
+                    My research experience spans wearable EEG–EOG acquisition,
+                    electrochemical biosensing, implantable brain–computer interfaces,
+                    and microneedle-based wearable electronics, with an emphasis on
+                    translating sensing principles into integrated and functional
+                    biomedical systems.
 
                 </p>
 
 
-                <!-- IMPORTANT:
-                     Replace the Google Scholar and GitHub links below
-                     with your real links.
-                -->
+
+                <!-- =================================================
+                     PROFILE LINKS
+                     ================================================= -->
+
 
                 <div class="social-links">
 
+
+                    <!--
+                    IMPORTANT:
+                    Replace this link with your own Google Scholar URL.
+                    -->
+
                     <a
-                        href="https://scholar.google.com/citations?user=6-nJ2kcAAAAJ&hl=en&oi=ao"
+                        href="https://scholar.google.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         Google Scholar
                     </a>
 
+
+
                     <a
-                        href="https://github.com/qingqiaocai"
+                        href="https://github.com/QingqiaoCai"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         GitHub
                     </a>
 
+
+
                     <a
                         href="Qingqiao_Cai_CV.pdf"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Curriculum Vitae
                     </a>
 
+
+
                     <a
-                        href="mailto:caiqq8@outlook.com"
+                        href="mailto:qcai@nd.edu"
                     >
                         Email
                     </a>
 
+
                 </div>
+
 
             </div>
 
@@ -724,73 +1241,93 @@ and currently a visiting student researcher at the
 
 
         <!-- =====================================================
-             NEWS
+             EDUCATION
              ===================================================== -->
 
-        <section id="news">
+        <section id="education">
+
 
             <h2 class="section-title">
-                News
+                Education
             </h2>
 
 
-            <div class="news-list">
+
+            <div class="education-item">
 
 
-                <div class="news-item">
+                <div>
 
-                    <div class="news-date">
-                        Jul. 2026
+
+                    <div class="education-school">
+
+                        <a
+                            href="https://www.sysu.edu.cn/sysuen/index.htm"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Sun Yat-sen University
+                        </a>
+
                     </div>
 
-                    <div class="news-content">
 
-                        Joined the University of Notre Dame as a visiting student researcher,
-                        working on a wearable microneedle bioelectronic platform for continuous
-                        electrochemical and physiological monitoring.
+
+                    <div class="education-degree">
+
+                        BE, Major in Biomedical Engineering
 
                     </div>
+
+
+
+                    <div class="education-details">
+
+                        <strong>GPA:</strong>
+                        3.7 / 4.0
+
+                        <br>
+
+                        <strong>Scholarship:</strong>
+                        Third-Class Scholarships for Outstanding Students
+                        (Awarded 3 times, 2022–2025)
+
+                    </div>
+
 
                 </div>
 
 
-                <div class="news-item">
 
-                    <div class="news-date">
-                        2026
-                    </div>
+                <div class="education-date">
 
-                    <div class="news-content">
+                    Sep. 2022 – Jul. 2027 (Expected)
 
-                        Our work
-                        <em>
-                            “Self-stratified Stretchable Passive Cooling Interface for
-                            Thermal Management of On-Skin Electronics”
-                        </em>
-                        was published in <em>Soft Science</em>.
-
-                    </div>
-
-                </div>
-
-
-                <div class="news-item">
-
-                    <div class="news-date">
-                        Nov. 2025
-                    </div>
-
-                    <div class="news-content">
-
-                        Received a National Bronze Award in the China International College
-                        Students Innovation Competition.
-
+                    <div class="education-location">
+                        Shenzhen, China
                     </div>
 
                 </div>
 
 
             </div>
+
+
+
+            <div class="ranking-note">
+
+                Sun Yat-sen University is ranked
+
+                <a
+                    href="https://www.shanghairanking.com/rankings/bcur/2026"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    #13 in China in the 2026 ShanghaiRanking Best Chinese Universities Ranking
+                </a>.
+
+            </div>
+
 
         </section>
 
@@ -802,17 +1339,21 @@ and currently a visiting student researcher at the
 
         <section id="research">
 
+
             <h2 class="section-title">
                 Research
             </h2>
 
 
+
             <p class="section-description">
 
-                My research experiences span biointerfaces, physiological signal acquisition,
-                biochemical sensing, and wearable system integration. These projects have
-                progressively shaped my long-term interest in integrated wearable
-                bioelectronics for continuous health monitoring.
+                My research experiences span wearable physiological sensing,
+                biochemical sensing, biomedical hardware development,
+                and brain–computer interfaces. Together, these projects have
+                shaped my interest in building integrated bioelectronic
+                systems that connect reliable sensing interfaces with
+                real-world health monitoring and human–computer interaction.
 
             </p>
 
@@ -825,18 +1366,22 @@ and currently a visiting student researcher at the
 
                 <div class="research-card">
 
+
                     <h3>
                         Wearable Bioelectronics & Biosensing
                     </h3>
 
+
                     <p>
 
-                        Development of integrated wearable platforms combining electrochemical
-                        sensing, microneedle interfaces, analog front-end electronics, power
-                        management, and wireless communication for continuous biochemical and
-                        physiological monitoring.
+                        Development of wearable sensing platforms integrating
+                        microneedle interfaces, electrochemical sensing,
+                        analog front-end electronics, power management,
+                        embedded systems, and wireless communication for
+                        continuous biochemical and physiological monitoring.
 
                     </p>
+
 
                 </div>
 
@@ -846,18 +1391,22 @@ and currently a visiting student researcher at the
 
                 <div class="research-card">
 
+
                     <h3>
                         Wearable Electrophysiology
                     </h3>
 
+
                     <p>
 
-                        Design of low-noise wearable electrophysiological acquisition systems
-                        for EEG and EOG monitoring, including high-precision analog front ends,
-                        PCB design, embedded systems, Bluetooth communication, and real-time
-                        signal acquisition.
+                        Design of low-noise wearable electrophysiological
+                        acquisition systems for EEG and EOG monitoring,
+                        including high-precision analog front ends,
+                        PCB design, embedded processing, Bluetooth
+                        communication, and real-time signal acquisition.
 
                     </p>
+
 
                 </div>
 
@@ -867,47 +1416,71 @@ and currently a visiting student researcher at the
 
                 <div class="research-card">
 
+
                     <h3>
-                        Neural Interfaces
+                        Brain–Computer Interfaces
                     </h3>
+
 
                     <p>
 
-                        Exploration of material and structural approaches for interfacing with
-                        neural tissue, including implantable brain-computer interfaces,
-                        magnetically guided electrode implantation, and biodegradable neural
-                        conduits.
+                        Exploration of implantable and wearable approaches
+                        for acquiring and interfacing with neural and
+                        electrophysiological signals, including
+                        large-scale neural recording, electrode
+                        implantation strategies, and human–computer
+                        interaction systems.
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
 
-            <!-- RESEARCH OVERVIEW -->
+            <!-- =================================================
+                 OPTIONAL RESEARCH OVERVIEW
+
+                 Upload a file called:
+                 research-overview.png
+
+                 If the file does not exist, this section will
+                 automatically disappear instead of showing a broken image.
+                 ================================================= -->
+
 
             <div class="overview-container">
+
 
                 <h3>
                     Research Overview
                 </h3>
 
+
                 <img
                     src="research-overview.png"
                     alt="Overview of Qingqiao Cai's research"
                     class="overview-image"
+
+                    onerror="
+                        this.closest('.overview-container').style.display='none';
+                    "
                 >
+
 
                 <div class="figure-caption">
 
-                    Research trajectory from neural interfaces and wearable electrophysiology
-                    toward integrated wearable bioelectronics for continuous health monitoring.
+                    Research trajectory toward integrated wearable
+                    bioelectronic systems for continuous health monitoring.
 
                 </div>
 
+
             </div>
+
 
         </section>
 
@@ -919,197 +1492,398 @@ and currently a visiting student researcher at the
 
         <section id="projects">
 
+
             <h2 class="section-title">
                 Selected Projects
             </h2>
 
 
 
-            <!-- PROJECT 1 -->
+            <!-- =================================================
+                 PROJECT 1
+                 IMAGE FILE: microneedle.png
+                 ================================================= -->
 
             <div class="project">
 
 
                 <div>
 
-                    <img
-                        src="microneedle.png"
-                        alt="Wearable microneedle bioelectronic system"
-                        class="project-image"
+
+                    <a
+                        href="microneedle.png"
+                        target="_blank"
+                        class="project-image-link"
                     >
+
+                        <img
+                            src="microneedle.png"
+                            alt="Wearable microneedle bioelectronic system"
+                            class="project-image"
+                        >
+
+                    </a>
+
 
                 </div>
 
 
+
                 <div>
 
+
                     <h3>
-                        Wearable Microneedle Bioelectronic System for Continuous Health Monitoring
+
+                        Wearable Microneedle Bioelectronic System
+                        for Continuous Health Monitoring
+
                     </h3>
+
+
 
                     <div class="project-meta">
 
-                        University of Notre Dame · 2026 – Present
+                        University of Notre Dame
+                        · Jul. 2026 – Present
 
                     </div>
 
 
+
                     <p>
 
-                        Developing an integrated wearable microneedle bioelectronic platform
-                        for continuous electrochemical sensing and physiological monitoring.
-                        The system combines microneedle sensor interfaces with multiple
-                        analog front-end channels, power management, wireless communication,
-                        and real-time data acquisition.
+                        Developing an integrated wearable microneedle
+                        bioelectronic platform for continuous
+                        electrochemical sensing and physiological monitoring.
 
                     </p>
 
 
+
                     <p>
 
-                        My primary responsibility is the hardware system design, including
-                        defining the overall architecture, selecting key components, and
-                        designing a two-layer wearable PCB integrating two electrochemical
-                        sensing channels, four open-circuit potential channels, signal
-                        conditioning, power management, and Bluetooth communication.
+                        My work includes polymer microneedle fabrication
+                        and wearable hardware system development. I am
+                        designing a two-layer bioelectronic PCB integrating
+                        two electrochemical sensing channels, four
+                        open-circuit potential measurement channels,
+                        analog signal-conditioning circuits, power
+                        management, and Bluetooth communication.
 
                     </p>
+
 
 
                     <div class="project-keywords">
 
                         <strong>Keywords:</strong>
-                        Wearable bioelectronics · Microneedles · Electrochemical sensing ·
-                        PCB design · Wireless systems
+
+                        Wearable bioelectronics ·
+                        Microneedles ·
+                        Electrochemical sensing ·
+                        Analog front end ·
+                        PCB design ·
+                        Wireless systems
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
 
 
-            <!-- PROJECT 2 -->
+            <!-- =================================================
+                 PROJECT 2
+                 IMAGE FILE: eeg-eog.png
+                 ================================================= -->
 
             <div class="project">
 
 
                 <div>
 
-                    <img
-                        src="eeg-eog.png"
-                        alt="Wearable EEG and EOG monitoring system"
-                        class="project-image"
+
+                    <a
+                        href="eeg-eog.png"
+                        target="_blank"
+                        class="project-image-link"
                     >
+
+                        <img
+                            src="eeg-eog.png"
+                            alt="Wearable EEG and EOG monitoring system"
+                            class="project-image"
+                        >
+
+                    </a>
+
 
                 </div>
 
 
+
                 <div>
 
+
                     <h3>
-                        Wearable EEG–EOG Monitoring System for Human-Computer Interaction
+
+                        Wearable EEG–EOG Monitoring System
+                        for Human–Computer Interaction
+
                     </h3>
+
+
 
                     <div class="project-meta">
 
-                        Sun Yat-sen University · 2025 – Present
+                        Sun Yat-sen University
+                        · Jul. 2025 – Present
 
                     </div>
 
 
+
                     <p>
 
-                        Designed and developed a wearable electrophysiological sensing platform
-                        for simultaneous EEG and EOG acquisition, targeting human-computer
-                        interaction and long-term physiological monitoring.
+                        Developing a wearable electrophysiological sensing
+                        platform for simultaneous EEG and EOG acquisition,
+                        targeting human–computer interaction and long-term
+                        physiological monitoring.
 
                     </p>
 
 
+
                     <p>
 
-                        I independently designed and iterated the core acquisition hardware
-                        using the ADS1299 and ESP32-S3, including the low-noise analog front end,
-                        power-supply circuitry, PCB layout, and Bluetooth Low Energy
-                        communication. I also developed a real-time wireless data transmission
-                        workflow and MATLAB-based signal-processing pipeline.
+                        I designed and iterated the core acquisition
+                        hardware using the ADS1299 and ESP32-S3,
+                        including the bio-signal acquisition front end,
+                        power-supply circuitry, four-layer PCB layout,
+                        and Bluetooth Low Energy communication.
+                        I also implemented real-time wireless data
+                        transmission and am developing a MATLAB-based
+                        signal-processing workflow.
 
                     </p>
+
 
 
                     <div class="project-keywords">
 
                         <strong>Keywords:</strong>
-                        EEG · EOG · ADS1299 · ESP32-S3 · PCB · BLE ·
+
+                        EEG ·
+                        EOG ·
+                        ADS1299 ·
+                        ESP32-S3 ·
+                        PCB design ·
+                        BLE ·
                         Electrophysiology
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
 
 
-            <!-- PROJECT 3 -->
+            <!-- =================================================
+                 PROJECT 3
+                 IMAGE FILE: glucose-sensor.png
+                 ================================================= -->
 
             <div class="project">
 
 
                 <div>
 
-                    <img
-                        src="bci.png"
-                        alt="Implantable brain-computer interface"
-                        class="project-image"
+
+                    <a
+                        href="glucose-sensor.png"
+                        target="_blank"
+                        class="project-image-link"
                     >
+
+                        <img
+                            src="glucose-sensor.png"
+                            alt="Electrochemical sweat glucose sensing system"
+                            class="project-image"
+                        >
+
+                    </a>
+
 
                 </div>
 
 
+
                 <div>
 
+
                     <h3>
-                        Implantable Brain-Computer Interface for Large-Scale Neural Recording
+
+                        Electrochemical Sweat Glucose Sensing System
+
                     </h3>
+
+
 
                     <div class="project-meta">
 
-                        Sun Yat-sen University · 2025
+                        Sun Yat-sen University
+                        · Oct. 2025 – Dec. 2025
 
                     </div>
 
 
+
                     <p>
 
-                        Contributed to the development of an implantable brain-computer
-                        interface designed for large-scale neural recording through
-                        magnetically guided electrode implantation.
+                        Built and evaluated an enzyme-based electrochemical
+                        system for sweat glucose detection, integrating
+                        electrode fabrication, signal-conditioning hardware,
+                        Arduino-based acquisition, Bluetooth communication,
+                        and mobile visualization.
 
                     </p>
 
 
+
                     <p>
 
-                        My work focused on structural fabrication, including PDMS guide
-                        channels, magnetic head components, reproducible channel fabrication,
-                        and micro/nano stereolithography-based electrode scaffolds for
-                        evaluating large-area neural interface designs.
+                        I led development of the signal-conditioning
+                        electronics, implementing current-to-voltage
+                        conversion and amplification circuits for low-level
+                        electrochemical currents. I also fabricated
+                        Prussian Blue-modified glucose oxidase electrodes
+                        and performed electrochemical characterization
+                        and concentration–current calibration.
 
                     </p>
+
 
 
                     <div class="project-keywords">
 
                         <strong>Keywords:</strong>
-                        Brain-computer interface · Neural interfaces · PDMS ·
-                        Microfabrication · 3D printing
+
+                        Electrochemical biosensing ·
+                        Glucose sensing ·
+                        Enzyme electrodes ·
+                        Transimpedance amplifier ·
+                        Bluetooth ·
+                        Mobile monitoring
 
                     </div>
 
+
                 </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROJECT 4
+                 IMAGE FILE: bci.png
+                 ================================================= -->
+
+            <div class="project">
+
+
+                <div>
+
+
+                    <a
+                        href="bci.png"
+                        target="_blank"
+                        class="project-image-link"
+                    >
+
+                        <img
+                            src="bci.png"
+                            alt="Implantable brain-computer interface"
+                            class="project-image"
+                        >
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div>
+
+
+                    <h3>
+
+                        Implantable Brain–Computer Interface
+                        for Large-Scale Neural Recording
+
+                    </h3>
+
+
+
+                    <div class="project-meta">
+
+                        Sun Yat-sen University
+                        · Mar. 2025 – May 2025
+
+                    </div>
+
+
+
+                    <p>
+
+                        Contributed to the development of an implantable
+                        brain–computer interface designed for large-scale
+                        neural recording through magnetically guided
+                        electrode implantation.
+
+                    </p>
+
+
+
+                    <p>
+
+                        My work focused on device and structural
+                        fabrication, including PDMS-based guide channels
+                        and magnetic head components. I developed
+                        reproducible channel-fabrication methods and
+                        fabricated tent-shaped electrode scaffolds using
+                        micro/nano stereolithography 3D printing to
+                        evaluate structural feasibility for large-area
+                        neural applications.
+
+                    </p>
+
+
+
+                    <div class="project-keywords">
+
+                        <strong>Keywords:</strong>
+
+                        Brain–computer interface ·
+                        Neural recording ·
+                        PDMS ·
+                        Microfabrication ·
+                        Magnetically guided implantation ·
+                        3D printing
+
+                    </div>
+
+
+                </div>
+
 
             </div>
 
@@ -1124,6 +1898,7 @@ and currently a visiting student researcher at the
 
         <section id="publications">
 
+
             <h2 class="section-title">
                 Selected Publications
             </h2>
@@ -1132,28 +1907,38 @@ and currently a visiting student researcher at the
 
             <div class="publication">
 
+
                 <div class="publication-year">
+
                     2026
+
                 </div>
+
 
 
                 <div>
 
+
                     <div class="publication-title">
 
-                        Self-stratified Stretchable Passive Cooling Interface for
-                        Thermal Management of On-Skin Electronics
+                        Self-stratified Stretchable Passive Cooling
+                        Interface for Thermal Management of
+                        On-Skin Electronics
 
                     </div>
+
 
 
                     <div class="publication-authors">
 
-                        J. Sun#, M. Liu#, C. Jiang#, <strong>Q. Cai</strong>,
-                        R. Cai, J. Li, Y. Xiao, Q. Xian, X. Sun, L. Jiang,
-                        C. Li, C. Y. Tso, X. Yu, Y. Zhou, Z. Peng, and J. Li
+                        J. Sun#, M. Liu#, C. Jiang#,
+                        <strong>Q. Cai</strong>,
+                        R. Cai, J. Li, Y. Xiao, Q. Xian,
+                        X. Sun, L. Jiang, C. Li, C. Y. Tso,
+                        X. Yu, Y. Zhou, Z. Peng, and J. Li
 
                     </div>
+
 
 
                     <div class="publication-journal">
@@ -1163,7 +1948,8 @@ and currently a visiting student researcher at the
                     </div>
 
 
-                    <div style="margin-top: 5px;">
+
+                    <div class="publication-links">
 
                         <a
                             href="https://doi.org/10.20517/ss.2026.33"
@@ -1175,7 +1961,9 @@ and currently a visiting student researcher at the
 
                     </div>
 
+
                 </div>
+
 
             </div>
 
@@ -1190,39 +1978,43 @@ and currently a visiting student researcher at the
 
         <section id="contact">
 
+
             <h2 class="section-title">
                 Contact
             </h2>
 
 
+
             <div class="contact-box">
+
 
                 <p>
 
-                    I am always interested in discussing research related to wearable
-                    bioelectronics, biosensing, electrophysiological systems, and neural
-                    interfaces.
+                    I am interested in research opportunities and
+                    discussions related to wearable bioelectronics,
+                    biosensing, electrophysiological systems,
+                    and brain–computer interfaces.
 
                 </p>
 
 
+
                 <p>
 
-                    Email:
-                    <a href="mailto:caiqq8@outlook.com">
-                        caiqq8@outlook.com
+                    <strong>Email:</strong>
+
+                    <a
+                        class="email-address"
+                        href="mailto:qcai@nd.edu"
+                    >
+                        qcai@nd.edu
                     </a>
 
                 </p>
 
 
-                <p>
-
-                    Sun Yat-sen University · Shenzhen, China
-
-                </p>
-
             </div>
+
 
         </section>
 
@@ -1237,11 +2029,15 @@ and currently a visiting student researcher at the
 
     <footer>
 
+
         <div class="container">
 
-            © 2026 Qingqiao Cai · Last updated August 2026
+            © 2026 Qingqiao Cai
+            ·
+            Last updated August 2026
 
         </div>
+
 
     </footer>
 
