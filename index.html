@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Qingqiao Cai - Biomedical Engineering undergraduate interested in wearable bioelectronics, biosensing, electrophysiology, and neural interfaces.">
+          content="Qingqiao Cai - Biomedical Engineering undergraduate interested in wearable bioelectronics, brain-computer interfaces, biosensing, electrophysiology, and biomedical systems.">
 
     <title>Qingqiao Cai | Biomedical Engineering</title>
+
 
     <style>
 
@@ -18,6 +19,7 @@
            ========================================================= */
 
         :root {
+
             --background: #ffffff;
             --background-soft: #f7f8fa;
             --background-card: #ffffff;
@@ -57,6 +59,7 @@
 
 
         body {
+
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -92,26 +95,33 @@
         }
 
 
+
         /* =========================================================
            2. NAVIGATION
            ========================================================= */
 
         .site-header {
+
             position: sticky;
             top: 0;
+
             z-index: 1000;
 
             background: rgba(255, 255, 255, 0.95);
+
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
 
             border-bottom: 1px solid var(--border);
         }
 
 
         .navbar {
+
             min-height: 72px;
 
             display: flex;
+
             align-items: center;
             justify-content: space-between;
 
@@ -120,8 +130,10 @@
 
 
         .site-name {
+
             font-size: 20px;
             font-weight: 700;
+
             letter-spacing: -0.02em;
 
             white-space: nowrap;
@@ -129,9 +141,11 @@
 
 
         .nav-links {
+
             list-style: none;
 
             display: flex;
+
             align-items: center;
 
             gap: 28px;
@@ -139,6 +153,7 @@
 
 
         .nav-links a {
+
             color: var(--text-secondary);
 
             font-size: 15px;
@@ -156,15 +171,20 @@
 
         .nav-links a:hover,
         .nav-links a.active {
+
             color: var(--accent);
+
             border-bottom-color: var(--accent);
         }
 
 
         .nav-cv {
+
             color: var(--accent) !important;
+
             font-weight: 650 !important;
         }
+
 
 
         /* =========================================================
@@ -172,29 +192,35 @@
            ========================================================= */
 
         .hero {
-            padding: 88px 0 82px;
+
+            padding: 82px 0 82px;
+
+            border-top: none;
         }
 
 
         .hero-grid {
+
             display: grid;
 
             grid-template-columns:
                 minmax(190px, 260px)
                 minmax(0, 1fr);
 
-            gap: 70px;
+            gap: 64px;
 
             align-items: center;
         }
 
 
         .profile-wrapper {
+
             width: 100%;
         }
 
 
         .profile-photo {
+
             width: 230px;
             height: 230px;
 
@@ -208,65 +234,54 @@
         }
 
 
-        .hero-eyebrow {
-            color: var(--accent);
+        .hero h1 {
 
-            font-size: 14px;
-            font-weight: 650;
+            font-size: clamp(38px, 5vw, 52px);
 
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
+            line-height: 1.08;
 
-            margin-bottom: 8px;
+            letter-spacing: -0.035em;
+
+            margin-bottom: 12px;
         }
 
 
-        .hero h1 {
-            font-size: clamp(42px, 6vw, 64px);
+        .hero-role {
 
-            line-height: 1.06;
+            color: var(--text-secondary);
 
-            letter-spacing: -0.04em;
+            font-size: 19px;
+
+            line-height: 1.5;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero-description {
+
+            color: var(--text-secondary);
+
+            max-width: 800px;
+
+            font-size: 16px;
+
+            line-height: 1.75;
 
             margin-bottom: 14px;
         }
 
 
-        .hero-role {
-            color: var(--text-secondary);
-
-            font-size: 20px;
-            line-height: 1.5;
-
-            margin-bottom: 22px;
-        }
-
-
-        .research-identity {
-            max-width: 760px;
-
-            color: var(--text-main);
-
-            font-size: 21px;
-            line-height: 1.55;
-
-            font-weight: 500;
-
-            margin-bottom: 20px;
-        }
-
-
-        .hero-description {
-            color: var(--text-secondary);
-
-            max-width: 760px;
+        .hero-description:last-of-type {
 
             margin-bottom: 28px;
         }
 
 
         .hero-links {
+
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 11px;
@@ -274,7 +289,9 @@
 
 
         .button {
+
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
 
@@ -302,6 +319,7 @@
 
 
         .button:hover {
+
             transform: translateY(-1px);
 
             border-color: var(--accent);
@@ -311,7 +329,9 @@
 
 
         .button-primary {
+
             background: var(--accent);
+
             color: white;
 
             border-color: var(--accent);
@@ -319,11 +339,14 @@
 
 
         .button-primary:hover {
+
             background: var(--accent-dark);
+
             color: white;
 
             border-color: var(--accent-dark);
         }
+
 
 
         /* =========================================================
@@ -331,6 +354,7 @@
            ========================================================= */
 
         section {
+
             padding: 88px 0;
 
             border-top: 1px solid var(--border);
@@ -338,6 +362,7 @@
 
 
         .section-header {
+
             max-width: 760px;
 
             margin-bottom: 46px;
@@ -345,12 +370,14 @@
 
 
         .section-label {
+
             color: var(--accent);
 
             font-size: 13px;
             font-weight: 700;
 
             letter-spacing: 0.09em;
+
             text-transform: uppercase;
 
             margin-bottom: 8px;
@@ -358,6 +385,7 @@
 
 
         .section-title {
+
             font-size: clamp(30px, 4vw, 42px);
 
             line-height: 1.2;
@@ -369,10 +397,12 @@
 
 
         .section-description {
+
             color: var(--text-secondary);
 
             font-size: 17px;
         }
+
 
 
         /* =========================================================
@@ -380,14 +410,17 @@
            ========================================================= */
 
         #research {
+
             background: var(--background-soft);
         }
 
 
         .vision-statement {
+
             max-width: 850px;
 
             font-size: 22px;
+
             line-height: 1.65;
 
             margin-bottom: 45px;
@@ -395,6 +428,7 @@
 
 
         .research-pillars {
+
             display: grid;
 
             grid-template-columns:
@@ -405,6 +439,7 @@
 
 
         .pillar-card {
+
             background: var(--background-card);
 
             border: 1px solid var(--border);
@@ -423,6 +458,7 @@
 
 
         .pillar-card:hover {
+
             transform: translateY(-4px);
 
             border-color: #c5d4dd;
@@ -432,6 +468,7 @@
 
 
         .pillar-number {
+
             color: var(--accent);
 
             font-size: 13px;
@@ -442,7 +479,9 @@
 
 
         .pillar-card h3 {
+
             font-size: 18px;
+
             line-height: 1.4;
 
             margin-bottom: 10px;
@@ -450,6 +489,7 @@
 
 
         .pillar-card p {
+
             color: var(--text-secondary);
 
             font-size: 14px;
@@ -457,6 +497,7 @@
 
 
         .research-path {
+
             margin-top: 30px;
 
             padding: 28px;
@@ -473,12 +514,15 @@
         }
 
 
+
         /* =========================================================
            6. RESEARCH EXPERIENCE
            ========================================================= */
 
         .experience-list {
+
             display: flex;
+
             flex-direction: column;
 
             gap: 34px;
@@ -486,6 +530,7 @@
 
 
         .experience-card {
+
             display: grid;
 
             grid-template-columns:
@@ -500,11 +545,13 @@
 
             background: var(--background-card);
 
-            box-shadow: 0 3px 12px rgba(20, 40, 50, 0.025);
+            box-shadow:
+                0 3px 12px rgba(20, 40, 50, 0.025);
         }
 
 
         .experience-image {
+
             min-height: 310px;
 
             background:
@@ -530,11 +577,13 @@
 
 
         .experience-content {
+
             padding: 38px 40px;
         }
 
 
         .experience-meta {
+
             color: var(--accent);
 
             font-size: 13px;
@@ -549,7 +598,9 @@
 
 
         .experience-content h3 {
+
             font-size: 25px;
+
             line-height: 1.35;
 
             margin-bottom: 8px;
@@ -557,6 +608,7 @@
 
 
         .experience-affiliation {
+
             color: var(--text-secondary);
 
             margin-bottom: 18px;
@@ -566,6 +618,7 @@
 
 
         .experience-content p {
+
             color: var(--text-secondary);
 
             margin-bottom: 18px;
@@ -573,7 +626,9 @@
 
 
         .tags {
+
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 8px;
@@ -583,6 +638,7 @@
 
 
         .tag {
+
             background: var(--accent-soft);
 
             color: var(--accent-dark);
@@ -596,16 +652,19 @@
         }
 
 
+
         /* =========================================================
            7. SELECTED PROJECTS
            ========================================================= */
 
         #projects {
+
             background: var(--background-soft);
         }
 
 
         .project-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -616,6 +675,7 @@
 
 
         .project-card {
+
             background: var(--background-card);
 
             border: 1px solid var(--border);
@@ -631,6 +691,7 @@
 
 
         .project-card:hover {
+
             transform: translateY(-4px);
 
             box-shadow: var(--shadow);
@@ -638,6 +699,7 @@
 
 
         .project-image {
+
             height: 180px;
 
             background:
@@ -648,6 +710,7 @@
                 );
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -658,12 +721,15 @@
 
 
         .project-content {
+
             padding: 24px;
         }
 
 
         .project-content h3 {
+
             font-size: 19px;
+
             line-height: 1.4;
 
             margin-bottom: 11px;
@@ -671,10 +737,12 @@
 
 
         .project-content p {
+
             color: var(--text-secondary);
 
             font-size: 14px;
         }
+
 
 
         /* =========================================================
@@ -682,7 +750,9 @@
            ========================================================= */
 
         .publication-list {
+
             display: flex;
+
             flex-direction: column;
 
             gap: 18px;
@@ -690,6 +760,7 @@
 
 
         .publication-card {
+
             display: grid;
 
             grid-template-columns: 100px 1fr;
@@ -707,6 +778,7 @@
 
 
         .publication-year {
+
             color: var(--accent);
 
             font-size: 20px;
@@ -715,6 +787,7 @@
 
 
         .publication-title {
+
             font-size: 18px;
             font-weight: 650;
 
@@ -725,6 +798,7 @@
 
 
         .publication-authors {
+
             color: var(--text-secondary);
 
             font-size: 14px;
@@ -734,6 +808,7 @@
 
 
         .publication-journal {
+
             color: var(--text-light);
 
             font-size: 14px;
@@ -743,7 +818,9 @@
 
 
         .publication-links {
+
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 14px;
@@ -751,6 +828,7 @@
 
 
         .publication-links a {
+
             color: var(--accent);
 
             font-size: 13px;
@@ -758,16 +836,19 @@
         }
 
 
+
         /* =========================================================
            9. EDUCATION & HONORS
            ========================================================= */
 
         #education {
+
             background: var(--background-soft);
         }
 
 
         .education-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -779,6 +860,7 @@
 
 
         .info-card {
+
             background: var(--background-card);
 
             border: 1px solid var(--border);
@@ -790,6 +872,7 @@
 
 
         .info-card h3 {
+
             font-size: 21px;
 
             margin-bottom: 20px;
@@ -797,11 +880,13 @@
 
 
         .timeline-item + .timeline-item {
+
             margin-top: 26px;
         }
 
 
         .timeline-title {
+
             font-size: 17px;
             font-weight: 650;
 
@@ -810,6 +895,7 @@
 
 
         .timeline-meta {
+
             color: var(--text-secondary);
 
             font-size: 14px;
@@ -819,6 +905,7 @@
 
 
         .timeline-description {
+
             color: var(--text-light);
 
             font-size: 14px;
@@ -826,11 +913,13 @@
 
 
         .honor-list {
+
             list-style: none;
         }
 
 
         .honor-list li {
+
             padding: 12px 0;
 
             border-bottom: 1px solid var(--border);
@@ -842,8 +931,10 @@
 
 
         .honor-list li:last-child {
+
             border-bottom: none;
         }
+
 
 
         /* =========================================================
@@ -851,6 +942,7 @@
            ========================================================= */
 
         #contact {
+
             text-align: center;
 
             padding-top: 90px;
@@ -859,6 +951,7 @@
 
 
         .contact-inner {
+
             max-width: 700px;
 
             margin: 0 auto;
@@ -866,6 +959,7 @@
 
 
         .contact-inner p {
+
             color: var(--text-secondary);
 
             font-size: 17px;
@@ -875,12 +969,16 @@
 
 
         .contact-links {
+
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
 
             gap: 10px;
         }
+
 
 
         /* =========================================================
@@ -888,6 +986,7 @@
            ========================================================= */
 
         footer {
+
             border-top: 1px solid var(--border);
 
             padding: 26px 0;
@@ -899,12 +998,16 @@
 
 
         .footer-inner {
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
 
             gap: 20px;
         }
+
 
 
         /* =========================================================
@@ -914,32 +1017,38 @@
         @media (max-width: 950px) {
 
             .research-pillars {
+
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
             }
 
 
             .project-grid {
+
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
             }
 
 
             .hero-grid {
+
                 gap: 45px;
             }
 
         }
 
 
+
         @media (max-width: 760px) {
 
             html {
+
                 scroll-padding-top: 120px;
             }
 
 
             .navbar {
+
                 flex-direction: column;
 
                 align-items: flex-start;
@@ -951,6 +1060,7 @@
 
 
             .nav-links {
+
                 width: 100%;
 
                 overflow-x: auto;
@@ -962,6 +1072,7 @@
 
 
             .nav-links a {
+
                 display: block;
 
                 padding: 8px 0;
@@ -971,11 +1082,13 @@
 
 
             .hero {
+
                 padding-top: 55px;
             }
 
 
             .hero-grid {
+
                 grid-template-columns: 1fr;
 
                 gap: 32px;
@@ -983,32 +1096,38 @@
 
 
             .profile-photo {
+
                 width: 180px;
                 height: 180px;
             }
 
 
             .experience-card {
+
                 grid-template-columns: 1fr;
             }
 
 
             .experience-image {
+
                 min-height: 220px;
             }
 
 
             .experience-content {
+
                 padding: 28px;
             }
 
 
             .education-grid {
+
                 grid-template-columns: 1fr;
             }
 
 
             .footer-inner {
+
                 flex-direction: column;
 
                 align-items: flex-start;
@@ -1017,24 +1136,29 @@
         }
 
 
+
         @media (max-width: 560px) {
 
             section {
+
                 padding: 68px 0;
             }
 
 
             .research-pillars {
+
                 grid-template-columns: 1fr;
             }
 
 
             .project-grid {
+
                 grid-template-columns: 1fr;
             }
 
 
             .publication-card {
+
                 grid-template-columns: 1fr;
 
                 gap: 10px;
@@ -1042,18 +1166,16 @@
 
 
             .hero h1 {
-                font-size: 43px;
-            }
 
-
-            .research-identity {
-                font-size: 19px;
+                font-size: 38px;
             }
 
         }
 
     </style>
+
 </head>
+
 
 
 <body>
@@ -1067,8 +1189,11 @@
 
         <div class="container navbar">
 
+
             <a class="site-name" href="#top">
+
                 Qingqiao Cai
+
             </a>
 
 
@@ -1076,45 +1201,66 @@
 
                 <ul class="nav-links">
 
+
                     <li>
+
                         <a href="#research">
                             Research
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="#experience">
                             Experience
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="#projects">
                             Projects
                         </a>
+
                     </li>
 
+
                     <li>
+
                         <a href="#publications">
                             Publications
                         </a>
+
                     </li>
 
+
                     <li>
-                        <a class="nav-cv"
-                           href="Qingqiao_Cai_CV.pdf"
-                           target="_blank">
+
+                        <a
+                            class="nav-cv"
+                            href="Qingqiao_Cai_CV.pdf"
+                            target="_blank">
+
                             CV
+
                         </a>
+
                     </li>
+
 
                 </ul>
 
             </nav>
 
+
         </div>
 
     </header>
+
 
 
 
@@ -1127,8 +1273,11 @@
 
         <section class="hero">
 
+
             <div class="container hero-grid">
 
+
+                <!-- Profile Photo -->
 
                 <div class="profile-wrapper">
 
@@ -1140,21 +1289,24 @@
                 </div>
 
 
-                <div>
 
-                    <div class="hero-eyebrow">
-                        Biomedical Engineering
-                    </div>
+                <!-- About Text -->
+
+                <div>
 
 
                     <h1>
+
                         Qingqiao Cai
+
                     </h1>
+
 
 
                     <div class="hero-role">
 
                         Biomedical Engineering Undergraduate
+
                         <br>
 
                         Sun Yat-sen University
@@ -1162,25 +1314,44 @@
                     </div>
 
 
-                    <p class="research-identity">
 
-                        Research identity / one-sentence description
-                        will be placed here.
+                    <p class="hero-description">
+
+                        I am a Biomedical Engineering undergraduate at
+                        Sun Yat-sen University. During summer 2026, I
+                        conducted visiting research with Professor Kaiyu Fu
+                        at the University of Notre Dame, where I worked on
+                        a microneedle-based wearable bioelectronic platform
+                        for continuous sensing. My research experience also
+                        includes wearable EEG–EOG systems, electrochemical
+                        biosensing, implantable brain–computer interfaces,
+                        neural interfaces, and physiological-signal analysis.
 
                     </p>
+
 
 
                     <p class="hero-description">
 
-                        A short introduction will be placed here.
-                        This section will later summarize research
-                        background, current interests, and long-term
-                        academic goals.
+                        Across these projects, I have developed end-to-end
+                        experience spanning biointerface and sensor fabrication,
+                        analog front-end and PCB design, embedded systems,
+                        wireless communication, signal processing, and desktop
+                        and mobile software development. My research experience
+                        has trained me to take projects from concept and system
+                        architecture through implementation, debugging, and
+                        validation, both independently and in collaboration
+                        with others. Looking ahead, I am interested in wearable
+                        bioelectronics and brain–computer interfaces, while
+                        remaining open to broader biomedical technologies that
+                        can meaningfully improve human health.
 
                     </p>
 
 
+
                     <div class="hero-links">
+
 
                         <a
                             class="button button-primary"
@@ -1190,6 +1361,7 @@
                             Google Scholar
 
                         </a>
+
 
 
                         <a
@@ -1202,6 +1374,7 @@
                         </a>
 
 
+
                         <a
                             class="button"
                             href="Qingqiao_Cai_CV.pdf"
@@ -1212,21 +1385,27 @@
                         </a>
 
 
+
                         <a
                             class="button"
                             href="mailto:caiqq8@outlook.com">
 
-                            Email
+                            caiqq8@outlook.com
 
                         </a>
 
+
                     </div>
+
 
                 </div>
 
+
             </div>
 
+
         </section>
+
 
 
 
@@ -1236,18 +1415,24 @@
 
         <section id="research">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
+
                         Research
+
                     </div>
 
 
                     <h2 class="section-title">
+
                         Research Vision
+
                     </h2>
 
 
@@ -1258,7 +1443,9 @@
 
                     </p>
 
+
                 </div>
+
 
 
                 <p class="vision-statement">
@@ -1266,87 +1453,135 @@
                     A concise research vision will be placed here.
                     Later, this paragraph will explain how my work in
                     biointerfaces, electrophysiological sensing,
-                    biochemical sensing, and wearable system integration
-                    contributes to continuous health monitoring.
+                    biochemical sensing, neural engineering, and
+                    biomedical system integration relates to my
+                    long-term research interests.
 
                 </p>
+
 
 
 
                 <div class="research-pillars">
 
 
+
                     <article class="pillar-card">
 
+
                         <div class="pillar-number">
+
                             01
+
                         </div>
 
+
                         <h3>
+
                             Neural & Biological Interfaces
+
                         </h3>
 
+
                         <p>
+
                             Short description of this research pillar.
+
                         </p>
+
 
                     </article>
 
 
 
+
                     <article class="pillar-card">
 
+
                         <div class="pillar-number">
+
                             02
+
                         </div>
 
+
                         <h3>
+
                             Wearable Electrophysiology
+
                         </h3>
 
+
                         <p>
+
                             Short description of this research pillar.
+
                         </p>
+
 
                     </article>
 
 
 
+
                     <article class="pillar-card">
 
+
                         <div class="pillar-number">
+
                             03
+
                         </div>
 
+
                         <h3>
+
                             Biochemical Biosensing
+
                         </h3>
 
+
                         <p>
+
                             Short description of this research pillar.
+
                         </p>
 
+
                     </article>
+
 
 
 
                     <article class="pillar-card">
 
+
                         <div class="pillar-number">
+
                             04
+
                         </div>
 
+
                         <h3>
-                            Integrated Wearable Bioelectronics
+
+                            Integrated Biomedical Systems
+
                         </h3>
 
+
                         <p>
+
                             Short description of this research pillar.
+
                         </p>
 
+
                     </article>
+
 
                 </div>
+
 
 
 
@@ -1357,9 +1592,12 @@
 
                 </div>
 
+
             </div>
 
+
         </section>
+
 
 
 
@@ -1369,30 +1607,38 @@
 
         <section id="experience">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
+
                         Experience
+
                     </div>
 
 
                     <h2 class="section-title">
+
                         Research Experience
+
                     </h2>
 
 
                     <p class="section-description">
 
                         Selected research experiences related to
-                        bioelectronics, wearable sensing, and
-                        neural engineering.
+                        bioelectronics, biomedical sensing,
+                        neural engineering, and integrated systems.
 
                     </p>
 
+
                 </div>
+
 
 
 
@@ -1404,19 +1650,26 @@
 
                     <article class="experience-card">
 
+
                         <div class="experience-image">
 
                             Project image / system figure
+
                             <br>
+
                             will be placed here.
 
                         </div>
 
 
+
                         <div class="experience-content">
 
+
                             <div class="experience-meta">
+
                                 Research Experience 01
+
                             </div>
 
 
@@ -1431,7 +1684,8 @@
                             <div class="experience-affiliation">
 
                                 University of Notre Dame
-                                · Research role · 2026
+                                · Visiting Research
+                                · Summer 2026
 
                             </div>
 
@@ -1448,27 +1702,43 @@
 
                             <div class="tags">
 
+
                                 <span class="tag">
+
                                     Wearable Bioelectronics
+
                                 </span>
 
+
                                 <span class="tag">
+
                                     Microneedles
+
                                 </span>
 
+
                                 <span class="tag">
+
                                     Electrochemistry
+
                                 </span>
 
+
                                 <span class="tag">
+
                                     PCB Design
+
                                 </span>
+
 
                             </div>
 
+
                         </div>
 
+
                     </article>
+
 
 
 
@@ -1476,19 +1746,26 @@
 
                     <article class="experience-card">
 
+
                         <div class="experience-image">
 
                             Project image / PCB / signal figure
+
                             <br>
+
                             will be placed here.
 
                         </div>
 
 
+
                         <div class="experience-content">
 
+
                             <div class="experience-meta">
+
                                 Research Experience 02
+
                             </div>
 
 
@@ -1521,27 +1798,43 @@
 
                             <div class="tags">
 
+
                                 <span class="tag">
+
                                     EEG
+
                                 </span>
 
+
                                 <span class="tag">
+
                                     EOG
+
                                 </span>
 
+
                                 <span class="tag">
+
                                     ADS1299
+
                                 </span>
 
+
                                 <span class="tag">
+
                                     ESP32-S3
+
                                 </span>
+
 
                             </div>
 
+
                         </div>
 
+
                     </article>
+
 
 
 
@@ -1549,19 +1842,26 @@
 
                     <article class="experience-card">
 
+
                         <div class="experience-image">
 
                             Device / fabrication image
+
                             <br>
+
                             will be placed here.
 
                         </div>
 
 
+
                         <div class="experience-content">
 
+
                             <div class="experience-meta">
+
                                 Research Experience 03
+
                             </div>
 
 
@@ -1592,33 +1892,50 @@
 
                             <div class="tags">
 
+
                                 <span class="tag">
+
+                                    Brain–Computer Interfaces
+
+                                </span>
+
+
+                                <span class="tag">
+
                                     Neural Interfaces
+
                                 </span>
 
+
                                 <span class="tag">
+
                                     PDMS
+
                                 </span>
 
+
                                 <span class="tag">
+
                                     Microfabrication
+
                                 </span>
 
-                                <span class="tag">
-                                    3D Printing
-                                </span>
 
                             </div>
 
+
                         </div>
 
+
                     </article>
+
 
 
 
                     <!-- EXPERIENCE 4 -->
 
                     <article class="experience-card">
+
 
                         <div class="experience-image">
 
@@ -1627,10 +1944,14 @@
                         </div>
 
 
+
                         <div class="experience-content">
 
+
                             <div class="experience-meta">
+
                                 Research Experience 04
+
                             </div>
 
 
@@ -1660,26 +1981,38 @@
 
                             <div class="tags">
 
-                                <span class="tag">
-                                    Research Method
-                                </span>
 
                                 <span class="tag">
-                                    Technical Skill
+
+                                    Research Method
+
                                 </span>
+
+
+                                <span class="tag">
+
+                                    Technical Skill
+
+                                </span>
+
 
                             </div>
 
+
                         </div>
+
 
                     </article>
 
 
                 </div>
 
+
             </div>
 
+
         </section>
+
 
 
 
@@ -1689,18 +2022,24 @@
 
         <section id="projects">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
+
                         Engineering
+
                     </div>
 
 
                     <h2 class="section-title">
+
                         Selected Projects
+
                     </h2>
 
 
@@ -1712,16 +2051,20 @@
 
                     </p>
 
+
                 </div>
+
 
 
 
                 <div class="project-grid">
 
 
+
                     <!-- PROJECT 1 -->
 
                     <article class="project-card">
+
 
                         <div class="project-image">
 
@@ -1732,9 +2075,12 @@
 
                         <div class="project-content">
 
+
                             <h3>
+
                                 Electrochemical Glucose
                                 Sensing System
+
                             </h3>
 
 
@@ -1744,9 +2090,12 @@
 
                             </p>
 
+
                         </div>
 
+
                     </article>
+
 
 
 
@@ -1754,6 +2103,7 @@
 
                     <article class="project-card">
 
+
                         <div class="project-image">
 
                             Project image
@@ -1763,8 +2113,11 @@
 
                         <div class="project-content">
 
+
                             <h3>
+
                                 TCD Signal Analysis
+
                             </h3>
 
 
@@ -1774,9 +2127,12 @@
 
                             </p>
 
+
                         </div>
 
+
                     </article>
+
 
 
 
@@ -1784,6 +2140,7 @@
 
                     <article class="project-card">
 
+
                         <div class="project-image">
 
                             Project image
@@ -1793,8 +2150,11 @@
 
                         <div class="project-content">
 
+
                             <h3>
+
                                 Additional Engineering Project
+
                             </h3>
 
 
@@ -1804,16 +2164,21 @@
 
                             </p>
 
+
                         </div>
+
 
                     </article>
 
 
                 </div>
 
+
             </div>
 
+
         </section>
+
 
 
 
@@ -1823,18 +2188,24 @@
 
         <section id="publications">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
+
                         Publications
+
                     </div>
 
 
                     <h2 class="section-title">
+
                         Publications
+
                     </h2>
 
 
@@ -1845,23 +2216,31 @@
 
                     </p>
 
+
                 </div>
+
 
 
 
                 <div class="publication-list">
 
 
+
                     <!-- PUBLICATION 1 -->
 
                     <article class="publication-card">
 
+
                         <div class="publication-year">
+
                             2026
+
                         </div>
 
 
+
                         <div>
+
 
                             <div class="publication-title">
 
@@ -1889,30 +2268,45 @@
 
                             <div class="publication-links">
 
+
                                 <a href="#">
+
                                     DOI
+
                                 </a>
 
+
                                 <a href="#">
+
                                     Google Scholar
+
                                 </a>
 
+
                                 <a href="#">
+
                                     PDF
+
                                 </a>
+
 
                             </div>
 
+
                         </div>
+
 
                     </article>
 
 
                 </div>
 
+
             </div>
 
+
         </section>
+
 
 
 
@@ -1922,37 +2316,51 @@
 
         <section id="education">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
+
                         Background
+
                     </div>
 
 
                     <h2 class="section-title">
+
                         Education & Honors
+
                     </h2>
 
+
                 </div>
+
 
 
 
                 <div class="education-grid">
 
 
+
                     <!-- EDUCATION -->
 
                     <div class="info-card">
 
+
                         <h3>
+
                             Education
+
                         </h3>
 
 
+
                         <div class="timeline-item">
+
 
                             <div class="timeline-title">
 
@@ -1978,10 +2386,13 @@
 
                             </div>
 
+
                         </div>
 
 
+
                         <div class="timeline-item">
+
 
                             <div class="timeline-title">
 
@@ -1992,22 +2403,25 @@
 
                             <div class="timeline-meta">
 
-                                University / Department
-                                · 2026
+                                University of Notre Dame
+                                · Summer 2026
 
                             </div>
 
 
                             <div class="timeline-description">
 
-                                Optional visiting research
-                                information can be placed here.
+                                Visiting research information
+                                will be finalized later.
 
                             </div>
 
+
                         </div>
 
+
                     </div>
+
 
 
 
@@ -2015,39 +2429,59 @@
 
                     <div class="info-card">
 
+
                         <h3>
+
                             Selected Honors
+
                         </h3>
 
 
                         <ul class="honor-list">
 
+
                             <li>
+
                                 Selected Award / Scholarship
+
                             </li>
 
+
                             <li>
+
                                 Selected Competition Award
+
                             </li>
 
+
                             <li>
+
                                 Selected Academic Honor
+
                             </li>
 
+
                             <li>
+
                                 Additional Honor
+
                             </li>
+
 
                         </ul>
+
 
                     </div>
 
 
                 </div>
 
+
             </div>
 
+
         </section>
+
 
 
 
@@ -2057,13 +2491,17 @@
 
         <section id="contact">
 
+
             <div class="container">
+
 
                 <div class="contact-inner">
 
 
                     <div class="section-label">
+
                         Contact
+
                     </div>
 
 
@@ -2076,19 +2514,20 @@
 
                     <p>
 
-                        A brief contact statement can be
-                        placed here later.
+                        Please feel free to contact me for
+                        research discussions and academic opportunities.
 
                     </p>
 
 
                     <div class="contact-links">
 
+
                         <a
                             class="button button-primary"
                             href="mailto:caiqq8@outlook.com">
 
-                            Email
+                            caiqq8@outlook.com
 
                         </a>
 
@@ -2122,16 +2561,21 @@
 
                         </a>
 
+
                     </div>
+
 
                 </div>
 
+
             </div>
+
 
         </section>
 
 
     </main>
+
 
 
 
@@ -2141,20 +2585,29 @@
 
     <footer>
 
+
         <div class="container footer-inner">
 
+
             <div>
+
                 © 2026 Qingqiao Cai
+
             </div>
 
 
             <div>
+
                 Biomedical Engineering · Academic Website
+
             </div>
+
 
         </div>
 
+
     </footer>
+
 
 
 
@@ -2168,6 +2621,7 @@
             document.querySelectorAll(
                 "main section[id]"
             );
+
 
         const navLinks =
             document.querySelectorAll(
@@ -2185,7 +2639,9 @@
                         if (entry.isIntersecting) {
 
                             navLinks.forEach(link => {
+
                                 link.classList.remove("active");
+
                             });
 
 
@@ -2196,7 +2652,9 @@
 
 
                             if (activeLink) {
+
                                 activeLink.classList.add("active");
+
                             }
 
                         }
@@ -2205,16 +2663,22 @@
 
                 },
 
+
                 {
+
                     rootMargin: "-30% 0px -60% 0px",
+
                     threshold: 0
+
                 }
 
             );
 
 
         sections.forEach(section => {
+
             observer.observe(section);
+
         });
 
     </script>
