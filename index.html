@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -12,7 +13,10 @@
         name="description"
         content="Qingqiao Cai - Biomedical Engineering undergraduate interested in wearable bioelectronics, brain-computer interfaces, biosensing, electrophysiology, and biomedical systems.">
 
-    <title>Qingqiao Cai | Biomedical Engineering</title>
+    <title>
+        Qingqiao Cai | Biomedical Engineering
+    </title>
+
 
     <style>
 
@@ -21,6 +25,7 @@
            ========================================================= */
 
         :root {
+
             --background: #ffffff;
             --background-soft: #f7f8fa;
             --background-card: #ffffff;
@@ -47,19 +52,25 @@
 
 
         * {
+
             box-sizing: border-box;
+
             margin: 0;
+
             padding: 0;
         }
 
 
         html {
+
             scroll-behavior: smooth;
+
             scroll-padding-top: 90px;
         }
 
 
         body {
+
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -70,26 +81,35 @@
                 sans-serif;
 
             background: var(--background);
+
             color: var(--text-main);
+
             line-height: 1.7;
+
             font-size: 16px;
         }
 
 
         a {
+
             color: inherit;
+
             text-decoration: none;
         }
 
 
         img {
+
             display: block;
+
             max-width: 100%;
         }
 
 
         .container {
+
             width: min(92%, var(--max-width));
+
             margin: 0 auto;
         }
 
@@ -100,14 +120,18 @@
            ========================================================= */
 
         .site-header {
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
 
             background:
                 rgba(255, 255, 255, 0.95);
 
             backdrop-filter: blur(12px);
+
             -webkit-backdrop-filter: blur(12px);
 
             border-bottom:
@@ -116,10 +140,13 @@
 
 
         .navbar {
+
             min-height: 72px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
 
             gap: 30px;
@@ -127,17 +154,23 @@
 
 
         .site-name {
+
             font-size: 20px;
+
             font-weight: 700;
+
             letter-spacing: -0.02em;
+
             white-space: nowrap;
         }
 
 
         .nav-links {
+
             list-style: none;
 
             display: flex;
+
             align-items: center;
 
             gap: 28px;
@@ -145,9 +178,11 @@
 
 
         .nav-links a {
+
             color: var(--text-secondary);
 
             font-size: 15px;
+
             font-weight: 500;
 
             transition:
@@ -163,13 +198,17 @@
 
         .nav-links a:hover,
         .nav-links a.active {
+
             color: var(--accent);
+
             border-bottom-color: var(--accent);
         }
 
 
         .nav-cv {
+
             color: var(--accent) !important;
+
             font-weight: 650 !important;
         }
 
@@ -180,12 +219,15 @@
            ========================================================= */
 
         .hero {
+
             padding: 82px 0;
+
             border-top: none;
         }
 
 
         .hero-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -193,18 +235,23 @@
                 minmax(0, 1fr);
 
             gap: 52px;
+
             align-items: start;
         }
 
 
         .profile-wrapper {
+
             width: 100%;
+
             padding-top: 6px;
         }
 
 
         .profile-photo {
+
             width: 190px;
+
             height: 190px;
 
             object-fit: cover;
@@ -219,10 +266,12 @@
 
 
         .hero h1 {
+
             font-size:
                 clamp(38px, 5vw, 52px);
 
             line-height: 1.08;
+
             letter-spacing: -0.035em;
 
             margin-bottom: 12px;
@@ -230,9 +279,11 @@
 
 
         .hero-role {
+
             color: var(--text-secondary);
 
             font-size: 19px;
+
             line-height: 1.5;
 
             margin-bottom: 25px;
@@ -241,6 +292,7 @@
 
         .university-link,
         .inline-academic-link {
+
             color: var(--text-secondary);
 
             border-bottom:
@@ -254,26 +306,33 @@
 
         .university-link:hover,
         .inline-academic-link:hover {
+
             color: var(--accent);
+
             border-bottom-color: var(--accent);
         }
 
 
         .university-ranking {
+
             margin-top: 2px;
 
             font-size: 13px;
+
             color: var(--text-light);
+
             line-height: 1.5;
         }
 
 
         .hero-description {
+
             color: var(--text-secondary);
 
             max-width: 800px;
 
             font-size: 16px;
+
             line-height: 1.75;
 
             margin-bottom: 14px;
@@ -281,13 +340,17 @@
 
 
         .hero-description:last-of-type {
+
             margin-bottom: 28px;
         }
 
 
         .hero-links {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 11px;
         }
 
@@ -298,8 +361,11 @@
            ========================================================= */
 
         .button {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
 
             min-height: 42px;
@@ -313,9 +379,11 @@
                 1px solid var(--border);
 
             background: #ffffff;
+
             color: var(--text-main);
 
             font-size: 14px;
+
             font-weight: 600;
 
             transition:
@@ -327,23 +395,31 @@
 
 
         .button:hover {
+
             transform: translateY(-1px);
 
             border-color: var(--accent);
+
             color: var(--accent);
         }
 
 
         .button-primary {
+
             background: var(--accent);
+
             color: white;
+
             border-color: var(--accent);
         }
 
 
         .button-primary:hover {
+
             background: var(--accent-dark);
+
             color: white;
+
             border-color: var(--accent-dark);
         }
 
@@ -354,6 +430,7 @@
            ========================================================= */
 
         section {
+
             padding: 88px 0;
 
             border-top:
@@ -362,18 +439,23 @@
 
 
         .section-header {
+
             max-width: 780px;
+
             margin-bottom: 44px;
         }
 
 
         .section-label {
+
             color: var(--accent);
 
             font-size: 13px;
+
             font-weight: 700;
 
             letter-spacing: 0.09em;
+
             text-transform: uppercase;
 
             margin-bottom: 8px;
@@ -381,10 +463,12 @@
 
 
         .section-title {
+
             font-size:
                 clamp(30px, 4vw, 42px);
 
             line-height: 1.2;
+
             letter-spacing: -0.025em;
 
             margin-bottom: 14px;
@@ -392,9 +476,11 @@
 
 
         .section-description {
+
             color: var(--text-secondary);
 
             font-size: 17px;
+
             line-height: 1.7;
         }
 
@@ -405,16 +491,19 @@
            ========================================================= */
 
         #research {
+
             background: var(--background-soft);
         }
 
 
         .vision-statement {
+
             max-width: 900px;
 
             color: var(--text-main);
 
             font-size: 20px;
+
             line-height: 1.7;
 
             margin-bottom: 46px;
@@ -422,6 +511,7 @@
 
 
         .research-pillars-primary {
+
             display: grid;
 
             grid-template-columns:
@@ -432,19 +522,25 @@
 
 
         .pillar-link {
+
             display: block;
+
             height: 100%;
+
             scroll-margin-top: 110px;
         }
 
 
         .pillar-card {
+
             position: relative;
 
             height: 100%;
+
             min-height: 270px;
 
             display: flex;
+
             flex-direction: column;
 
             background:
@@ -468,6 +564,7 @@
 
 
         .pillar-card:hover {
+
             transform:
                 translateY(-5px);
 
@@ -480,9 +577,11 @@
 
 
         .pillar-number {
+
             color: var(--accent);
 
             font-size: 13px;
+
             font-weight: 750;
 
             letter-spacing: 0.06em;
@@ -492,9 +591,11 @@
 
 
         .pillar-card h3 {
+
             color: var(--text-main);
 
             font-size: 21px;
+
             line-height: 1.35;
 
             letter-spacing: -0.015em;
@@ -504,27 +605,35 @@
 
 
         .pillar-card p {
+
             color: var(--text-secondary);
 
             font-size: 14px;
+
             line-height: 1.7;
         }
 
 
         .pillar-explore {
+
             margin-top: auto;
+
             padding-top: 22px;
 
             color: var(--accent);
 
             font-size: 13px;
+
             font-weight: 700;
         }
 
 
         .research-flow {
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             height: 68px;
@@ -538,12 +647,15 @@
 
 
         .synthesis-link {
+
             display: block;
+
             scroll-margin-top: 110px;
         }
 
 
         .synthesis-card {
+
             position: relative;
 
             display: grid;
@@ -586,12 +698,15 @@
 
 
         .synthesis-card::before {
+
             content: "";
 
             position: absolute;
 
             left: 0;
+
             top: 24px;
+
             bottom: 24px;
 
             width: 4px;
@@ -603,6 +718,7 @@
 
 
         .synthesis-card:hover {
+
             transform:
                 translateY(-4px);
 
@@ -615,23 +731,33 @@
 
 
         .synthesis-meta {
+
             display: flex;
+
             align-items: center;
+
             gap: 12px;
+
             margin-bottom: 15px;
         }
 
 
         .synthesis-number {
+
             color: var(--accent);
+
             font-size: 14px;
+
             font-weight: 750;
+
             letter-spacing: 0.06em;
         }
 
 
         .synthesis-badge {
+
             display: inline-flex;
+
             align-items: center;
 
             padding: 4px 9px;
@@ -639,41 +765,55 @@
             border-radius: 999px;
 
             background: var(--accent);
+
             color: #ffffff;
 
             font-size: 10px;
+
             font-weight: 750;
+
             letter-spacing: 0.09em;
         }
 
 
         .synthesis-card h3 {
+
             font-size: 27px;
+
             line-height: 1.3;
+
             letter-spacing: -0.02em;
+
             margin-bottom: 13px;
         }
 
 
         .synthesis-card p {
+
             max-width: 720px;
 
             color: var(--text-secondary);
 
             font-size: 15px;
+
             line-height: 1.75;
         }
 
 
         .synthesis-components {
+
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: flex-end;
+
             gap: 8px;
         }
 
 
         .synthesis-component {
+
             padding: 7px 11px;
 
             background:
@@ -687,33 +827,108 @@
             color: var(--accent-dark);
 
             font-size: 12px;
+
             font-weight: 650;
         }
 
 
         .synthesis-explore {
+
             margin-top: 20px;
 
             color: var(--accent);
 
             font-size: 13px;
+
             font-weight: 750;
         }
 
 
 
         /* =========================================================
-           7. RESEARCH EXPERIENCE
+           7. UNIFIED IMAGE FALLBACK
+           ========================================================= */
+
+        .experience-image,
+        .project-image,
+        .publication-image {
+
+            position: relative;
+
+            background: #ffffff;
+
+            overflow: hidden;
+        }
+
+
+        .experience-image.is-missing::after,
+        .project-image.is-missing::after,
+        .publication-image.is-missing::after {
+
+            content: "?";
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            width: 30px;
+
+            height: 30px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #ffffff;
+
+            color: #3284bd;
+
+            border:
+                2px solid #3284bd;
+
+            box-shadow:
+                inset 0 0 0 1px #d7e8f2;
+
+            font-size: 20px;
+
+            line-height: 1;
+
+            font-weight: 700;
+        }
+
+
+        .experience-image.is-missing img,
+        .project-image.is-missing img,
+        .publication-image.is-missing img {
+
+            display: none;
+        }
+
+
+
+        /* =========================================================
+           8. RESEARCH EXPERIENCE
            ========================================================= */
 
         .experience-list {
+
             display: flex;
+
             flex-direction: column;
+
             gap: 34px;
         }
 
 
         .experience-card {
+
             scroll-margin-top: 105px;
 
             display: grid;
@@ -740,49 +955,48 @@
 
 
         .experience-image {
+
             min-height: 310px;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #eef3f6,
-                    #dde8ee
-                );
-
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
-            padding: 30px;
-
-            color: var(--text-light);
-
-            text-align: center;
-            font-size: 14px;
-
-            overflow: hidden;
+            border-right:
+                1px solid var(--border);
         }
 
 
         .experience-image img {
+
             width: 100%;
+
             height: 100%;
+
+            min-height: 310px;
+
             object-fit: contain;
         }
 
 
         .experience-content {
+
             padding: 38px 40px;
         }
 
 
         .experience-meta {
+
             color: var(--accent);
 
             font-size: 13px;
+
             font-weight: 700;
 
             text-transform: uppercase;
+
             letter-spacing: 0.05em;
 
             margin-bottom: 8px;
@@ -790,36 +1004,51 @@
 
 
         .experience-content h3 {
+
             font-size: 25px;
+
             line-height: 1.35;
+
             margin-bottom: 8px;
         }
 
 
         .experience-affiliation {
+
             color: var(--text-secondary);
+
             margin-bottom: 18px;
+
             font-size: 15px;
         }
 
 
         .experience-content p {
+
             color: var(--text-secondary);
+
             margin-bottom: 14px;
+
             line-height: 1.72;
         }
 
 
         .tags {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 8px;
+
             margin-top: 22px;
         }
 
 
         .tag {
+
             background: var(--accent-soft);
+
             color: var(--accent-dark);
 
             padding: 5px 10px;
@@ -827,12 +1056,15 @@
             border-radius: 999px;
 
             font-size: 12px;
+
             font-weight: 600;
         }
 
 
         .back-to-research {
+
             display: inline-flex;
+
             align-items: center;
 
             margin-top: 24px;
@@ -840,37 +1072,56 @@
             color: var(--accent);
 
             font-size: 13px;
+
             font-weight: 700;
 
             border-bottom:
                 1px solid transparent;
+
+            transition:
+                border-color 0.15s ease,
+                color 0.15s ease;
+        }
+
+
+        .back-to-research:hover {
+
+            color: var(--accent-dark);
+
+            border-bottom-color:
+                var(--accent-dark);
         }
 
 
 
         /* =========================================================
-           8. SELECTED PROJECTS
+           9. SELECTED PROJECTS
            ========================================================= */
 
         #projects {
+
             background:
                 var(--background-soft);
         }
 
 
         .project-grid {
+
             display: grid;
 
             grid-template-columns:
                 repeat(3, minmax(0, 1fr));
 
             gap: 22px;
+
             align-items: stretch;
         }
 
 
         .project-card {
+
             display: flex;
+
             flex-direction: column;
 
             height: 100%;
@@ -889,48 +1140,59 @@
             box-shadow:
                 0 3px 12px
                 rgba(20, 40, 50, 0.025);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+
+        .project-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #c4d4dd;
+
+            box-shadow:
+                0 12px 28px
+                rgba(35, 65, 85, 0.08);
         }
 
 
         .project-image {
-            position: relative;
 
             width: 100%;
+
             height: 245px;
 
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #e8eff3,
-                    #d7e4ea
-                );
-
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
-            padding: 28px;
-
-            color: var(--text-light);
-
-            text-align: center;
-
-            font-size: 13px;
-            line-height: 1.6;
+            border-bottom:
+                1px solid var(--border);
         }
 
 
         .project-image img {
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
         }
 
 
         .project-content {
+
             display: flex;
+
             flex-direction: column;
 
             flex: 1;
@@ -940,7 +1202,9 @@
 
 
         .project-content h3 {
+
             font-size: 19px;
+
             line-height: 1.4;
 
             letter-spacing: -0.01em;
@@ -950,25 +1214,31 @@
 
 
         .project-content p {
+
             color: var(--text-secondary);
 
             font-size: 14px;
+
             line-height: 1.7;
         }
 
 
         .project-tags {
+
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 7px;
 
             margin-top: auto;
+
             padding-top: 20px;
         }
 
 
         .project-tag {
+
             padding: 5px 9px;
 
             border-radius: 999px;
@@ -980,21 +1250,24 @@
                 var(--accent-dark);
 
             font-size: 11px;
+
             font-weight: 650;
         }
 
 
 
         /* =========================================================
-           9. FEATURED PUBLICATION
+           10. FEATURED PUBLICATION
            ========================================================= */
 
         #publication {
+
             background: var(--background);
         }
 
 
         .featured-publication {
+
             display: grid;
 
             grid-template-columns:
@@ -1019,26 +1292,28 @@
 
 
         .publication-image {
+
             min-height: 470px;
 
-            background: #ffffff;
-
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             padding: 24px;
 
             border-right:
                 1px solid var(--border);
-
-            overflow: hidden;
         }
 
 
         .publication-image img {
+
             width: 100%;
+
             height: 100%;
+
             max-height: 520px;
 
             object-fit: contain;
@@ -1046,17 +1321,21 @@
 
 
         .publication-content {
+
             padding: 40px 42px;
         }
 
 
         .publication-meta {
+
             color: var(--accent);
 
             font-size: 13px;
+
             font-weight: 750;
 
             letter-spacing: 0.06em;
+
             text-transform: uppercase;
 
             margin-bottom: 13px;
@@ -1064,7 +1343,9 @@
 
 
         .publication-title {
+
             font-size: 26px;
+
             line-height: 1.38;
 
             letter-spacing: -0.018em;
@@ -1074,9 +1355,11 @@
 
 
         .publication-authors {
+
             color: var(--text-secondary);
 
             font-size: 14px;
+
             line-height: 1.65;
 
             margin-bottom: 5px;
@@ -1084,15 +1367,19 @@
 
 
         .publication-authors strong {
+
             color: var(--text-main);
+
             font-weight: 700;
         }
 
 
         .publication-journal {
+
             color: var(--text-light);
 
             font-size: 14px;
+
             font-style: italic;
 
             margin-bottom: 24px;
@@ -1100,9 +1387,11 @@
 
 
         .publication-summary {
+
             color: var(--text-secondary);
 
             font-size: 15px;
+
             line-height: 1.75;
 
             margin-bottom: 14px;
@@ -1110,7 +1399,9 @@
 
 
         .publication-contribution {
+
             display: inline-flex;
+
             align-items: center;
 
             gap: 7px;
@@ -1131,8 +1422,16 @@
         }
 
 
+        .publication-contribution strong {
+
+            font-weight: 700;
+        }
+
+
         .publication-links {
+
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 10px;
@@ -1142,9 +1441,11 @@
 
 
         .publication-link {
+
             display: inline-flex;
 
             align-items: center;
+
             justify-content: center;
 
             min-height: 38px;
@@ -1164,11 +1465,35 @@
                 #ffffff;
 
             font-size: 13px;
+
             font-weight: 700;
+
+            transition:
+                transform 0.15s ease,
+                color 0.15s ease,
+                border-color 0.15s ease,
+                background 0.15s ease;
+        }
+
+
+        .publication-link:hover {
+
+            transform:
+                translateY(-1px);
+
+            color:
+                var(--accent);
+
+            border-color:
+                var(--accent);
+
+            background:
+                var(--accent-soft);
         }
 
 
         .publication-link-primary {
+
             background:
                 var(--accent);
 
@@ -1180,18 +1505,33 @@
         }
 
 
+        .publication-link-primary:hover {
+
+            background:
+                var(--accent-dark);
+
+            color:
+                #ffffff;
+
+            border-color:
+                var(--accent-dark);
+        }
+
+
 
         /* =========================================================
-           10. EDUCATION & HONORS
+           11. EDUCATION & HONORS
            ========================================================= */
 
         #education {
+
             background:
                 var(--background-soft);
         }
 
 
         .education-grid {
+
             display: grid;
 
             grid-template-columns:
@@ -1205,6 +1545,7 @@
 
 
         .info-card {
+
             background:
                 var(--background-card);
 
@@ -1219,13 +1560,17 @@
 
 
         .info-card h3 {
+
             font-size: 21px;
+
             margin-bottom: 22px;
         }
 
 
         .timeline-item + .timeline-item {
+
             margin-top: 30px;
+
             padding-top: 26px;
 
             border-top:
@@ -1234,9 +1579,11 @@
 
 
         .timeline-header {
+
             display: flex;
 
             align-items: baseline;
+
             justify-content: space-between;
 
             gap: 22px;
@@ -1246,29 +1593,37 @@
 
 
         .timeline-title {
+
             font-size: 17px;
+
             font-weight: 700;
+
             line-height: 1.45;
         }
 
 
         .timeline-date {
+
             flex-shrink: 0;
 
             color: var(--text-light);
 
             font-size: 13px;
+
             font-weight: 600;
 
             text-align: right;
+
             white-space: nowrap;
         }
 
 
         .timeline-meta {
+
             color: var(--text-secondary);
 
             font-size: 14px;
+
             line-height: 1.6;
 
             margin-bottom: 8px;
@@ -1276,25 +1631,51 @@
 
 
         .timeline-description {
+
             color: var(--text-light);
 
             font-size: 14px;
+
             line-height: 1.65;
         }
 
 
         .timeline-description strong {
+
             color: var(--text-main);
+
             font-weight: 700;
         }
 
 
+        .education-school-link {
+
+            border-bottom:
+                1px solid transparent;
+
+            transition:
+                color 0.15s ease,
+                border-color 0.15s ease;
+        }
+
+
+        .education-school-link:hover {
+
+            color: var(--accent);
+
+            border-bottom-color:
+                var(--accent);
+        }
+
+
         .honor-list {
+
             list-style: none;
         }
 
 
         .honor-list li {
+
             padding: 14px 0;
 
             border-bottom:
@@ -1303,20 +1684,25 @@
 
 
         .honor-list li:first-child {
+
             padding-top: 0;
         }
 
 
         .honor-list li:last-child {
+
             padding-bottom: 0;
+
             border-bottom: none;
         }
 
 
         .honor-header {
+
             display: flex;
 
             justify-content: space-between;
+
             align-items: baseline;
 
             gap: 16px;
@@ -1326,9 +1712,11 @@
 
 
         .honor-title {
+
             color: var(--text-main);
 
             font-size: 14px;
+
             font-weight: 650;
 
             line-height: 1.5;
@@ -1336,45 +1724,56 @@
 
 
         .honor-date {
+
             flex-shrink: 0;
 
             color: var(--text-light);
 
             font-size: 12px;
+
             font-weight: 600;
 
             white-space: nowrap;
+
+            text-align: right;
         }
 
 
         .honor-meta {
+
             color: var(--text-secondary);
 
             font-size: 13px;
+
             line-height: 1.55;
         }
 
 
 
         /* =========================================================
-           11. CONTACT
+           12. CONTACT
            ========================================================= */
 
         #contact {
+
             text-align: center;
 
             padding-top: 90px;
+
             padding-bottom: 90px;
         }
 
 
         .contact-inner {
+
             max-width: 700px;
+
             margin: 0 auto;
         }
 
 
         .contact-inner p {
+
             color: var(--text-secondary);
 
             font-size: 17px;
@@ -1384,19 +1783,24 @@
 
 
         .contact-links {
+
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
+
             gap: 10px;
         }
 
 
 
         /* =========================================================
-           12. FOOTER
+           13. FOOTER
            ========================================================= */
 
         footer {
+
             border-top:
                 1px solid var(--border);
 
@@ -1409,49 +1813,60 @@
 
 
         .footer-inner {
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: center;
+
             gap: 20px;
         }
 
 
 
         /* =========================================================
-           13. RESPONSIVE DESIGN
+           14. RESPONSIVE DESIGN
            ========================================================= */
 
         @media (max-width: 950px) {
 
             .research-pillars-primary {
+
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
             }
 
 
             .synthesis-card {
+
                 grid-template-columns: 1fr;
+
                 gap: 25px;
             }
 
 
             .synthesis-components {
+
                 justify-content: flex-start;
             }
 
 
             .project-grid {
+
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
             }
 
 
             .featured-publication {
+
                 grid-template-columns: 1fr;
             }
 
 
             .publication-image {
+
                 min-height: 360px;
 
                 border-right: none;
@@ -1462,6 +1877,7 @@
 
 
             .hero-grid {
+
                 grid-template-columns:
                     180px
                     minmax(0, 1fr);
@@ -1471,7 +1887,9 @@
 
 
             .profile-photo {
+
                 width: 170px;
+
                 height: 170px;
             }
 
@@ -1482,12 +1900,15 @@
         @media (max-width: 760px) {
 
             html {
+
                 scroll-padding-top: 120px;
             }
 
 
             .navbar {
+
                 flex-direction: column;
+
                 align-items: flex-start;
 
                 padding: 14px 0 12px;
@@ -1497,6 +1918,7 @@
 
 
             .nav-links {
+
                 width: 100%;
 
                 overflow-x: auto;
@@ -1508,6 +1930,7 @@
 
 
             .nav-links a {
+
                 display: block;
 
                 padding: 8px 0;
@@ -1517,89 +1940,125 @@
 
 
             .hero {
+
                 padding-top: 55px;
             }
 
 
             .hero-grid {
+
                 grid-template-columns: 1fr;
+
                 gap: 30px;
             }
 
 
+            .profile-wrapper {
+
+                padding-top: 0;
+            }
+
+
             .profile-photo {
+
                 width: 165px;
+
                 height: 165px;
             }
 
 
             .research-pillars-primary {
+
                 grid-template-columns: 1fr;
             }
 
 
             .pillar-card {
+
                 min-height: 230px;
             }
 
 
             .research-flow {
+
                 height: 50px;
             }
 
 
             .synthesis-card {
+
                 padding: 30px 28px;
             }
 
 
             .experience-card {
+
                 grid-template-columns: 1fr;
             }
 
 
             .experience-image {
-                min-height: 220px;
+
+                min-height: 250px;
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid var(--border);
+            }
+
+
+            .experience-image img {
+
+                min-height: 250px;
             }
 
 
             .experience-content {
+
                 padding: 28px;
             }
 
 
             .project-grid {
+
                 grid-template-columns: 1fr;
             }
 
 
             .project-image {
+
                 height: 230px;
             }
 
 
             .publication-content {
+
                 padding: 30px 28px;
             }
 
 
             .publication-title {
+
                 font-size: 23px;
             }
 
 
             .publication-image {
+
                 min-height: 300px;
             }
 
 
             .education-grid {
+
                 grid-template-columns: 1fr;
             }
 
 
             .timeline-header,
             .honor-header {
+
                 flex-direction: column;
 
                 align-items: flex-start;
@@ -1610,12 +2069,15 @@
 
             .timeline-date,
             .honor-date {
+
                 text-align: left;
             }
 
 
             .footer-inner {
+
                 flex-direction: column;
+
                 align-items: flex-start;
             }
 
@@ -1626,32 +2088,39 @@
         @media (max-width: 560px) {
 
             section {
+
                 padding: 68px 0;
             }
 
 
             .hero h1 {
+
                 font-size: 38px;
             }
 
 
             .vision-statement {
+
                 font-size: 18px;
             }
 
 
             .synthesis-card h3 {
+
                 font-size: 24px;
             }
 
 
             .project-image {
+
                 height: 215px;
             }
 
 
             .publication-image {
+
                 min-height: 250px;
+
                 padding: 18px;
             }
 
@@ -1688,21 +2157,34 @@
 
                 <ul class="nav-links">
 
-                    <li>
-                        <a href="#research">Research</a>
-                    </li>
 
                     <li>
-                        <a href="#experience">Experience</a>
+                        <a href="#research">
+                            Research
+                        </a>
                     </li>
 
-                    <li>
-                        <a href="#projects">Projects</a>
-                    </li>
 
                     <li>
-                        <a href="#publication">Publication</a>
+                        <a href="#experience">
+                            Experience
+                        </a>
                     </li>
+
+
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#publication">
+                            Publication
+                        </a>
+                    </li>
+
 
                     <li>
 
@@ -1716,6 +2198,7 @@
                         </a>
 
                     </li>
+
 
                 </ul>
 
@@ -1738,6 +2221,7 @@
 
         <section class="hero">
 
+
             <div class="container hero-grid">
 
 
@@ -1755,7 +2239,9 @@
                 <div>
 
 
-                    <h1>Qingqiao Cai</h1>
+                    <h1>
+                        Qingqiao Cai
+                    </h1>
 
 
 
@@ -1896,6 +2382,7 @@
 
             </div>
 
+
         </section>
 
 
@@ -1907,18 +2394,22 @@
 
         <section id="research">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
                         Research
                     </div>
 
+
                     <h2 class="section-title">
                         Research Vision
                     </h2>
+
 
                     <p class="section-description">
 
@@ -1927,6 +2418,7 @@
                         my long-term academic interests.
 
                     </p>
+
 
                 </div>
 
@@ -1949,7 +2441,9 @@
 
 
 
+
                 <div class="research-pillars-primary">
+
 
 
                     <a
@@ -1957,15 +2451,19 @@
                         class="pillar-link"
                         href="#experience-neural">
 
+
                         <article class="pillar-card">
+
 
                             <div class="pillar-number">
                                 01
                             </div>
 
+
                             <h3>
                                 Neural & Biological Interfaces
                             </h3>
+
 
                             <p>
 
@@ -1977,13 +2475,17 @@
 
                             </p>
 
+
                             <div class="pillar-explore">
                                 Explore related experience →
                             </div>
 
+
                         </article>
 
+
                     </a>
+
 
 
 
@@ -1992,15 +2494,19 @@
                         class="pillar-link"
                         href="#experience-electrophysiology">
 
+
                         <article class="pillar-card">
+
 
                             <div class="pillar-number">
                                 02
                             </div>
 
+
                             <h3>
                                 Wearable Electrophysiology
                             </h3>
+
 
                             <p>
 
@@ -2013,13 +2519,17 @@
 
                             </p>
 
+
                             <div class="pillar-explore">
                                 Explore related experience →
                             </div>
 
+
                         </article>
 
+
                     </a>
+
 
 
 
@@ -2028,15 +2538,19 @@
                         class="pillar-link"
                         href="#experience-biosensing">
 
+
                         <article class="pillar-card">
+
 
                             <div class="pillar-number">
                                 03
                             </div>
 
+
                             <h3>
                                 Biochemical Biosensing
                             </h3>
+
 
                             <p>
 
@@ -2049,16 +2563,20 @@
 
                             </p>
 
+
                             <div class="pillar-explore">
                                 Explore related experience →
                             </div>
 
+
                         </article>
+
 
                     </a>
 
 
                 </div>
+
 
 
 
@@ -2068,32 +2586,40 @@
 
 
 
+
                 <a
                     id="pillar-integrated"
                     class="synthesis-link"
                     href="#experience-integrated">
+
 
                     <article class="synthesis-card">
 
 
                         <div>
 
+
                             <div class="synthesis-meta">
+
 
                                 <span class="synthesis-number">
                                     04
                                 </span>
 
+
                                 <span class="synthesis-badge">
                                     SYNTHESIS
                                 </span>
 
+
                             </div>
+
 
 
                             <h3>
                                 Integrated Biomedical Systems
                             </h3>
+
 
 
                             <p>
@@ -2107,9 +2633,11 @@
                             </p>
 
 
+
                             <div class="synthesis-explore">
                                 Explore system-level experience →
                             </div>
+
 
                         </div>
 
@@ -2117,27 +2645,33 @@
 
                         <div class="synthesis-components">
 
+
                             <span class="synthesis-component">
                                 Sensors
                             </span>
+
 
                             <span class="synthesis-component">
                                 Embedded Systems
                             </span>
 
+
                             <span class="synthesis-component">
                                 Wireless Communication
                             </span>
+
 
                         </div>
 
 
                     </article>
 
+
                 </a>
 
 
             </div>
+
 
         </section>
 
@@ -2150,18 +2684,22 @@
 
         <section id="experience">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
                         Experience
                     </div>
 
+
                     <h2 class="section-title">
                         Research Experience
                     </h2>
+
 
                     <p class="section-description">
 
@@ -2172,7 +2710,9 @@
 
                     </p>
 
+
                 </div>
+
 
 
 
@@ -2189,11 +2729,13 @@
 
                         <div class="experience-image">
 
-                            Notre Dame project image / system figure
 
-                            <br>
+                            <img
+                                src="assets/images/experience-notredame.jpg"
+                                alt="Wearable microneedle bioelectronic system"
+                                onload="handleImageLoad(this)"
+                                onerror="handleImageError(this)">
 
-                            will be placed here later.
 
                         </div>
 
@@ -2259,21 +2801,26 @@
 
                             <div class="tags">
 
+
                                 <span class="tag">
                                     Microneedle Fabrication
                                 </span>
+
 
                                 <span class="tag">
                                     Electrochemical Sensing
                                 </span>
 
+
                                 <span class="tag">
                                     PCB Design
                                 </span>
 
+
                                 <span class="tag">
                                     System Integration
                                 </span>
+
 
                             </div>
 
@@ -2305,11 +2852,13 @@
 
                         <div class="experience-image">
 
-                            EEG–EOG project image / PCB
 
-                            <br>
+                            <img
+                                src="assets/images/experience-eeg-eog.jpg"
+                                alt="Wearable EEG and EOG monitoring system"
+                                onload="handleImageLoad(this)"
+                                onerror="handleImageError(this)">
 
-                            will be placed here later.
 
                         </div>
 
@@ -2373,11 +2922,17 @@
 
                             <div class="tags">
 
+
                                 <span class="tag">EEG</span>
+
                                 <span class="tag">EOG</span>
+
                                 <span class="tag">ADS1299</span>
+
                                 <span class="tag">ESP32-S3</span>
+
                                 <span class="tag">BLE</span>
+
 
                             </div>
 
@@ -2409,11 +2964,13 @@
 
                         <div class="experience-image">
 
-                            Implantable BCI / fabrication image
 
-                            <br>
+                            <img
+                                src="assets/images/experience-bci.jpg"
+                                alt="Implantable brain-computer interface fabrication"
+                                onload="handleImageLoad(this)"
+                                onerror="handleImageError(this)">
 
-                            will be placed here later.
 
                         </div>
 
@@ -2483,21 +3040,26 @@
 
                             <div class="tags">
 
+
                                 <span class="tag">
                                     Brain–Computer Interfaces
                                 </span>
+
 
                                 <span class="tag">
                                     PDMS
                                 </span>
 
+
                                 <span class="tag">
                                     Microfabrication
                                 </span>
 
+
                                 <span class="tag">
                                     3D Printing
                                 </span>
+
 
                             </div>
 
@@ -2529,11 +3091,13 @@
 
                         <div class="experience-image">
 
-                            Glucose sensing / electrode image
 
-                            <br>
+                            <img
+                                src="assets/images/experience-glucose.jpg"
+                                alt="Electrochemical sweat glucose sensing system"
+                                onload="handleImageLoad(this)"
+                                onerror="handleImageError(this)">
 
-                            will be placed here later.
 
                         </div>
 
@@ -2559,7 +3123,9 @@
 
 
                             <div class="experience-affiliation">
+
                                 Course Project
+
                             </div>
 
 
@@ -2599,21 +3165,26 @@
 
                             <div class="tags">
 
+
                                 <span class="tag">
                                     Electrochemistry
                                 </span>
+
 
                                 <span class="tag">
                                     Glucose Sensing
                                 </span>
 
+
                                 <span class="tag">
                                     Enzyme Electrodes
                                 </span>
 
+
                                 <span class="tag">
                                     Signal Conditioning
                                 </span>
+
 
                             </div>
 
@@ -2639,6 +3210,7 @@
 
             </div>
 
+
         </section>
 
 
@@ -2650,18 +3222,22 @@
 
         <section id="projects">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
                         Engineering
                     </div>
 
+
                     <h2 class="section-title">
                         Selected Projects
                     </h2>
+
 
                     <p class="section-description">
 
@@ -2671,7 +3247,9 @@
 
                     </p>
 
+
                 </div>
+
 
 
 
@@ -2686,11 +3264,16 @@
 
                         <div class="project-image">
 
-                            Neural conduit fabrication,
-                            microscopy, or structural
-                            characterization image
+
+                            <img
+                                src="assets/images/project-neural-conduit.jpg"
+                                alt="Neural conduit fabrication and structural characterization"
+                                onload="handleImageLoad(this)"
+                                onerror="handleImageError(this)">
+
 
                         </div>
+
 
 
                         <div class="project-content">
@@ -2717,17 +3300,21 @@
 
                             <div class="project-tags">
 
+
                                 <span class="project-tag">
                                     Biomaterials
                                 </span>
+
 
                                 <span class="project-tag">
                                     Neural Interfaces
                                 </span>
 
+
                                 <span class="project-tag">
                                     Fabrication
                                 </span>
+
 
                             </div>
 
@@ -2747,11 +3334,16 @@
 
                         <div class="project-image">
 
-                            TCD waveform,
-                            spectrogram, or analysis
-                            pipeline figure
+
+                            <img
+                                src="assets/images/project-tcd.jpg"
+                                alt="TCD signal processing and patient classification"
+                                onload="handleImageLoad(this)"
+                                onerror="handleImageError(this)">
+
 
                         </div>
+
 
 
                         <div class="project-content">
@@ -2778,17 +3370,21 @@
 
                             <div class="project-tags">
 
+
                                 <span class="project-tag">
                                     Signal Processing
                                 </span>
+
 
                                 <span class="project-tag">
                                     Machine Learning
                                 </span>
 
+
                                 <span class="project-tag">
                                     MATLAB
                                 </span>
+
 
                             </div>
 
@@ -2808,11 +3404,16 @@
 
                         <div class="project-image">
 
-                            ECG waveform,
-                            monitoring interface,
-                            circuit, or PCB image
+
+                            <img
+                                src="assets/images/project-ecg.jpg"
+                                alt="ECG acquisition and real-time monitoring system"
+                                onload="handleImageLoad(this)"
+                                onerror="handleImageError(this)">
+
 
                         </div>
+
 
 
                         <div class="project-content">
@@ -2839,17 +3440,21 @@
 
                             <div class="project-tags">
 
+
                                 <span class="project-tag">
                                     ECG
                                 </span>
+
 
                                 <span class="project-tag">
                                     Biomedical Instrumentation
                                 </span>
 
+
                                 <span class="project-tag">
                                     System Integration
                                 </span>
+
 
                             </div>
 
@@ -2865,6 +3470,7 @@
 
             </div>
 
+
         </section>
 
 
@@ -2876,18 +3482,22 @@
 
         <section id="publication">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
                         Publication
                     </div>
 
+
                     <h2 class="section-title">
                         Featured Publication
                     </h2>
+
 
                 </div>
 
@@ -2902,9 +3512,13 @@
 
                     <div class="publication-image">
 
+
                         <img
                             src="assets/images/publication-spci.jpg"
-                            alt="Material architecture, device integration, and thermal management mechanism of the self-stratified stretchable passive cooling interface">
+                            alt="Material architecture, device integration, and thermal management mechanism of the self-stratified stretchable passive cooling interface"
+                            onload="handleImageLoad(this)"
+                            onerror="handleImageError(this)">
+
 
                     </div>
 
@@ -2917,7 +3531,9 @@
 
 
                         <div class="publication-meta">
+
                             2026 · Soft Science
+
                         </div>
 
 
@@ -2942,7 +3558,9 @@
 
 
                         <div class="publication-journal">
+
                             Soft Science, 2026, 6, 43
+
                         </div>
 
 
@@ -2978,7 +3596,9 @@
 
                         <div class="publication-contribution">
 
-                            <strong>Contribution:</strong>
+                            <strong>
+                                Contribution:
+                            </strong>
 
                             Conceptualization
 
@@ -3032,6 +3652,7 @@
 
             </div>
 
+
         </section>
 
 
@@ -3043,20 +3664,25 @@
 
         <section id="education">
 
+
             <div class="container">
 
 
                 <div class="section-header">
 
+
                     <div class="section-label">
                         Background
                     </div>
+
 
                     <h2 class="section-title">
                         Education & Honors
                     </h2>
 
+
                 </div>
+
 
 
 
@@ -3084,6 +3710,7 @@
                                 <div class="timeline-title">
 
                                     <a
+                                        class="education-school-link"
                                         href="https://www.sysu.edu.cn/newsen/"
                                         target="_blank"
                                         rel="noopener noreferrer">
@@ -3117,7 +3744,9 @@
 
                             <div class="timeline-description">
 
-                                <strong>GPA: 3.7 / 4.0</strong>
+                                <strong>
+                                    GPA: 3.7 / 4.0
+                                </strong>
 
                             </div>
 
@@ -3136,6 +3765,7 @@
                                 <div class="timeline-title">
 
                                     <a
+                                        class="education-school-link"
                                         href="https://www.nd.edu/"
                                         target="_blank"
                                         rel="noopener noreferrer">
@@ -3208,14 +3838,20 @@
 
                             <li>
 
+
                                 <div class="honor-header">
 
                                     <div class="honor-title">
+
                                         National Bronze Award
+
                                     </div>
 
+
                                     <div class="honor-date">
+
                                         Nov 2025
+
                                     </div>
 
                                 </div>
@@ -3228,20 +3864,27 @@
 
                                 </div>
 
+
                             </li>
 
 
 
                             <li>
+
 
                                 <div class="honor-header">
 
                                     <div class="honor-title">
+
                                         Provincial-Level Gold Award
+
                                     </div>
 
+
                                     <div class="honor-date">
+
                                         Aug 2025
+
                                     </div>
 
                                 </div>
@@ -3254,11 +3897,13 @@
 
                                 </div>
 
+
                             </li>
 
 
 
                             <li>
+
 
                                 <div class="honor-header">
 
@@ -3269,8 +3914,11 @@
 
                                     </div>
 
+
                                     <div class="honor-date">
+
                                         2022–2025
+
                                     </div>
 
                                 </div>
@@ -3283,20 +3931,27 @@
 
                                 </div>
 
+
                             </li>
 
 
 
                             <li>
 
+
                                 <div class="honor-header">
 
                                     <div class="honor-title">
+
                                         Team Champion
+
                                     </div>
 
+
                                     <div class="honor-date">
+
                                         May 2024
+
                                     </div>
 
                                 </div>
@@ -3309,6 +3964,7 @@
                                     · Sun Yat-sen University
 
                                 </div>
+
 
                             </li>
 
@@ -3324,6 +3980,7 @@
 
             </div>
 
+
         </section>
 
 
@@ -3335,7 +3992,9 @@
 
         <section id="contact">
 
+
             <div class="container">
+
 
                 <div class="contact-inner">
 
@@ -3410,6 +4069,7 @@
 
             </div>
 
+
         </section>
 
 
@@ -3424,17 +4084,26 @@
 
     <footer>
 
+
         <div class="container footer-inner">
 
-            <div>
-                © 2026 Qingqiao Cai
-            </div>
 
             <div>
-                Biomedical Engineering · Academic Website
+
+                © 2026 Qingqiao Cai
+
             </div>
+
+
+            <div>
+
+                Biomedical Engineering · Academic Website
+
+            </div>
+
 
         </div>
+
 
     </footer>
 
@@ -3442,10 +4111,47 @@
 
 
     <!-- =========================================================
-         NAVIGATION HIGHLIGHT SCRIPT
+         IMAGE FALLBACK + NAVIGATION SCRIPT
          ========================================================= -->
 
     <script>
+
+
+        /* ---------------------------------------------------------
+           IMAGE FALLBACK
+
+           If an image does not exist yet, hide the broken image
+           and display the standardized question-mark placeholder.
+
+           Once the image is uploaded using the same file name,
+           it will appear automatically.
+           --------------------------------------------------------- */
+
+
+        function handleImageError(image) {
+
+            image.style.display = "none";
+
+            image.parentElement.classList.add("is-missing");
+
+        }
+
+
+        function handleImageLoad(image) {
+
+            image.style.display = "block";
+
+            image.parentElement.classList.remove("is-missing");
+
+        }
+
+
+
+
+        /* ---------------------------------------------------------
+           NAVIGATION HIGHLIGHT
+           --------------------------------------------------------- */
+
 
         const sections =
             document.querySelectorAll(
@@ -3511,6 +4217,7 @@
             observer.observe(section);
 
         });
+
 
     </script>
 
