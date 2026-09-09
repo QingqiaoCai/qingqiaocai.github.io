@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -13,10 +12,7 @@
         name="description"
         content="Qingqiao Cai - Biomedical Engineering undergraduate interested in wearable bioelectronics, brain-computer interfaces, biosensing, electrophysiology, and biomedical systems.">
 
-    <title>
-        Qingqiao Cai | Biomedical Engineering
-    </title>
-
+    <title>Qingqiao Cai | Biomedical Engineering</title>
 
     <style>
 
@@ -25,7 +21,6 @@
            ========================================================= */
 
         :root {
-
             --background: #ffffff;
             --background-soft: #f7f8fa;
             --background-card: #ffffff;
@@ -35,6 +30,3700 @@
             --text-light: #7b8794;
 
             --accent: #315f7d;
+            --accent-dark: #24485f;
+            --accent-soft: #edf4f8;
+
+            --border: #e3e8ec;
+
+            --shadow:
+                0 10px 30px rgba(30, 50, 65, 0.06);
+
+            --max-width: 1120px;
+
+            --radius-small: 8px;
+            --radius-medium: 14px;
+            --radius-large: 20px;
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+
+        body {
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            background: var(--background);
+            color: var(--text-main);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+
+        .container {
+            width: min(92%, var(--max-width));
+            margin: 0 auto;
+        }
+
+
+
+        /* =========================================================
+           2. NAVIGATION
+           ========================================================= */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background:
+                rgba(255, 255, 255, 0.95);
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .navbar {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        .site-name {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+
+        .nav-links {
+            list-style: none;
+
+            display: flex;
+            align-items: center;
+
+            gap: 28px;
+        }
+
+
+        .nav-links a {
+            color: var(--text-secondary);
+
+            font-size: 15px;
+            font-weight: 500;
+
+            transition:
+                color 0.2s ease,
+                border-color 0.2s ease;
+
+            padding: 25px 0 22px;
+
+            border-bottom:
+                2px solid transparent;
+        }
+
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+
+        .nav-cv {
+            color: var(--accent) !important;
+            font-weight: 650 !important;
+        }
+
+
+
+        /* =========================================================
+           3. HERO / ABOUT
+           ========================================================= */
+
+        .hero {
+            padding: 82px 0;
+            border-top: none;
+        }
+
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns:
+                200px
+                minmax(0, 1fr);
+
+            gap: 52px;
+            align-items: start;
+        }
+
+
+        .profile-wrapper {
+            width: 100%;
+            padding-top: 6px;
+        }
+
+
+        .profile-photo {
+            width: 190px;
+            height: 190px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border:
+                1px solid var(--border);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .hero h1 {
+            font-size:
+                clamp(38px, 5vw, 52px);
+
+            line-height: 1.08;
+            letter-spacing: -0.035em;
+
+            margin-bottom: 12px;
+        }
+
+
+        .hero-role {
+            color: var(--text-secondary);
+
+            font-size: 19px;
+            line-height: 1.5;
+
+            margin-bottom: 25px;
+        }
+
+
+        .university-link,
+        .inline-academic-link {
+            color: var(--text-secondary);
+
+            border-bottom:
+                1px solid #c8d3da;
+
+            transition:
+                color 0.15s ease,
+                border-color 0.15s ease;
+        }
+
+
+        .university-link:hover,
+        .inline-academic-link:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+
+        .university-ranking {
+            margin-top: 2px;
+
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+
+        .hero-description {
+            color: var(--text-secondary);
+
+            max-width: 800px;
+
+            font-size: 16px;
+            line-height: 1.75;
+
+            margin-bottom: 14px;
+        }
+
+
+        .hero-description:last-of-type {
+            margin-bottom: 28px;
+        }
+
+
+        .hero-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 11px;
+        }
+
+
+
+        /* =========================================================
+           4. BUTTONS
+           ========================================================= */
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 42px;
+
+            padding: 8px 17px;
+
+            border-radius:
+                var(--radius-small);
+
+            border:
+                1px solid var(--border);
+
+            background: #ffffff;
+            color: var(--text-main);
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition:
+                transform 0.15s ease,
+                border-color 0.15s ease,
+                color 0.15s ease,
+                background 0.15s ease;
+        }
+
+
+        .button:hover {
+            transform: translateY(-1px);
+
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+
+        .button-primary {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+
+        .button-primary:hover {
+            background: var(--accent-dark);
+            color: white;
+            border-color: var(--accent-dark);
+        }
+
+
+
+        /* =========================================================
+           5. GENERAL SECTION SETTINGS
+           ========================================================= */
+
+        section {
+            padding: 88px 0;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+
+        .section-header {
+            max-width: 780px;
+            margin-bottom: 44px;
+        }
+
+
+        .section-label {
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+
+        .section-title {
+            font-size:
+                clamp(30px, 4vw, 42px);
+
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+
+            margin-bottom: 14px;
+        }
+
+
+        .section-description {
+            color: var(--text-secondary);
+
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+
+        /* =========================================================
+           6. RESEARCH VISION
+           ========================================================= */
+
+        #research {
+            background: var(--background-soft);
+        }
+
+
+        .vision-statement {
+            max-width: 900px;
+
+            color: var(--text-main);
+
+            font-size: 20px;
+            line-height: 1.7;
+
+            margin-bottom: 46px;
+        }
+
+
+        .research-pillars-primary {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+
+        .pillar-link {
+            display: block;
+            height: 100%;
+
+            scroll-margin-top: 110px;
+        }
+
+
+        .pillar-card {
+            position: relative;
+
+            height: 100%;
+            min-height: 270px;
+
+            display: flex;
+            flex-direction: column;
+
+            background:
+                var(--background-card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-medium);
+
+            padding: 28px 26px;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+
+        .pillar-card:hover {
+            transform:
+                translateY(-5px);
+
+            border-color: #b8cbd7;
+
+            box-shadow:
+                0 12px 30px
+                rgba(35, 65, 85, 0.09);
+        }
+
+
+        .pillar-number {
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 750;
+
+            letter-spacing: 0.06em;
+
+            margin-bottom: 22px;
+        }
+
+
+        .pillar-card h3 {
+            color: var(--text-main);
+
+            font-size: 21px;
+            line-height: 1.35;
+
+            letter-spacing: -0.015em;
+
+            margin-bottom: 14px;
+        }
+
+
+        .pillar-card p {
+            color: var(--text-secondary);
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        .pillar-explore {
+            margin-top: auto;
+            padding-top: 22px;
+
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        .research-flow {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            height: 68px;
+
+            color: var(--accent);
+
+            font-size: 25px;
+
+            opacity: 0.6;
+        }
+
+
+        .synthesis-link {
+            display: block;
+
+            scroll-margin-top: 110px;
+        }
+
+
+        .synthesis-card {
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.45fr)
+                minmax(250px, 0.75fr);
+
+            gap: 40px;
+
+            align-items: center;
+
+            min-height: 245px;
+
+            padding: 36px 38px;
+
+            border-radius:
+                var(--radius-large);
+
+            border:
+                1px solid #b9cfdb;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf3f8 0%,
+                    #f6fafc 55%,
+                    #edf5f8 100%
+                );
+
+            box-shadow:
+                0 10px 28px
+                rgba(40, 80, 105, 0.06);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+
+        .synthesis-card::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 24px;
+            bottom: 24px;
+
+            width: 4px;
+
+            background: var(--accent);
+
+            border-radius: 0 4px 4px 0;
+        }
+
+
+        .synthesis-card:hover {
+            transform:
+                translateY(-4px);
+
+            border-color: #91b3c5;
+
+            box-shadow:
+                0 14px 34px
+                rgba(40, 80, 105, 0.11);
+        }
+
+
+        .synthesis-meta {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .synthesis-number {
+            color: var(--accent);
+
+            font-size: 14px;
+            font-weight: 750;
+
+            letter-spacing: 0.06em;
+        }
+
+
+        .synthesis-badge {
+            display: inline-flex;
+            align-items: center;
+
+            padding: 4px 9px;
+
+            border-radius: 999px;
+
+            background: var(--accent);
+            color: #ffffff;
+
+            font-size: 10px;
+            font-weight: 750;
+
+            letter-spacing: 0.09em;
+        }
+
+
+        .synthesis-card h3 {
+            font-size: 27px;
+            line-height: 1.3;
+
+            letter-spacing: -0.02em;
+
+            margin-bottom: 13px;
+        }
+
+
+        .synthesis-card p {
+            max-width: 720px;
+
+            color: var(--text-secondary);
+
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+
+        .synthesis-components {
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: flex-end;
+
+            gap: 8px;
+        }
+
+
+        .synthesis-component {
+            padding: 7px 11px;
+
+            background:
+                rgba(255, 255, 255, 0.78);
+
+            border:
+                1px solid #cfdee6;
+
+            border-radius: 999px;
+
+            color: var(--accent-dark);
+
+            font-size: 12px;
+            font-weight: 650;
+        }
+
+
+        .synthesis-explore {
+            margin-top: 20px;
+
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 750;
+        }
+
+
+
+        /* =========================================================
+           7. RESEARCH EXPERIENCE
+           ========================================================= */
+
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+
+            gap: 34px;
+        }
+
+
+        .experience-card {
+            scroll-margin-top: 105px;
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(250px, 0.78fr)
+                minmax(0, 1.35fr);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-large);
+
+            overflow: hidden;
+
+            background:
+                var(--background-card);
+
+            box-shadow:
+                0 3px 12px
+                rgba(20, 40, 50, 0.025);
+        }
+
+
+        .experience-image {
+            min-height: 310px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef3f6,
+                    #dde8ee
+                );
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            color: var(--text-light);
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        .experience-content {
+            padding: 38px 40px;
+        }
+
+
+        .experience-meta {
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+
+            margin-bottom: 8px;
+        }
+
+
+        .experience-content h3 {
+            font-size: 25px;
+            line-height: 1.35;
+
+            margin-bottom: 8px;
+        }
+
+
+        .experience-affiliation {
+            color: var(--text-secondary);
+
+            margin-bottom: 18px;
+
+            font-size: 15px;
+        }
+
+
+        .experience-content p {
+            color: var(--text-secondary);
+
+            margin-bottom: 14px;
+
+            line-height: 1.72;
+        }
+
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 22px;
+        }
+
+
+        .tag {
+            background: var(--accent-soft);
+
+            color: var(--accent-dark);
+
+            padding: 5px 10px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        .back-to-research {
+            display: inline-flex;
+            align-items: center;
+
+            margin-top: 24px;
+
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 700;
+
+            border-bottom:
+                1px solid transparent;
+
+            transition:
+                border-color 0.15s ease,
+                color 0.15s ease;
+        }
+
+
+        .back-to-research:hover {
+            color: var(--accent-dark);
+
+            border-bottom-color:
+                var(--accent-dark);
+        }
+
+
+
+        /* =========================================================
+           8. SELECTED PROJECTS
+           ========================================================= */
+
+        #projects {
+            background:
+                var(--background-soft);
+        }
+
+
+        .project-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
+
+            align-items: stretch;
+        }
+
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+
+            background:
+                var(--background-card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-medium);
+
+            overflow: hidden;
+
+            box-shadow:
+                0 3px 12px
+                rgba(20, 40, 50, 0.025);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+
+        .project-card:hover {
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #c4d4dd;
+
+            box-shadow:
+                0 12px 28px
+                rgba(35, 65, 85, 0.08);
+        }
+
+
+        .project-image {
+            position: relative;
+
+            width: 100%;
+            height: 245px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e8eff3,
+                    #d7e4ea
+                );
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 28px;
+
+            color: var(--text-light);
+
+            text-align: center;
+
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .project-content {
+            display: flex;
+            flex-direction: column;
+
+            flex: 1;
+
+            padding: 23px 23px 24px;
+        }
+
+
+        .project-content h3 {
+            font-size: 19px;
+            line-height: 1.4;
+
+            letter-spacing: -0.01em;
+
+            margin-bottom: 11px;
+        }
+
+
+        .project-content p {
+            color: var(--text-secondary);
+
+            font-size: 14px;
+            line-height: 1.7;
+
+            margin-bottom: 0;
+        }
+
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+
+        .project-tag {
+            padding: 5px 9px;
+
+            border-radius: 999px;
+
+            background:
+                var(--accent-soft);
+
+            color:
+                var(--accent-dark);
+
+            font-size: 11px;
+            font-weight: 650;
+        }
+
+
+
+        /* =========================================================
+           9. FEATURED PUBLICATION
+           ========================================================= */
+
+        #publication {
+            background: var(--background);
+        }
+
+
+        .featured-publication {
+            display: grid;
+
+            grid-template-columns:
+                minmax(340px, 0.95fr)
+                minmax(0, 1.25fr);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-large);
+
+            overflow: hidden;
+
+            background:
+                var(--background-card);
+
+            box-shadow:
+                0 8px 26px
+                rgba(30, 50, 65, 0.05);
+        }
+
+
+        .publication-image {
+            min-height: 470px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf3f6,
+                    #dce7ed
+                );
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 36px;
+
+            text-align: center;
+
+            color: var(--text-light);
+
+            font-size: 14px;
+            line-height: 1.7;
+
+            border-right:
+                1px solid var(--border);
+
+            overflow: hidden;
+        }
+
+
+        .publication-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+        }
+
+
+        .publication-content {
+            padding: 40px 42px;
+        }
+
+
+        .publication-meta {
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 750;
+
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+
+            margin-bottom: 13px;
+        }
+
+
+        .publication-title {
+            font-size: 26px;
+            line-height: 1.38;
+
+            letter-spacing: -0.018em;
+
+            margin-bottom: 15px;
+        }
+
+
+        .publication-authors {
+            color:
+                var(--text-secondary);
+
+            font-size: 14px;
+            line-height: 1.65;
+
+            margin-bottom: 5px;
+        }
+
+
+        .publication-authors strong {
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+
+        .publication-journal {
+            color:
+                var(--text-light);
+
+            font-size: 14px;
+            font-style: italic;
+
+            margin-bottom: 24px;
+        }
+
+
+        .publication-summary {
+            color:
+                var(--text-secondary);
+
+            font-size: 15px;
+            line-height: 1.75;
+
+            margin-bottom: 14px;
+        }
+
+
+        .publication-contribution {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 7px;
+
+            padding: 7px 11px;
+
+            border-radius: 8px;
+
+            background:
+                var(--accent-soft);
+
+            color:
+                var(--accent-dark);
+
+            font-size: 13px;
+        }
+
+
+        .publication-contribution strong {
+            font-weight: 700;
+        }
+
+
+        .publication-links {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 25px;
+        }
+
+
+        .publication-link {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 38px;
+
+            padding: 7px 14px;
+
+            border:
+                1px solid #cbd8df;
+
+            border-radius:
+                var(--radius-small);
+
+            color:
+                var(--accent-dark);
+
+            background:
+                #ffffff;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition:
+                transform 0.15s ease,
+                color 0.15s ease,
+                border-color 0.15s ease,
+                background 0.15s ease;
+        }
+
+
+        .publication-link:hover {
+            transform:
+                translateY(-1px);
+
+            color:
+                var(--accent);
+
+            border-color:
+                var(--accent);
+
+            background:
+                var(--accent-soft);
+        }
+
+
+        .publication-link-primary {
+            background:
+                var(--accent);
+
+            color:
+                #ffffff;
+
+            border-color:
+                var(--accent);
+        }
+
+
+        .publication-link-primary:hover {
+            background:
+                var(--accent-dark);
+
+            color:
+                #ffffff;
+
+            border-color:
+                var(--accent-dark);
+        }
+
+
+
+        /* =========================================================
+           10. EDUCATION & HONORS
+           ========================================================= */
+
+        #education {
+            background:
+                var(--background-soft);
+        }
+
+
+        .education-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.3fr)
+                minmax(0, 1fr);
+
+            gap: 28px;
+
+            align-items: start;
+        }
+
+
+        .info-card {
+            background:
+                var(--background-card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius-medium);
+
+            padding: 30px;
+        }
+
+
+        .info-card h3 {
+            font-size: 21px;
+            margin-bottom: 22px;
+        }
+
+
+        .timeline-item + .timeline-item {
+            margin-top: 30px;
+
+            padding-top: 26px;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+
+        .timeline-header {
+            display: flex;
+
+            align-items: baseline;
+            justify-content: space-between;
+
+            gap: 22px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .timeline-title {
+            font-size: 17px;
+            font-weight: 700;
+
+            line-height: 1.45;
+        }
+
+
+        .timeline-date {
+            flex-shrink: 0;
+
+            color: var(--text-light);
+
+            font-size: 13px;
+            font-weight: 600;
+
+            text-align: right;
+
+            white-space: nowrap;
+        }
+
+
+        .timeline-meta {
+            color: var(--text-secondary);
+
+            font-size: 14px;
+            line-height: 1.6;
+
+            margin-bottom: 8px;
+        }
+
+
+        .timeline-description {
+            color: var(--text-light);
+
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+
+        .timeline-description strong {
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+
+        .education-school-link {
+            border-bottom:
+                1px solid transparent;
+
+            transition:
+                color 0.15s ease,
+                border-color 0.15s ease;
+        }
+
+
+        .education-school-link:hover {
+            color: var(--accent);
+
+            border-bottom-color:
+                var(--accent);
+        }
+
+
+
+        /* ---------------------------------------------------------
+           HONORS
+           --------------------------------------------------------- */
+
+        .honor-list {
+            list-style: none;
+        }
+
+
+        .honor-list li {
+            padding: 14px 0;
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+
+        .honor-list li:first-child {
+            padding-top: 0;
+        }
+
+
+        .honor-list li:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+
+        .honor-header {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: baseline;
+
+            gap: 16px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .honor-title {
+            color: var(--text-main);
+
+            font-size: 14px;
+            font-weight: 650;
+
+            line-height: 1.5;
+        }
+
+
+        .honor-date {
+            flex-shrink: 0;
+
+            color: var(--text-light);
+
+            font-size: 12px;
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            text-align: right;
+        }
+
+
+        .honor-meta {
+            color: var(--text-secondary);
+
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+
+
+        /* =========================================================
+           11. CONTACT
+           ========================================================= */
+
+        #contact {
+            text-align: center;
+
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+
+        .contact-inner {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+
+        .contact-inner p {
+            color: var(--text-secondary);
+
+            font-size: 17px;
+
+            margin: 14px auto 26px;
+        }
+
+
+        .contact-links {
+            display: flex;
+
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+
+
+        /* =========================================================
+           12. FOOTER
+           ========================================================= */
+
+        footer {
+            border-top:
+                1px solid var(--border);
+
+            padding: 26px 0;
+
+            color: var(--text-light);
+
+            font-size: 13px;
+        }
+
+
+        .footer-inner {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+
+        /* =========================================================
+           13. RESPONSIVE DESIGN
+           ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .research-pillars-primary {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .synthesis-card {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+
+            .synthesis-components {
+                justify-content: flex-start;
+            }
+
+
+            .project-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .featured-publication {
+                grid-template-columns: 1fr;
+            }
+
+
+            .publication-image {
+                min-height: 360px;
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid var(--border);
+            }
+
+
+            .hero-grid {
+                grid-template-columns:
+                    180px
+                    minmax(0, 1fr);
+
+                gap: 40px;
+            }
+
+
+            .profile-photo {
+                width: 170px;
+                height: 170px;
+            }
+
+        }
+
+
+
+        @media (max-width: 760px) {
+
+            html {
+                scroll-padding-top: 120px;
+            }
+
+
+            .navbar {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 14px 0 12px;
+
+                gap: 4px;
+            }
+
+
+            .nav-links {
+                width: 100%;
+
+                overflow-x: auto;
+
+                gap: 20px;
+
+                padding-bottom: 2px;
+            }
+
+
+            .nav-links a {
+                display: block;
+
+                padding: 8px 0;
+
+                white-space: nowrap;
+            }
+
+
+            .hero {
+                padding-top: 55px;
+            }
+
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+
+            .profile-wrapper {
+                padding-top: 0;
+            }
+
+
+            .profile-photo {
+                width: 165px;
+                height: 165px;
+            }
+
+
+            .research-pillars-primary {
+                grid-template-columns: 1fr;
+            }
+
+
+            .pillar-card {
+                min-height: 230px;
+            }
+
+
+            .research-flow {
+                height: 50px;
+            }
+
+
+            .synthesis-card {
+                padding: 30px 28px;
+            }
+
+
+            .experience-card {
+                grid-template-columns: 1fr;
+            }
+
+
+            .experience-image {
+                min-height: 220px;
+            }
+
+
+            .experience-content {
+                padding: 28px;
+            }
+
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .project-image {
+                height: 230px;
+            }
+
+
+            .publication-content {
+                padding: 30px 28px;
+            }
+
+
+            .publication-title {
+                font-size: 23px;
+            }
+
+
+            .publication-image {
+                min-height: 300px;
+            }
+
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .timeline-header,
+            .honor-header {
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 2px;
+            }
+
+
+            .timeline-date,
+            .honor-date {
+                text-align: left;
+            }
+
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+
+
+        @media (max-width: 560px) {
+
+            section {
+                padding: 68px 0;
+            }
+
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+
+            .vision-statement {
+                font-size: 18px;
+            }
+
+
+            .synthesis-card h3 {
+                font-size: 24px;
+            }
+
+
+            .project-image {
+                height: 215px;
+            }
+
+
+            .publication-image {
+                min-height: 250px;
+                padding: 24px;
+            }
+
+
+            .publication-links {
+                gap: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <a
+                class="site-name"
+                href="#top">
+
+                Qingqiao Cai
+
+            </a>
+
+
+            <nav>
+
+                <ul class="nav-links">
+
+
+                    <li>
+                        <a href="#research">
+                            Research
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#experience">
+                            Experience
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#publication">
+                            Publication
+                        </a>
+                    </li>
+
+
+                    <li>
+
+                        <a
+                            class="nav-cv"
+                            href="Qingqiao_Cai_CV.pdf"
+                            target="_blank">
+
+                            CV
+
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+
+
+    <main id="top">
+
+
+        <!-- =====================================================
+             HERO / ABOUT
+             ===================================================== -->
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+
+                <div class="profile-wrapper">
+
+                    <img
+                        class="profile-photo"
+                        src="profile.jpg"
+                        alt="Qingqiao Cai">
+
+                </div>
+
+
+
+                <div>
+
+
+                    <h1>
+                        Qingqiao Cai
+                    </h1>
+
+
+
+                    <div class="hero-role">
+
+                        Biomedical Engineering Undergraduate
+
+                        <br>
+
+                        <a
+                            class="university-link"
+                            href="https://www.sysu.edu.cn/newsen/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Sun Yat-sen University
+
+                        </a>
+
+
+                        <div class="university-ranking">
+
+                            No. 13 in China · ShanghaiRanking 2026
+
+                        </div>
+
+                    </div>
+
+
+
+                    <p class="hero-description">
+
+                        I am a Biomedical Engineering undergraduate at
+                        Sun Yat-sen University. During summer 2026, I
+                        conducted visiting research with
+
+                        <a
+                            class="inline-academic-link"
+                            href="https://chemistry.nd.edu/faculty/kaiyu-fu/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Professor Kaiyu Fu
+
+                        </a>
+
+                        at the
+
+                        <a
+                            class="inline-academic-link"
+                            href="https://www.nd.edu/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            University of Notre Dame
+
+                        </a>,
+
+                        where I worked on a microneedle-based wearable
+                        bioelectronic platform for continuous sensing.
+                        My research experience also includes wearable
+                        EEG–EOG systems, electrochemical biosensing,
+                        implantable brain–computer interfaces, neural
+                        interfaces, and physiological-signal analysis.
+
+                    </p>
+
+
+
+                    <p class="hero-description">
+
+                        Across these projects, I have developed end-to-end
+                        experience spanning biointerface and sensor fabrication,
+                        analog front-end and PCB design, embedded systems,
+                        wireless communication, signal processing, and desktop
+                        and mobile software development. My research experience
+                        has trained me to take projects from concept and system
+                        architecture through implementation, debugging, and
+                        validation, both independently and in collaboration
+                        with others. Looking ahead, I am interested in wearable
+                        bioelectronics and brain–computer interfaces, while
+                        remaining open to broader biomedical technologies that
+                        can meaningfully improve human health.
+
+                    </p>
+
+
+
+                    <div class="hero-links">
+
+
+                        <a
+                            class="button button-primary"
+                            href="https://scholar.google.com/citations?hl=en&user=6-nJ2kcAAAAJ"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Google Scholar
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="https://github.com/QingqiaoCai"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            GitHub
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="Qingqiao_Cai_CV.pdf"
+                            target="_blank">
+
+                            CV
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="mailto:caiqq8@outlook.com">
+
+                            caiqq8@outlook.com
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =====================================================
+             RESEARCH VISION
+             ===================================================== -->
+
+        <section id="research">
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Research
+                    </div>
+
+                    <h2 class="section-title">
+                        Research Vision
+                    </h2>
+
+                    <p class="section-description">
+
+                        This section highlights the research themes
+                        that connect my previous projects and shape
+                        my long-term academic interests.
+
+                    </p>
+
+                </div>
+
+
+
+                <p class="vision-statement">
+
+                    My long-term research interest lies in developing
+                    biomedical systems that connect the body and technology
+                    more effectively. Across my previous projects, I have
+                    gradually built experience in neural and biological
+                    interfaces, wearable electrophysiological sensing,
+                    biochemical biosensing, and system integration. These
+                    experiences have shaped my interest in creating reliable
+                    and meaningful technologies for human health, ranging
+                    from brain–computer interfaces to wearable platforms
+                    for continuous monitoring.
+
+                </p>
+
+
+
+
+                <div class="research-pillars-primary">
+
+
+                    <a
+                        id="pillar-neural"
+                        class="pillar-link"
+                        href="#experience-neural">
+
+                        <article class="pillar-card">
+
+                            <div class="pillar-number">
+                                01
+                            </div>
+
+                            <h3>
+                                Neural & Biological Interfaces
+                            </h3>
+
+                            <p>
+
+                                I am interested in how materials,
+                                structures, and fabrication strategies
+                                can be used to build effective interfaces
+                                with biological tissue, especially for
+                                neural applications.
+
+                            </p>
+
+                            <div class="pillar-explore">
+                                Explore related experience →
+                            </div>
+
+                        </article>
+
+                    </a>
+
+
+
+                    <a
+                        id="pillar-electrophysiology"
+                        class="pillar-link"
+                        href="#experience-electrophysiology">
+
+                        <article class="pillar-card">
+
+                            <div class="pillar-number">
+                                02
+                            </div>
+
+                            <h3>
+                                Wearable Electrophysiology
+                            </h3>
+
+                            <p>
+
+                                I am interested in wearable systems
+                                for electrophysiological sensing,
+                                including signal acquisition,
+                                analog front-end design, wireless
+                                transmission, and physiological-signal
+                                analysis.
+
+                            </p>
+
+                            <div class="pillar-explore">
+                                Explore related experience →
+                            </div>
+
+                        </article>
+
+                    </a>
+
+
+
+                    <a
+                        id="pillar-biosensing"
+                        class="pillar-link"
+                        href="#experience-biosensing">
+
+                        <article class="pillar-card">
+
+                            <div class="pillar-number">
+                                03
+                            </div>
+
+                            <h3>
+                                Biochemical Biosensing
+                            </h3>
+
+                            <p>
+
+                                I am interested in biochemical sensing
+                                approaches that can provide molecular
+                                information about human health,
+                                particularly through electrochemical
+                                sensing and minimally invasive
+                                biosensing platforms.
+
+                            </p>
+
+                            <div class="pillar-explore">
+                                Explore related experience →
+                            </div>
+
+                        </article>
+
+                    </a>
+
+
+                </div>
+
+
+
+
+                <div class="research-flow">
+                    ↓
+                </div>
+
+
+
+
+                <a
+                    id="pillar-integrated"
+                    class="synthesis-link"
+                    href="#experience-integrated">
+
+                    <article class="synthesis-card">
+
+
+                        <div>
+
+                            <div class="synthesis-meta">
+
+                                <span class="synthesis-number">
+                                    04
+                                </span>
+
+                                <span class="synthesis-badge">
+                                    SYNTHESIS
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Integrated Biomedical Systems
+                            </h3>
+
+
+                            <p>
+
+                                Beyond individual devices or sensing
+                                modalities, I am interested in integrating
+                                interfaces, sensors, electronics, and
+                                software into complete biomedical systems
+                                for real-world applications.
+
+                            </p>
+
+
+                            <div class="synthesis-explore">
+                                Explore system-level experience →
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="synthesis-components">
+
+                            <span class="synthesis-component">
+                                Sensors
+                            </span>
+
+                            <span class="synthesis-component">
+                                Embedded Systems
+                            </span>
+
+                            <span class="synthesis-component">
+                                Wireless Communication
+                            </span>
+
+                        </div>
+
+
+                    </article>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =====================================================
+             RESEARCH EXPERIENCE
+             ===================================================== -->
+
+        <section id="experience">
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Experience
+                    </div>
+
+                    <h2 class="section-title">
+                        Research Experience
+                    </h2>
+
+                    <p class="section-description">
+
+                        Selected research experiences spanning
+                        wearable bioelectronics, electrophysiological
+                        sensing, neural interfaces, and biochemical
+                        biosensing.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div class="experience-list">
+
+
+
+                    <!-- NOTRE DAME -->
+
+                    <article
+                        id="experience-integrated"
+                        class="experience-card">
+
+
+                        <div class="experience-image">
+
+                            Notre Dame project image / system figure
+
+                            <br>
+
+                            will be placed here later.
+
+                        </div>
+
+
+
+                        <div class="experience-content">
+
+
+                            <div class="experience-meta">
+
+                                University of Notre Dame
+                                · Summer 2026
+
+                            </div>
+
+
+                            <h3>
+
+                                Wearable Microneedle Bioelectronic System
+                                for Continuous Health Monitoring
+
+                            </h3>
+
+
+                            <div class="experience-affiliation">
+
+                                Visiting Researcher
+                                · Advisor: Professor Kaiyu Fu
+
+                            </div>
+
+
+                            <p>
+
+                                During my summer research at the University
+                                of Notre Dame, I worked on an integrated
+                                wearable microneedle bioelectronic platform
+                                for continuous health monitoring. My work
+                                spanned microneedle fabrication and system-level
+                                hardware development, including the architecture
+                                and PCB design of a wearable sensing system
+                                integrating electrochemical and open-circuit-potential
+                                sensing channels, power management, embedded
+                                control, and Bluetooth communication.
+
+                            </p>
+
+
+                            <p>
+
+                                I also contributed to the software workflow
+                                for real-time data acquisition, visualization,
+                                wireless communication, and device control.
+                                This experience gave me the opportunity to work
+                                across multiple layers of a biomedical system—from
+                                the sensing interface to electronics and software—and
+                                strengthened my interest in developing complete,
+                                wearable platforms rather than isolated sensing
+                                components.
+
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span class="tag">
+                                    Microneedle Fabrication
+                                </span>
+
+                                <span class="tag">
+                                    Electrochemical Sensing
+                                </span>
+
+                                <span class="tag">
+                                    PCB Design
+                                </span>
+
+                                <span class="tag">
+                                    System Integration
+                                </span>
+
+                            </div>
+
+
+
+                            <a
+                                class="back-to-research"
+                                href="#pillar-integrated">
+
+                                ↑ Back to Integrated Biomedical Systems
+
+                            </a>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+
+                    <!-- EEG / EOG -->
+
+                    <article
+                        id="experience-electrophysiology"
+                        class="experience-card">
+
+
+                        <div class="experience-image">
+
+                            EEG–EOG project image / PCB
+
+                            <br>
+
+                            will be placed here later.
+
+                        </div>
+
+
+
+                        <div class="experience-content">
+
+
+                            <div class="experience-meta">
+
+                                Sun Yat-sen University
+                                · 2025–Present
+
+                            </div>
+
+
+                            <h3>
+
+                                Wearable EEG–EOG Monitoring System
+                                for Human–Computer Interaction
+
+                            </h3>
+
+
+                            <div class="experience-affiliation">
+
+                                Independent Researcher
+                                · Advisor: Professor Jiyu Li
+
+                            </div>
+
+
+                            <p>
+
+                                I independently developed a wearable
+                                electrophysiological acquisition system for
+                                simultaneous EEG and EOG monitoring. Based on
+                                the ADS1299 and ESP32-S3, I designed and iterated
+                                the acquisition hardware, including the analog
+                                front end, low-noise power circuitry, PCB layout,
+                                and Bluetooth Low Energy communication for
+                                real-time wireless signal transmission.
+
+                            </p>
+
+
+                            <p>
+
+                                Beyond hardware development, I built the host-side
+                                acquisition workflow and am developing a MATLAB
+                                pipeline for signal preprocessing, feature
+                                extraction, and quantitative analysis. Repeated
+                                hardware iterations and systematic debugging
+                                throughout this project trained me to move
+                                independently from system architecture and
+                                circuit design to implementation, troubleshooting,
+                                and signal-level validation.
+
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span class="tag">EEG</span>
+                                <span class="tag">EOG</span>
+                                <span class="tag">ADS1299</span>
+                                <span class="tag">ESP32-S3</span>
+                                <span class="tag">BLE</span>
+
+                            </div>
+
+
+
+                            <a
+                                class="back-to-research"
+                                href="#pillar-electrophysiology">
+
+                                ↑ Back to Wearable Electrophysiology
+
+                            </a>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+
+                    <!-- BCI -->
+
+                    <article
+                        id="experience-neural"
+                        class="experience-card">
+
+
+                        <div class="experience-image">
+
+                            Implantable BCI / fabrication image
+
+                            <br>
+
+                            will be placed here later.
+
+                        </div>
+
+
+
+                        <div class="experience-content">
+
+
+                            <div class="experience-meta">
+
+                                Sun Yat-sen University
+                                · Mar 2025 – May 2025
+
+                            </div>
+
+
+                            <h3>
+
+                                Implantable Brain–Computer Interface
+                                for Large-Scale Neural Recording
+
+                            </h3>
+
+
+                            <div class="experience-affiliation">
+
+                                Research Team Member
+                                · Advisor: Professor Xudong Lin
+
+                            </div>
+
+
+                            <p>
+
+                                I contributed to the structural fabrication
+                                of an implantable brain–computer interface
+                                designed for neural recording over a large
+                                spatial range using magnetically guided
+                                electrode implantation. My work focused on
+                                developing PDMS-based prototype guide structures
+                                and magnetic components for early-stage design
+                                validation, as well as exploring fabrication
+                                methods for producing reproducible guide channels.
+
+                            </p>
+
+
+                            <p>
+
+                                I improved the PDMS perforation process by
+                                introducing needle insertion before curing to
+                                obtain smoother and more consistent channels,
+                                and I developed template-based fixation methods
+                                to support batch fabrication. I also explored
+                                micro-stereolithography as an alternative
+                                fabrication approach for more complex
+                                electrode-supporting structures, fabricating
+                                tent-shaped scaffolds to evaluate the feasibility
+                                of different structural designs for large-area
+                                neural applications. This project introduced me
+                                to the practical challenges of designing and
+                                fabricating interfaces intended to interact with
+                                neural tissue.
+
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span class="tag">
+                                    Brain–Computer Interfaces
+                                </span>
+
+                                <span class="tag">
+                                    PDMS
+                                </span>
+
+                                <span class="tag">
+                                    Microfabrication
+                                </span>
+
+                                <span class="tag">
+                                    3D Printing
+                                </span>
+
+                            </div>
+
+
+
+                            <a
+                                class="back-to-research"
+                                href="#pillar-neural">
+
+                                ↑ Back to Neural & Biological Interfaces
+
+                            </a>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+
+                    <!-- GLUCOSE -->
+
+                    <article
+                        id="experience-biosensing"
+                        class="experience-card">
+
+
+                        <div class="experience-image">
+
+                            Glucose sensing / electrode image
+
+                            <br>
+
+                            will be placed here later.
+
+                        </div>
+
+
+
+                        <div class="experience-content">
+
+
+                            <div class="experience-meta">
+
+                                Sun Yat-sen University
+                                · Oct 2025 – Dec 2025
+
+                            </div>
+
+
+                            <h3>
+
+                                Electrochemical Sweat Glucose
+                                Sensing System
+
+                            </h3>
+
+
+                            <div class="experience-affiliation">
+
+                                Course Project
+
+                            </div>
+
+
+                            <p>
+
+                                In this project, I helped develop an
+                                enzyme-based electrochemical system for sweat
+                                glucose sensing, covering the workflow from
+                                electrode preparation and electrochemical
+                                characterization to signal-conditioning
+                                electronics, wireless acquisition, and mobile
+                                visualization. My primary responsibility was
+                                the sensing hardware, where I designed
+                                amplification and current-to-voltage conversion
+                                circuits for low-level electrochemical currents
+                                and integrated Arduino-based acquisition with
+                                Bluetooth transmission.
+
+                            </p>
+
+
+                            <p>
+
+                                I also fabricated Prussian Blue–modified
+                                electrodes with immobilized glucose oxidase,
+                                performed chronoamperometric measurements for
+                                glucose calibration, and developed a mobile
+                                application for real-time visualization and data
+                                logging. This project expanded my experience
+                                from electrophysiological signals to biochemical
+                                sensing and helped me understand how sensor
+                                chemistry, electronics, and software must work
+                                together in a complete biosensing system.
+
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span class="tag">
+                                    Electrochemistry
+                                </span>
+
+                                <span class="tag">
+                                    Glucose Sensing
+                                </span>
+
+                                <span class="tag">
+                                    Enzyme Electrodes
+                                </span>
+
+                                <span class="tag">
+                                    Signal Conditioning
+                                </span>
+
+                            </div>
+
+
+
+                            <a
+                                class="back-to-research"
+                                href="#pillar-biosensing">
+
+                                ↑ Back to Biochemical Biosensing
+
+                            </a>
+
+
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =====================================================
+             SELECTED PROJECTS
+             ===================================================== -->
+
+        <section id="projects">
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Engineering
+                    </div>
+
+                    <h2 class="section-title">
+                        Selected Projects
+                    </h2>
+
+                    <p class="section-description">
+
+                        Additional projects exploring biomaterials,
+                        physiological-signal analysis, and biomedical
+                        instrumentation.
+
+                    </p>
+
+                </div>
+
+
+
+
+                <div class="project-grid">
+
+
+
+                    <!-- NEURAL CONDUIT -->
+
+                    <article class="project-card">
+
+
+                        <div class="project-image">
+
+                            Neural conduit fabrication,
+                            microscopy, or structural
+                            characterization image
+
+                        </div>
+
+
+                        <div class="project-content">
+
+
+                            <h3>
+
+                                Neural Conduit Fabrication
+                                & Structural Control
+
+                            </h3>
+
+
+                            <p>
+
+                                Fabricated biodegradable neural conduits
+                                and investigated how material and
+                                dip-coating parameters influence pore
+                                structure, wall thickness, and fabrication
+                                consistency.
+
+                            </p>
+
+
+                            <div class="project-tags">
+
+                                <span class="project-tag">
+                                    Biomaterials
+                                </span>
+
+                                <span class="project-tag">
+                                    Neural Interfaces
+                                </span>
+
+                                <span class="project-tag">
+                                    Fabrication
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+
+                    <!-- TCD -->
+
+                    <article class="project-card">
+
+
+                        <div class="project-image">
+
+                            TCD waveform,
+                            spectrogram, or analysis
+                            pipeline figure
+
+                        </div>
+
+
+                        <div class="project-content">
+
+
+                            <h3>
+
+                                TCD Signal Analysis
+                                & Patient Classification
+
+                            </h3>
+
+
+                            <p>
+
+                                Developed a MATLAB pipeline for TCD
+                                signal processing, feature extraction,
+                                statistical analysis, and patient
+                                classification using machine-learning
+                                and deep-learning models.
+
+                            </p>
+
+
+                            <div class="project-tags">
+
+                                <span class="project-tag">
+                                    Signal Processing
+                                </span>
+
+                                <span class="project-tag">
+                                    Machine Learning
+                                </span>
+
+                                <span class="project-tag">
+                                    MATLAB
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+
+                    <!-- ECG -->
+
+                    <article class="project-card">
+
+
+                        <div class="project-image">
+
+                            ECG waveform,
+                            monitoring interface,
+                            circuit, or PCB image
+
+                        </div>
+
+
+                        <div class="project-content">
+
+
+                            <h3>
+
+                                ECG Acquisition
+                                & Real-Time Analysis System
+
+                            </h3>
+
+
+                            <p>
+
+                                Worked on the integration and evaluation
+                                of an ECG monitoring system combining
+                                analog signal conditioning, ADC acquisition,
+                                real-time visualization, and
+                                physiological-signal analysis.
+
+                            </p>
+
+
+                            <div class="project-tags">
+
+                                <span class="project-tag">
+                                    ECG
+                                </span>
+
+                                <span class="project-tag">
+                                    Biomedical Instrumentation
+                                </span>
+
+                                <span class="project-tag">
+                                    System Integration
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =====================================================
+             FEATURED PUBLICATION
+             ===================================================== -->
+
+        <section id="publication">
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Publication
+                    </div>
+
+                    <h2 class="section-title">
+                        Featured Publication
+                    </h2>
+
+                </div>
+
+
+
+
+                <article class="featured-publication">
+
+
+
+                    <div class="publication-image">
+
+                        Graphical abstract / Figure 1
+
+                        <br><br>
+
+                        Self-stratified stretchable
+                        passive cooling interface
+
+                    </div>
+
+
+
+
+                    <div class="publication-content">
+
+
+                        <div class="publication-meta">
+                            2026 · Soft Science
+                        </div>
+
+
+
+                        <h3 class="publication-title">
+
+                            Self-stratified stretchable passive cooling
+                            interface for thermal management of on-skin
+                            electronics
+
+                        </h3>
+
+
+
+                        <div class="publication-authors">
+
+                            Jiahao Sun#, Mingzi Liu#, Cancheng Jiang#,
+                            <strong>Qingqiao Cai</strong>, et al.
+
+                        </div>
+
+
+
+                        <div class="publication-journal">
+                            Soft Science, 2026, 6, 43
+                        </div>
+
+
+
+                        <p class="publication-summary">
+
+                            This work presents a self-stratified stretchable
+                            passive cooling interface (SPCI) for thermal
+                            management of on-skin electronics. By leveraging
+                            the density-driven separation of Al₂O₃
+                            microparticles and liquid metal within an
+                            elastomer, the material simultaneously supports
+                            solar reflection and efficient dissipation of
+                            internally generated heat while maintaining high
+                            stretchability.
+
+                        </p>
+
+
+
+                        <p class="publication-summary">
+
+                            Integrated with a wireless skin-interfaced PPG
+                            platform, the SPCI reduced device surface
+                            temperature during outdoor operation and helped
+                            preserve pulse-wave signal quality, demonstrating
+                            its potential for long-term wearable electronics
+                            and human–machine interfaces.
+
+                        </p>
+
+
+
+                        <div class="publication-contribution">
+
+                            <strong>Contribution:</strong>
+
+                            Conceptualization
+
+                        </div>
+
+
+
+                        <div class="publication-links">
+
+
+                            <a
+                                class="publication-link publication-link-primary"
+                                href="https://doi.org/10.20517/ss.2026.33"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                DOI
+
+                            </a>
+
+
+                            <a
+                                class="publication-link"
+                                href="https://scholar.google.com/scholar?q=%22Self-stratified+stretchable+passive+cooling+interface+for+thermal+management+of+on-skin+electronics%22"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Google Scholar
+
+                            </a>
+
+
+                            <a
+                                class="publication-link"
+                                href="Self-stratified_stretchable_passive_cooling_interface.pdf"
+                                target="_blank">
+
+                                PDF
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =====================================================
+             EDUCATION & HONORS
+             ===================================================== -->
+
+        <section id="education">
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Background
+                    </div>
+
+                    <h2 class="section-title">
+                        Education & Honors
+                    </h2>
+
+                </div>
+
+
+
+
+                <div class="education-grid">
+
+
+
+                    <!-- =============================================
+                         EDUCATION
+                         ============================================= -->
+
+                    <div class="info-card">
+
+
+                        <h3>
+                            Education
+                        </h3>
+
+
+
+                        <!-- SUN YAT-SEN UNIVERSITY -->
+
+                        <div class="timeline-item">
+
+
+                            <div class="timeline-header">
+
+
+                                <div class="timeline-title">
+
+                                    <a
+                                        class="education-school-link"
+                                        href="https://www.sysu.edu.cn/newsen/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+
+                                        Sun Yat-sen University
+
+                                    </a>
+
+                                </div>
+
+
+                                <div class="timeline-date">
+
+                                    Sep 2022 – Jul 2027 (Expected)
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="timeline-meta">
+
+                                B.E. in Biomedical Engineering
+                                · Shenzhen, China
+
+                            </div>
+
+
+
+                            <div class="timeline-description">
+
+                                <strong>GPA: 3.7 / 4.0</strong>
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <!-- UNIVERSITY OF NOTRE DAME -->
+
+                        <div class="timeline-item">
+
+
+                            <div class="timeline-header">
+
+
+                                <div class="timeline-title">
+
+                                    <a
+                                        class="education-school-link"
+                                        href="https://www.nd.edu/"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+
+                                        University of Notre Dame
+
+                                    </a>
+
+                                </div>
+
+
+                                <div class="timeline-date">
+
+                                    Summer 2026
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="timeline-meta">
+
+                                Visiting Researcher
+                                · Department of Chemistry & Biochemistry
+
+                            </div>
+
+
+
+                            <div class="timeline-description">
+
+                                Advisor:
+
+                                <a
+                                    class="inline-academic-link"
+                                    href="https://chemistry.nd.edu/faculty/kaiyu-fu/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+
+                                    Professor Kaiyu Fu
+
+                                </a>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                    <!-- =============================================
+                         SELECTED HONORS
+                         ============================================= -->
+
+                    <div class="info-card">
+
+
+                        <h3>
+                            Selected Honors
+                        </h3>
+
+
+                        <ul class="honor-list">
+
+
+
+                            <li>
+
+
+                                <div class="honor-header">
+
+                                    <div class="honor-title">
+
+                                        National Bronze Award
+
+                                    </div>
+
+
+                                    <div class="honor-date">
+
+                                        Nov 2025
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="honor-meta">
+
+                                    2025 China International College
+                                    Students Innovation Competition
+
+                                </div>
+
+
+                            </li>
+
+
+
+                            <li>
+
+
+                                <div class="honor-header">
+
+                                    <div class="honor-title">
+
+                                        Provincial-Level Gold Award
+
+                                    </div>
+
+
+                                    <div class="honor-date">
+
+                                        Aug 2025
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="honor-meta">
+
+                                    2025 China International College
+                                    Students Innovation Competition
+
+                                </div>
+
+
+                            </li>
+
+
+
+                            <li>
+
+
+                                <div class="honor-header">
+
+                                    <div class="honor-title">
+
+                                        Third-Class Scholarship
+                                        for Outstanding Students
+
+                                    </div>
+
+
+                                    <div class="honor-date">
+
+                                        2022–2025
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="honor-meta">
+
+                                    Sun Yat-sen University
+                                    · Awarded three times
+
+                                </div>
+
+
+                            </li>
+
+
+
+                            <li>
+
+
+                                <div class="honor-header">
+
+                                    <div class="honor-title">
+
+                                        Team Champion
+
+                                    </div>
+
+
+                                    <div class="honor-date">
+
+                                        May 2024
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="honor-meta">
+
+                                    2024 Four-University Baseball
+                                    and Softball Tournament
+                                    · Sun Yat-sen University
+
+                                </div>
+
+
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- =====================================================
+             CONTACT
+             ===================================================== -->
+
+        <section id="contact">
+
+            <div class="container">
+
+                <div class="contact-inner">
+
+
+                    <div class="section-label">
+                        Contact
+                    </div>
+
+
+                    <h2 class="section-title">
+                        Get in Touch
+                    </h2>
+
+
+                    <p>
+
+                        Please feel free to contact me for
+                        research discussions and academic opportunities.
+
+                    </p>
+
+
+                    <div class="contact-links">
+
+
+                        <a
+                            class="button button-primary"
+                            href="mailto:caiqq8@outlook.com">
+
+                            caiqq8@outlook.com
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="https://scholar.google.com/citations?hl=en&user=6-nJ2kcAAAAJ"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Google Scholar
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="https://github.com/QingqiaoCai"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            GitHub
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="Qingqiao_Cai_CV.pdf"
+                            target="_blank">
+
+                            Curriculum Vitae
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <div>
+                © 2026 Qingqiao Cai
+            </div>
+
+            <div>
+                Biomedical Engineering · Academic Website
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- =========================================================
+         NAVIGATION HIGHLIGHT SCRIPT
+         ========================================================= -->
+
+    <script>
+
+        const sections =
+            document.querySelectorAll(
+                "main section[id]"
+            );
+
+
+        const navLinks =
+            document.querySelectorAll(
+                '.nav-links a[href^="#"]'
+            );
+
+
+        const observer =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            navLinks.forEach(link => {
+
+                                link.classList.remove("active");
+
+                            });
+
+
+                            const activeLink =
+                                document.querySelector(
+                                    `.nav-links a[href="#${entry.target.id}"]`
+                                );
+
+
+                            if (activeLink) {
+
+                                activeLink.classList.add("active");
+
+                            }
+
+                        }
+
+                    });
+
+                },
+
+
+                {
+
+                    rootMargin:
+                        "-30% 0px -60% 0px",
+
+                    threshold: 0
+
+                }
+
+            );
+
+
+        sections.forEach(section => {
+
+            observer.observe(section);
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>            --accent: #315f7d;
             --accent-dark: #24485f;
             --accent-soft: #edf4f8;
 
