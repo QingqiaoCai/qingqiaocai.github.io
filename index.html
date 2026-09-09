@@ -1209,60 +1209,115 @@
 
 
         /* =========================================================
-           9. PUBLICATIONS
+           9. FEATURED PUBLICATION
            ========================================================= */
 
-        .publication-list {
+        #publication {
 
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 18px;
+            background: var(--background);
         }
 
 
-        .publication-card {
+        .featured-publication {
 
             display: grid;
 
             grid-template-columns:
-                100px 1fr;
-
-            gap: 24px;
-
-            padding: 26px;
+                minmax(340px, 0.95fr)
+                minmax(0, 1.25fr);
 
             border:
                 1px solid var(--border);
 
             border-radius:
-                var(--radius-medium);
+                var(--radius-large);
+
+            overflow: hidden;
 
             background:
                 var(--background-card);
+
+            box-shadow:
+                0 8px 26px
+                rgba(30, 50, 65, 0.05);
         }
 
 
-        .publication-year {
+        .publication-image {
+
+            min-height: 470px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf3f6,
+                    #dce7ed
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 36px;
+
+            text-align: center;
+
+            color: var(--text-light);
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            border-right:
+                1px solid var(--border);
+
+            overflow: hidden;
+        }
+
+
+        .publication-image img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: contain;
+        }
+
+
+        .publication-content {
+
+            padding: 40px 42px;
+        }
+
+
+        .publication-meta {
 
             color: var(--accent);
 
-            font-size: 20px;
+            font-size: 13px;
 
-            font-weight: 700;
+            font-weight: 750;
+
+            letter-spacing: 0.06em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 13px;
         }
 
 
         .publication-title {
 
-            font-size: 18px;
+            font-size: 26px;
 
-            font-weight: 650;
+            line-height: 1.38;
 
-            line-height: 1.45;
+            letter-spacing: -0.018em;
 
-            margin-bottom: 7px;
+            margin-bottom: 15px;
         }
 
 
@@ -1273,17 +1328,73 @@
 
             font-size: 14px;
 
+            line-height: 1.65;
+
             margin-bottom: 5px;
+        }
+
+
+        .publication-authors strong {
+
+            color: var(--text-main);
+
+            font-weight: 700;
         }
 
 
         .publication-journal {
 
-            color: var(--text-light);
+            color:
+                var(--text-light);
 
             font-size: 14px;
 
-            margin-bottom: 12px;
+            font-style: italic;
+
+            margin-bottom: 24px;
+        }
+
+
+        .publication-summary {
+
+            color:
+                var(--text-secondary);
+
+            font-size: 15px;
+
+            line-height: 1.75;
+
+            margin-bottom: 14px;
+        }
+
+
+        .publication-contribution {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 7px;
+
+            padding: 7px 11px;
+
+            border-radius: 8px;
+
+            background:
+                var(--accent-soft);
+
+            color:
+                var(--accent-dark);
+
+            font-size: 13px;
+        }
+
+
+        .publication-contribution strong {
+
+            font-weight: 700;
         }
 
 
@@ -1293,17 +1404,87 @@
 
             flex-wrap: wrap;
 
-            gap: 14px;
+            gap: 10px;
+
+            margin-top: 25px;
         }
 
 
-        .publication-links a {
+        .publication-link {
 
-            color: var(--accent);
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 38px;
+
+            padding: 7px 14px;
+
+            border:
+                1px solid #cbd8df;
+
+            border-radius:
+                var(--radius-small);
+
+            color:
+                var(--accent-dark);
+
+            background:
+                #ffffff;
 
             font-size: 13px;
 
-            font-weight: 650;
+            font-weight: 700;
+
+            transition:
+                transform 0.15s ease,
+                color 0.15s ease,
+                border-color 0.15s ease,
+                background 0.15s ease;
+        }
+
+
+        .publication-link:hover {
+
+            transform:
+                translateY(-1px);
+
+            color:
+                var(--accent);
+
+            border-color:
+                var(--accent);
+
+            background:
+                var(--accent-soft);
+        }
+
+
+        .publication-link-primary {
+
+            background:
+                var(--accent);
+
+            color:
+                #ffffff;
+
+            border-color:
+                var(--accent);
+        }
+
+
+        .publication-link-primary:hover {
+
+            background:
+                var(--accent-dark);
+
+            color:
+                #ffffff;
+
+            border-color:
+                var(--accent-dark);
         }
 
 
@@ -1523,6 +1704,23 @@
             }
 
 
+            .featured-publication {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .publication-image {
+
+                min-height: 360px;
+
+                border-right: none;
+
+                border-bottom:
+                    1px solid var(--border);
+            }
+
+
             .hero-grid {
 
                 grid-template-columns:
@@ -1668,6 +1866,24 @@
             }
 
 
+            .publication-content {
+
+                padding: 30px 28px;
+            }
+
+
+            .publication-title {
+
+                font-size: 23px;
+            }
+
+
+            .publication-image {
+
+                min-height: 300px;
+            }
+
+
             .education-grid {
 
                 grid-template-columns: 1fr;
@@ -1693,14 +1909,6 @@
             }
 
 
-            .publication-card {
-
-                grid-template-columns: 1fr;
-
-                gap: 10px;
-            }
-
-
             .hero h1 {
 
                 font-size: 38px;
@@ -1722,6 +1930,20 @@
             .project-image {
 
                 height: 215px;
+            }
+
+
+            .publication-image {
+
+                min-height: 250px;
+
+                padding: 24px;
+            }
+
+
+            .publication-links {
+
+                gap: 8px;
             }
 
         }
@@ -1793,9 +2015,9 @@
 
                     <li>
 
-                        <a href="#publications">
+                        <a href="#publication">
 
-                            Publications
+                            Publication
 
                         </a>
 
@@ -2961,9 +3183,7 @@
 
 
 
-                    <!-- =================================================
-                         NEURAL CONDUIT
-                         ================================================= -->
+                    <!-- NEURAL CONDUIT -->
 
                     <article class="project-card">
 
@@ -3034,9 +3254,7 @@
 
 
 
-                    <!-- =================================================
-                         TCD
-                         ================================================= -->
+                    <!-- TCD -->
 
                     <article class="project-card">
 
@@ -3107,9 +3325,7 @@
 
 
 
-                    <!-- =================================================
-                         ECG
-                         ================================================= -->
+                    <!-- ECG -->
 
                     <article class="project-card">
 
@@ -3190,10 +3406,10 @@
 
 
         <!-- =====================================================
-             PUBLICATIONS
+             FEATURED PUBLICATION
              ===================================================== -->
 
-        <section id="publications">
+        <section id="publication">
 
 
             <div class="container">
@@ -3204,105 +3420,164 @@
 
                     <div class="section-label">
 
-                        Publications
+                        Publication
 
                     </div>
 
 
                     <h2 class="section-title">
 
-                        Publications
+                        Featured Publication
 
                     </h2>
 
 
-                    <p class="section-description">
-
-                        Peer-reviewed publications and selected
-                        scholarly work.
-
-                    </p>
-
-
                 </div>
 
 
 
 
-                <div class="publication-list">
+                <article class="featured-publication">
 
 
-                    <article class="publication-card">
+
+                    <!-- LEFT: PAPER FIGURE -->
+
+                    <div class="publication-image">
+
+                        Graphical abstract / Figure 1
+
+                        <br><br>
+
+                        Self-stratified stretchable
+                        passive cooling interface
+
+                    </div>
 
 
-                        <div class="publication-year">
 
-                            2026
+
+                    <!-- RIGHT: PAPER INFORMATION -->
+
+                    <div class="publication-content">
+
+
+                        <div class="publication-meta">
+
+                            2026 · Soft Science
+
+                        </div>
+
+
+
+                        <h3 class="publication-title">
+
+                            Self-stratified stretchable passive cooling
+                            interface for thermal management of on-skin
+                            electronics
+
+                        </h3>
+
+
+
+                        <div class="publication-authors">
+
+                            Jiahao Sun#, Mingzi Liu#, Cancheng Jiang#,
+                            <strong>Qingqiao Cai</strong>, et al.
 
                         </div>
 
 
 
-                        <div>
+                        <div class="publication-journal">
+
+                            Soft Science, 2026, 6, 43
+
+                        </div>
 
 
-                            <div class="publication-title">
 
-                                Publication title will be placed here
+                        <p class="publication-summary">
 
-                            </div>
+                            This work presents a self-stratified stretchable
+                            passive cooling interface (SPCI) for thermal
+                            management of on-skin electronics. By leveraging
+                            the density-driven separation of Al₂O₃
+                            microparticles and liquid metal within an
+                            elastomer, the material simultaneously supports
+                            solar reflection and efficient dissipation of
+                            internally generated heat while maintaining high
+                            stretchability.
 
-
-                            <div class="publication-authors">
-
-                                Author A, Author B,
-                                Qingqiao Cai, et al.
-
-                            </div>
-
-
-                            <div class="publication-journal">
-
-                                Journal Name, Volume,
-                                Article Number, Year
-
-                            </div>
+                        </p>
 
 
-                            <div class="publication-links">
+
+                        <p class="publication-summary">
+
+                            Integrated with a wireless skin-interfaced PPG
+                            platform, the SPCI reduced device surface
+                            temperature during outdoor operation and helped
+                            preserve pulse-wave signal quality, demonstrating
+                            its potential for long-term wearable electronics
+                            and human–machine interfaces.
+
+                        </p>
 
 
-                                <a href="#">
 
-                                    DOI
+                        <div class="publication-contribution">
 
-                                </a>
+                            <strong>Contribution:</strong>
 
+                            Conceptualization
 
-                                <a href="#">
-
-                                    Google Scholar
-
-                                </a>
+                        </div>
 
 
-                                <a href="#">
 
-                                    PDF
-
-                                </a>
+                        <div class="publication-links">
 
 
-                            </div>
+                            <a
+                                class="publication-link publication-link-primary"
+                                href="https://doi.org/10.20517/ss.2026.33"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                DOI
+
+                            </a>
+
+
+                            <a
+                                class="publication-link"
+                                href="https://scholar.google.com/scholar?q=%22Self-stratified+stretchable+passive+cooling+interface+for+thermal+management+of+on-skin+electronics%22"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Google Scholar
+
+                            </a>
+
+
+                            <a
+                                class="publication-link"
+                                href="Self-stratified_stretchable_passive_cooling_interface.pdf"
+                                target="_blank">
+
+                                PDF
+
+                            </a>
 
 
                         </div>
 
 
-                    </article>
+                    </div>
 
 
-                </div>
+                </article>
 
 
             </div>
