@@ -2,45 +2,61 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Qingqiao Cai - Biomedical Engineering undergraduate researcher working on wearable bioelectronics, biosensing, electrophysiological systems, and brain-computer interfaces."
-    >
-
-    <meta
-        name="keywords"
-        content="Qingqiao Cai, Biomedical Engineering, Wearable Bioelectronics, Biosensing, EEG, EOG, Brain-Computer Interface, BCI, Electrochemical Sensing"
-    >
-
-    <meta name="author" content="Qingqiao Cai">
+    <meta name="description"
+          content="Qingqiao Cai - Biomedical Engineering undergraduate interested in wearable bioelectronics, biosensing, electrophysiology, and neural interfaces.">
 
     <title>Qingqiao Cai | Biomedical Engineering</title>
-
 
     <style>
 
         /* =========================================================
-           BASIC SETTINGS
+           1. GLOBAL SETTINGS
            ========================================================= */
+
+        :root {
+            --background: #ffffff;
+            --background-soft: #f7f8fa;
+            --background-card: #ffffff;
+
+            --text-main: #1f2933;
+            --text-secondary: #5f6b76;
+            --text-light: #7b8794;
+
+            --accent: #315f7d;
+            --accent-dark: #24485f;
+            --accent-soft: #edf4f8;
+
+            --border: #e3e8ec;
+
+            --shadow:
+                0 10px 30px rgba(30, 50, 65, 0.06);
+
+            --max-width: 1120px;
+
+            --radius-small: 8px;
+            --radius-medium: 14px;
+            --radius-large: 20px;
+        }
+
 
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
+
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 90px;
         }
 
+
         body {
-
-            margin: 0;
-            padding: 0;
-
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -50,955 +66,994 @@
                 Arial,
                 sans-serif;
 
-            color: #222;
+            background: var(--background);
+            color: var(--text-main);
 
-            background-color: #ffffff;
-
-            line-height: 1.68;
-
+            line-height: 1.7;
+            font-size: 16px;
         }
 
 
         a {
-
-            color: #1f5f99;
-
+            color: inherit;
             text-decoration: none;
-
-        }
-
-
-        a:hover {
-
-            text-decoration: underline;
-
         }
 
 
         img {
-
+            display: block;
             max-width: 100%;
-
         }
 
-
-
-        /* =========================================================
-           PAGE WIDTH
-           ========================================================= */
 
         .container {
-
-            max-width: 1080px;
-
+            width: min(92%, var(--max-width));
             margin: 0 auto;
-
-            padding: 0 32px;
-
         }
 
 
-
         /* =========================================================
-           NAVIGATION BAR
+           2. NAVIGATION
            ========================================================= */
 
-        header {
-
-            border-bottom: 1px solid #e5e5e5;
-
-            background: rgba(255, 255, 255, 0.96);
-
+        .site-header {
             position: sticky;
-
             top: 0;
-
             z-index: 1000;
 
-            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
 
+            border-bottom: 1px solid var(--border);
         }
 
 
         .navbar {
-
             min-height: 72px;
 
             display: flex;
-
+            align-items: center;
             justify-content: space-between;
 
-            align-items: center;
-
+            gap: 30px;
         }
 
 
         .site-name {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
 
-            font-size: 1.35rem;
-
-            font-weight: 650;
-
-            color: #111;
-
-            letter-spacing: 0.2px;
-
-        }
-
-
-        .site-name:hover {
-
-            text-decoration: none;
-
+            white-space: nowrap;
         }
 
 
         .nav-links {
+            list-style: none;
 
             display: flex;
-
-            gap: 27px;
-
             align-items: center;
 
+            gap: 28px;
         }
 
 
         .nav-links a {
+            color: var(--text-secondary);
 
-            color: #333;
-
-            font-size: 0.95rem;
-
+            font-size: 15px;
             font-weight: 500;
 
+            transition:
+                color 0.2s ease,
+                border-color 0.2s ease;
+
+            padding: 25px 0 22px;
+
+            border-bottom: 2px solid transparent;
         }
 
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+
+        .nav-cv {
+            color: var(--accent) !important;
+            font-weight: 650 !important;
+        }
 
 
         /* =========================================================
-           INTRODUCTION
+           3. HERO / ABOUT
            ========================================================= */
 
-        .intro {
-
-            display: grid;
-
-            grid-template-columns: 225px 1fr;
-
-            gap: 58px;
-
-            padding-top: 72px;
-
-            padding-bottom: 68px;
-
-            align-items: start;
-
+        .hero {
+            padding: 88px 0 82px;
         }
 
 
-        .profile-column {
+        .hero-grid {
+            display: grid;
 
-            text-align: center;
+            grid-template-columns:
+                minmax(190px, 260px)
+                minmax(0, 1fr);
 
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .profile-wrapper {
+            width: 100%;
         }
 
 
         .profile-photo {
-
-            width: 205px;
-
-            height: 205px;
-
-            border-radius: 50%;
+            width: 230px;
+            height: 230px;
 
             object-fit: cover;
 
-            border: 1px solid #dedede;
+            border-radius: 50%;
 
-            display: block;
+            border: 1px solid var(--border);
 
-            margin: 0 auto;
-
+            box-shadow: var(--shadow);
         }
 
 
-        .profile-info {
+        .hero-eyebrow {
+            color: var(--accent);
 
-            margin-top: 20px;
-
-            color: #666;
-
-            font-size: 0.91rem;
-
-            line-height: 1.6;
-
-        }
-
-
-        .intro-text h1 {
-
-            margin-top: 0;
-
-            margin-bottom: 9px;
-
-            font-size: 2.55rem;
-
-            line-height: 1.18;
-
+            font-size: 14px;
             font-weight: 650;
 
-            color: #111;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
 
+            margin-bottom: 8px;
         }
 
 
-        .subtitle {
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 64px);
 
-            margin-bottom: 27px;
+            line-height: 1.06;
 
-            color: #555;
+            letter-spacing: -0.04em;
 
-            font-size: 1.07rem;
+            margin-bottom: 14px;
+        }
 
+
+        .hero-role {
+            color: var(--text-secondary);
+
+            font-size: 20px;
+            line-height: 1.5;
+
+            margin-bottom: 22px;
+        }
+
+
+        .research-identity {
+            max-width: 760px;
+
+            color: var(--text-main);
+
+            font-size: 21px;
             line-height: 1.55;
 
+            font-weight: 500;
+
+            margin-bottom: 20px;
         }
 
 
-        .intro-text p {
+        .hero-description {
+            color: var(--text-secondary);
 
-            margin-top: 0;
+            max-width: 760px;
 
-            margin-bottom: 18px;
-
-            font-size: 1.01rem;
-
+            margin-bottom: 28px;
         }
 
 
-        .research-highlight {
-
-            font-weight: 550;
-
-            color: #222;
-
-        }
-
-
-        .ranking-link {
-
-            white-space: nowrap;
-
-            font-size: 0.93em;
-
-        }
-
-
-
-        /* =========================================================
-           PROFILE BUTTONS
-           ========================================================= */
-
-        .social-links {
-
-            margin-top: 28px;
-
+        .hero-links {
             display: flex;
-
             flex-wrap: wrap;
 
-            gap: 10px;
-
+            gap: 11px;
         }
 
 
-        .social-links a {
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
 
-            display: inline-block;
+            min-height: 42px;
 
-            padding: 7px 14px;
+            padding: 8px 17px;
 
-            border: 1px solid #d6d6d6;
+            border-radius: var(--radius-small);
 
-            border-radius: 5px;
+            border: 1px solid var(--border);
 
-            background: #fafafa;
+            background: #ffffff;
 
-            color: #333;
+            color: var(--text-main);
 
-            font-size: 0.90rem;
+            font-size: 14px;
+            font-weight: 600;
 
             transition:
-                background 0.15s ease,
-                border-color 0.15s ease;
-
+                transform 0.15s ease,
+                border-color 0.15s ease,
+                color 0.15s ease,
+                background 0.15s ease;
         }
 
 
-        .social-links a:hover {
+        .button:hover {
+            transform: translateY(-1px);
 
-            background: #f1f1f1;
+            border-color: var(--accent);
 
-            border-color: #c6c6c6;
-
-            text-decoration: none;
-
+            color: var(--accent);
         }
 
+
+        .button-primary {
+            background: var(--accent);
+            color: white;
+
+            border-color: var(--accent);
+        }
+
+
+        .button-primary:hover {
+            background: var(--accent-dark);
+            color: white;
+
+            border-color: var(--accent-dark);
+        }
 
 
         /* =========================================================
-           GENERAL SECTION SETTINGS
+           4. GENERAL SECTION SETTINGS
            ========================================================= */
 
         section {
+            padding: 88px 0;
 
-            padding-top: 58px;
+            border-top: 1px solid var(--border);
+        }
 
-            padding-bottom: 58px;
 
-            border-top: 1px solid #ececec;
+        .section-header {
+            max-width: 760px;
 
-            scroll-margin-top: 85px;
+            margin-bottom: 46px;
+        }
 
+
+        .section-label {
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
         }
 
 
         .section-title {
+            font-size: clamp(30px, 4vw, 42px);
 
-            margin-top: 0;
+            line-height: 1.2;
 
-            margin-bottom: 32px;
+            letter-spacing: -0.025em;
 
-            font-size: 1.78rem;
-
-            font-weight: 650;
-
-            color: #111;
-
+            margin-bottom: 14px;
         }
 
 
         .section-description {
+            color: var(--text-secondary);
 
-            max-width: 830px;
-
-            margin-top: -14px;
-
-            margin-bottom: 38px;
-
-            color: #555;
-
+            font-size: 17px;
         }
-
 
 
         /* =========================================================
-           EDUCATION
+           5. RESEARCH VISION
            ========================================================= */
 
-        .education-item {
+        #research {
+            background: var(--background-soft);
+        }
 
+
+        .vision-statement {
+            max-width: 850px;
+
+            font-size: 22px;
+            line-height: 1.65;
+
+            margin-bottom: 45px;
+        }
+
+
+        .research-pillars {
             display: grid;
 
-            grid-template-columns: 1fr auto;
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
 
-            gap: 30px;
-
-            padding: 5px 0;
-
+            gap: 18px;
         }
 
 
-        .education-school {
+        .pillar-card {
+            background: var(--background-card);
 
-            margin-bottom: 5px;
+            border: 1px solid var(--border);
 
-            font-size: 1.16rem;
+            border-radius: var(--radius-medium);
 
-            font-weight: 650;
+            padding: 26px 23px;
 
+            min-height: 185px;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
         }
 
 
-        .education-school a {
+        .pillar-card:hover {
+            transform: translateY(-4px);
 
-            color: #222;
+            border-color: #c5d4dd;
 
+            box-shadow: var(--shadow);
         }
 
 
-        .education-school a:hover {
+        .pillar-number {
+            color: var(--accent);
 
-            color: #1f5f99;
+            font-size: 13px;
+            font-weight: 700;
 
+            margin-bottom: 16px;
         }
 
 
-        .education-degree {
-
-            margin-bottom: 8px;
-
-            color: #333;
-
-            font-weight: 500;
-
-        }
-
-
-        .education-details {
-
-            color: #555;
-
-            font-size: 0.96rem;
-
-            line-height: 1.75;
-
-        }
-
-
-        .education-date {
-
-            color: #666;
-
-            font-size: 0.94rem;
-
-            text-align: right;
-
-            white-space: nowrap;
-
-        }
-
-
-        .education-location {
-
-            margin-top: 4px;
-
-            color: #777;
-
-        }
-
-
-        .ranking-note {
-
-            margin-top: 18px;
-
-            color: #666;
-
-            font-size: 0.90rem;
-
-        }
-
-
-
-        /* =========================================================
-           RESEARCH AREAS
-           ========================================================= */
-
-        .research-grid {
-
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 25px;
-
-        }
-
-
-        .research-card {
-
-            padding: 25px;
-
-            border: 1px solid #e1e1e1;
-
-            border-radius: 7px;
-
-            background: #fff;
-
-        }
-
-
-        .research-card h3 {
-
-            margin-top: 0;
-
-            margin-bottom: 14px;
-
-            font-size: 1.14rem;
-
+        .pillar-card h3 {
+            font-size: 18px;
             line-height: 1.4;
 
-            color: #222;
-
+            margin-bottom: 10px;
         }
 
 
-        .research-card p {
+        .pillar-card p {
+            color: var(--text-secondary);
 
-            margin: 0;
-
-            color: #555;
-
-            font-size: 0.94rem;
-
+            font-size: 14px;
         }
 
 
+        .research-path {
+            margin-top: 30px;
 
-        /* =========================================================
-           OPTIONAL RESEARCH OVERVIEW FIGURE
-           ========================================================= */
+            padding: 28px;
 
-        .overview-container {
+            border: 1px dashed #c8d3da;
 
-            margin-top: 48px;
+            border-radius: var(--radius-medium);
 
-        }
-
-
-        .overview-container h3 {
-
-            margin-bottom: 18px;
-
-            font-size: 1.2rem;
-
-        }
-
-
-        .overview-image {
-
-            width: 100%;
-
-            max-height: 620px;
-
-            object-fit: contain;
-
-            display: block;
-
-            padding: 8px;
-
-            border: 1px solid #e2e2e2;
-
-            border-radius: 6px;
-
-            background: #fff;
-
-        }
-
-
-        .figure-caption {
-
-            margin-top: 10px;
-
-            color: #777;
-
-            font-size: 0.88rem;
+            color: var(--text-light);
 
             text-align: center;
 
+            background: rgba(255, 255, 255, 0.55);
         }
-
 
 
         /* =========================================================
-           PROJECTS
+           6. RESEARCH EXPERIENCE
            ========================================================= */
 
-        .project {
+        .experience-list {
+            display: flex;
+            flex-direction: column;
 
+            gap: 34px;
+        }
+
+
+        .experience-card {
             display: grid;
 
-            grid-template-columns: 330px 1fr;
+            grid-template-columns:
+                minmax(250px, 0.78fr)
+                minmax(0, 1.35fr);
 
-            gap: 38px;
+            border: 1px solid var(--border);
 
-            padding: 36px 0;
+            border-radius: var(--radius-large);
 
-            border-bottom: 1px solid #ececec;
+            overflow: hidden;
 
-            align-items: start;
+            background: var(--background-card);
 
+            box-shadow: 0 3px 12px rgba(20, 40, 50, 0.025);
         }
 
 
-        .project:last-child {
+        .experience-image {
+            min-height: 310px;
 
-            border-bottom: none;
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef3f6,
+                    #dde8ee
+                );
 
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            color: var(--text-light);
+
+            text-align: center;
+
+            font-size: 14px;
         }
 
 
-        .project-image-link {
+        .experience-content {
+            padding: 38px 40px;
+        }
 
-            display: block;
 
+        .experience-meta {
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.05em;
+
+            margin-bottom: 8px;
+        }
+
+
+        .experience-content h3 {
+            font-size: 25px;
+            line-height: 1.35;
+
+            margin-bottom: 8px;
+        }
+
+
+        .experience-affiliation {
+            color: var(--text-secondary);
+
+            margin-bottom: 18px;
+
+            font-size: 15px;
+        }
+
+
+        .experience-content p {
+            color: var(--text-secondary);
+
+            margin-bottom: 18px;
+        }
+
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 22px;
+        }
+
+
+        .tag {
+            background: var(--accent-soft);
+
+            color: var(--accent-dark);
+
+            padding: 5px 10px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           7. SELECTED PROJECTS
+           ========================================================= */
+
+        #projects {
+            background: var(--background-soft);
+        }
+
+
+        .project-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
+        }
+
+
+        .project-card {
+            background: var(--background-card);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-medium);
+
+            overflow: hidden;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .project-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow: var(--shadow);
         }
 
 
         .project-image {
+            height: 180px;
 
-            width: 100%;
+            background:
+                linear-gradient(
+                    135deg,
+                    #edf2f5,
+                    #dce7ec
+                );
 
-            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            object-fit: contain;
+            color: var(--text-light);
 
-            padding: 7px;
-
-            border-radius: 6px;
-
-            border: 1px solid #dddddd;
-
-            background: #ffffff;
-
-            display: block;
-
+            font-size: 13px;
         }
 
 
-        .project-image-link:hover {
-
-            text-decoration: none;
-
+        .project-content {
+            padding: 24px;
         }
 
 
-        .project h3 {
+        .project-content h3 {
+            font-size: 19px;
+            line-height: 1.4;
 
-            margin-top: 0;
-
-            margin-bottom: 7px;
-
-            font-size: 1.21rem;
-
-            line-height: 1.42;
-
-            color: #222;
-
+            margin-bottom: 11px;
         }
 
 
-        .project-meta {
+        .project-content p {
+            color: var(--text-secondary);
 
-            margin-bottom: 14px;
-
-            color: #777;
-
-            font-size: 0.90rem;
-
+            font-size: 14px;
         }
-
-
-        .project p {
-
-            margin-top: 0;
-
-            margin-bottom: 13px;
-
-            color: #444;
-
-            font-size: 0.97rem;
-
-        }
-
-
-        .project-keywords {
-
-            margin-top: 16px;
-
-            color: #666;
-
-            font-size: 0.89rem;
-
-            line-height: 1.6;
-
-        }
-
 
 
         /* =========================================================
-           PUBLICATIONS
+           8. PUBLICATIONS
            ========================================================= */
 
-        .publication {
+        .publication-list {
+            display: flex;
+            flex-direction: column;
 
+            gap: 18px;
+        }
+
+
+        .publication-card {
             display: grid;
 
-            grid-template-columns: 70px 1fr;
+            grid-template-columns: 100px 1fr;
 
-            gap: 25px;
+            gap: 24px;
 
-            margin-bottom: 28px;
+            padding: 26px;
 
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-medium);
+
+            background: var(--background-card);
         }
 
 
         .publication-year {
+            color: var(--accent);
 
-            color: #777;
-
-            font-weight: 600;
-
+            font-size: 20px;
+            font-weight: 700;
         }
 
 
         .publication-title {
+            font-size: 18px;
+            font-weight: 650;
 
-            margin-bottom: 6px;
+            line-height: 1.45;
 
-            font-weight: 600;
-
-            color: #222;
-
-            line-height: 1.5;
-
+            margin-bottom: 7px;
         }
 
 
         .publication-authors {
+            color: var(--text-secondary);
+
+            font-size: 14px;
 
             margin-bottom: 5px;
-
-            color: #555;
-
-            font-size: 0.95rem;
-
         }
 
 
         .publication-journal {
+            color: var(--text-light);
 
-            color: #666;
+            font-size: 14px;
 
-            font-style: italic;
-
+            margin-bottom: 12px;
         }
 
 
         .publication-links {
+            display: flex;
+            flex-wrap: wrap;
 
-            margin-top: 7px;
-
-            font-size: 0.92rem;
-
+            gap: 14px;
         }
 
 
+        .publication-links a {
+            color: var(--accent);
+
+            font-size: 13px;
+            font-weight: 650;
+        }
+
 
         /* =========================================================
-           CONTACT
+           9. EDUCATION & HONORS
            ========================================================= */
 
-        .contact-box {
-
-            max-width: 760px;
-
+        #education {
+            background: var(--background-soft);
         }
 
 
-        .contact-box p {
+        .education-grid {
+            display: grid;
 
-            margin-top: 0;
+            grid-template-columns:
+                minmax(0, 1.3fr)
+                minmax(0, 1fr);
 
-            margin-bottom: 12px;
-
+            gap: 28px;
         }
 
 
-        .email-address {
+        .info-card {
+            background: var(--background-card);
 
-            font-weight: 500;
+            border: 1px solid var(--border);
 
+            border-radius: var(--radius-medium);
+
+            padding: 30px;
         }
 
+
+        .info-card h3 {
+            font-size: 21px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .timeline-item + .timeline-item {
+            margin-top: 26px;
+        }
+
+
+        .timeline-title {
+            font-size: 17px;
+            font-weight: 650;
+
+            margin-bottom: 3px;
+        }
+
+
+        .timeline-meta {
+            color: var(--text-secondary);
+
+            font-size: 14px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .timeline-description {
+            color: var(--text-light);
+
+            font-size: 14px;
+        }
+
+
+        .honor-list {
+            list-style: none;
+        }
+
+
+        .honor-list li {
+            padding: 12px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            color: var(--text-secondary);
+
+            font-size: 14px;
+        }
+
+
+        .honor-list li:last-child {
+            border-bottom: none;
+        }
 
 
         /* =========================================================
-           FOOTER
+           10. CONTACT
+           ========================================================= */
+
+        #contact {
+            text-align: center;
+
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+
+        .contact-inner {
+            max-width: 700px;
+
+            margin: 0 auto;
+        }
+
+
+        .contact-inner p {
+            color: var(--text-secondary);
+
+            font-size: 17px;
+
+            margin: 14px auto 26px;
+        }
+
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+
+        /* =========================================================
+           11. FOOTER
            ========================================================= */
 
         footer {
+            border-top: 1px solid var(--border);
 
-            padding: 33px 0 43px;
+            padding: 26px 0;
 
-            border-top: 1px solid #ececec;
+            color: var(--text-light);
 
-            color: #888;
+            font-size: 13px;
+        }
 
-            text-align: center;
 
-            font-size: 0.87rem;
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+
+        /* =========================================================
+           12. RESPONSIVE DESIGN
+           ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .research-pillars {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .project-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+
+            .hero-grid {
+                gap: 45px;
+            }
 
         }
 
 
+        @media (max-width: 760px) {
 
-        /* =========================================================
-           TABLET / MOBILE
-           ========================================================= */
-
-        @media (max-width: 820px) {
-
-            .container {
-
-                padding: 0 22px;
-
+            html {
+                scroll-padding-top: 120px;
             }
 
 
             .navbar {
+                flex-direction: column;
 
-                min-height: 65px;
+                align-items: flex-start;
 
-            }
+                padding: 14px 0 12px;
 
-
-            .site-name {
-
-                font-size: 1.12rem;
-
+                gap: 4px;
             }
 
 
             .nav-links {
+                width: 100%;
 
-                gap: 15px;
+                overflow-x: auto;
 
+                gap: 20px;
+
+                padding-bottom: 2px;
             }
 
 
             .nav-links a {
+                display: block;
 
-                font-size: 0.84rem;
+                padding: 8px 0;
 
+                white-space: nowrap;
             }
 
 
-            .intro {
+            .hero {
+                padding-top: 55px;
+            }
 
+
+            .hero-grid {
                 grid-template-columns: 1fr;
 
-                gap: 30px;
-
-                padding-top: 48px;
-
+                gap: 32px;
             }
 
 
             .profile-photo {
-
-                width: 175px;
-
-                height: 175px;
-
+                width: 180px;
+                height: 180px;
             }
 
 
-            .intro-text h1 {
-
-                font-size: 2.1rem;
-
-            }
-
-
-            .research-grid {
-
+            .experience-card {
                 grid-template-columns: 1fr;
-
             }
 
 
-            .project {
+            .experience-image {
+                min-height: 220px;
+            }
 
+
+            .experience-content {
+                padding: 28px;
+            }
+
+
+            .education-grid {
                 grid-template-columns: 1fr;
-
-                gap: 24px;
-
             }
 
 
-            .project-image {
+            .footer-inner {
+                flex-direction: column;
 
-                height: auto;
-
-                max-height: 420px;
-
+                align-items: flex-start;
             }
 
         }
 
 
+        @media (max-width: 560px) {
 
-        @media (max-width: 600px) {
-
-            .navbar {
-
-                display: block;
-
-                padding: 14px 0;
-
+            section {
+                padding: 68px 0;
             }
 
 
-            .site-name {
-
-                display: block;
-
-                margin-bottom: 10px;
-
+            .research-pillars {
+                grid-template-columns: 1fr;
             }
 
 
-            .nav-links {
-
-                display: flex;
-
-                flex-wrap: wrap;
-
-                gap: 8px 16px;
-
+            .project-grid {
+                grid-template-columns: 1fr;
             }
 
 
-            .education-item {
-
+            .publication-card {
                 grid-template-columns: 1fr;
 
-                gap: 5px;
-
+                gap: 10px;
             }
 
 
-            .education-date {
-
-                text-align: left;
-
+            .hero h1 {
+                font-size: 43px;
             }
 
 
-            .publication {
-
-                grid-template-columns: 1fr;
-
-                gap: 4px;
-
-            }
-
-
-            .social-links {
-
-                gap: 8px;
-
+            .research-identity {
+                font-size: 19px;
             }
 
         }
 
     </style>
-
 </head>
-
 
 
 <body>
@@ -1008,39 +1063,52 @@
          NAVIGATION
          ========================================================= -->
 
-    <header>
+    <header class="site-header">
 
         <div class="container navbar">
 
-            <a
-                class="site-name"
-                href="#"
-            >
+            <a class="site-name" href="#top">
                 Qingqiao Cai
             </a>
 
 
-            <nav class="nav-links">
+            <nav>
 
-                <a href="#education">
-                    Education
-                </a>
+                <ul class="nav-links">
 
-                <a href="#research">
-                    Research
-                </a>
+                    <li>
+                        <a href="#research">
+                            Research
+                        </a>
+                    </li>
 
-                <a href="#projects">
-                    Projects
-                </a>
+                    <li>
+                        <a href="#experience">
+                            Experience
+                        </a>
+                    </li>
 
-                <a href="#publications">
-                    Publications
-                </a>
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
 
-                <a href="#contact">
-                    Contact
-                </a>
+                    <li>
+                        <a href="#publications">
+                            Publications
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-cv"
+                           href="Qingqiao_Cai_CV.pdf"
+                           target="_blank">
+                            CV
+                        </a>
+                    </li>
+
+                </ul>
 
             </nav>
 
@@ -1050,454 +1118,566 @@
 
 
 
-    <main class="container">
+    <main id="top">
 
 
         <!-- =====================================================
-             INTRODUCTION
+             HERO / ABOUT
              ===================================================== -->
 
-        <div class="intro">
+        <section class="hero">
+
+            <div class="container hero-grid">
 
 
-            <!-- PROFILE PHOTO -->
+                <div class="profile-wrapper">
 
-            <div class="profile-column">
-
-                <img
-                    src="profile.jpg"
-                    alt="Qingqiao Cai"
-                    class="profile-photo"
-                >
-
-
-                <div class="profile-info">
-
-                    Biomedical Engineering
-                    <br>
-
-                    Sun Yat-sen University
-                    <br>
-
-                    Shenzhen, China
+                    <img
+                        class="profile-photo"
+                        src="profile.jpg"
+                        alt="Qingqiao Cai">
 
                 </div>
-
-            </div>
-
-
-
-            <!-- INTRODUCTION TEXT -->
-
-            <div class="intro-text">
-
-
-                <h1>
-                    Qingqiao Cai
-                </h1>
-
-
-                <div class="subtitle">
-
-                    Undergraduate Student in Biomedical Engineering
-                    <br>
-
-                    Sun Yat-sen University
-
-                    &nbsp;·&nbsp;
-
-                    Visiting Student Researcher at the University of Notre Dame
-
-                </div>
-
-
-
-                <!-- SCHOOL INTRODUCTION -->
-
-                <p>
-
-                    I am an undergraduate student majoring in Biomedical Engineering at
-
-                    <a
-                        href="https://www.sysu.edu.cn/sysuen/index.htm"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <strong>Sun Yat-sen University</strong>
-                    </a>,
-
-                    ranked
-
-                    <a
-                        class="ranking-link"
-                        href="https://www.shanghairanking.com/rankings/bcur/2026"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <strong>#13 in China in the 2026 ShanghaiRanking Best Chinese Universities Ranking</strong>
-                    </a>.
-
-                    I am currently a visiting student researcher at the
-
-                    <a
-                        href="https://www.nd.edu/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <strong>University of Notre Dame</strong>
-                    </a>.
-
-                </p>
-
-
-
-                <!-- RESEARCH INTEREST -->
-
-                <p>
-
-                    My research interests focus on
-
-                    <span class="research-highlight">
-                        wearable bioelectronics,
-                        biosensing,
-                        electrophysiological systems,
-                        and brain–computer interfaces
-                    </span>.
-
-                    I am particularly interested in developing integrated
-                    bioelectronic platforms that combine biochemical and
-                    electrophysiological sensing for continuous, long-term,
-                    and personalized health monitoring.
-
-                </p>
-
-
-
-                <!-- RESEARCH SKILLS / INDEPENDENCE -->
-
-                <p>
-
-                    I am a self-motivated researcher with hands-on experience
-                    in developing physiological monitoring systems across a
-                    broad range of signals, including ECG, respiration, SpO₂,
-                    blood pressure, body temperature, EMG, EEG, and EOG.
-                    I am comfortable driving projects through the full
-                    development pipeline—from sensor interfacing and low-noise
-                    signal acquisition circuitry to signal processing, feature
-                    extraction and classification, as well as PC- and
-                    mobile-based applications for real-time visualization
-                    and system control.
-
-                </p>
-
-
-
-                <!-- RESEARCH VISION / TEAMWORK -->
-
-                <p>
-
-                    Building on this foundation in circuit and system design,
-                    I am particularly interested in advancing the sensing
-                    interface itself and integrating novel sensors with
-                    reliable electronics into complete biomedical systems.
-                    I value collaborative research and enjoy working with
-                    team members across sensing, hardware, software, and
-                    experimental development. In the long term, I hope to
-                    develop stable, long-term wearable health-monitoring
-                    technologies that can make a meaningful contribution
-                    to human health.
-
-                </p>
-
-
-
-                <!-- =================================================
-                     PROFILE LINKS
-                     ================================================= -->
-
-                <div class="social-links">
-
-
-                    <a
-                        href="https://scholar.google.com/citations?hl=en&user=6-nJ2kcAAAAJ"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Google Scholar
-                    </a>
-
-
-
-                    <a
-                        href="https://github.com/QingqiaoCai"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-
-
-                    <a
-                        href="Qingqiao_Cai_CV.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Curriculum Vitae
-                    </a>
-
-
-
-                    <a
-                        href="mailto:qcai@nd.edu"
-                    >
-                        Email
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =====================================================
-             EDUCATION
-             ===================================================== -->
-
-        <section id="education">
-
-
-            <h2 class="section-title">
-                Education
-            </h2>
-
-
-
-            <div class="education-item">
 
 
                 <div>
 
+                    <div class="hero-eyebrow">
+                        Biomedical Engineering
+                    </div>
 
-                    <div class="education-school">
+
+                    <h1>
+                        Qingqiao Cai
+                    </h1>
+
+
+                    <div class="hero-role">
+
+                        Biomedical Engineering Undergraduate
+                        <br>
+
+                        Sun Yat-sen University
+
+                    </div>
+
+
+                    <p class="research-identity">
+
+                        Research identity / one-sentence description
+                        will be placed here.
+
+                    </p>
+
+
+                    <p class="hero-description">
+
+                        A short introduction will be placed here.
+                        This section will later summarize research
+                        background, current interests, and long-term
+                        academic goals.
+
+                    </p>
+
+
+                    <div class="hero-links">
 
                         <a
-                            href="https://www.sysu.edu.cn/sysuen/index.htm"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Sun Yat-sen University
+                            class="button button-primary"
+                            href="https://scholar.google.com/citations?hl=en&user=6-nJ2kcAAAAJ"
+                            target="_blank">
+
+                            Google Scholar
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="https://github.com/QingqiaoCai"
+                            target="_blank">
+
+                            GitHub
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="Qingqiao_Cai_CV.pdf"
+                            target="_blank">
+
+                            CV
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="mailto:caiqq8@outlook.com">
+
+                            Email
+
                         </a>
 
                     </div>
 
-
-
-                    <div class="education-degree">
-
-                        BE, Major in Biomedical Engineering
-
-                    </div>
-
-
-
-                    <div class="education-details">
-
-                        <strong>GPA:</strong>
-                        3.7 / 4.0
-
-                        <br>
-
-                        <strong>Scholarship:</strong>
-                        Third-Class Scholarships for Outstanding Students
-                        (Awarded 3 times, 2022–2025)
-
-                    </div>
-
-
                 </div>
 
-
-
-                <div class="education-date">
-
-                    Sep. 2022 – Jul. 2027 (Expected)
-
-                    <div class="education-location">
-                        Shenzhen, China
-                    </div>
-
-                </div>
-
-
             </div>
-
-
-
-            <div class="ranking-note">
-
-                Sun Yat-sen University is ranked
-
-                <a
-                    href="https://www.shanghairanking.com/rankings/bcur/2026"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    #13 in China in the 2026 ShanghaiRanking Best Chinese Universities Ranking
-                </a>.
-
-            </div>
-
 
         </section>
 
 
 
         <!-- =====================================================
-             RESEARCH
+             RESEARCH VISION
              ===================================================== -->
 
         <section id="research">
 
-
-            <h2 class="section-title">
-                Research
-            </h2>
+            <div class="container">
 
 
+                <div class="section-header">
 
-            <p class="section-description">
-
-                My research experiences span wearable physiological sensing,
-                biochemical sensing, biomedical hardware development,
-                and brain–computer interfaces. Together, these projects have
-                shaped my interest in building integrated bioelectronic
-                systems that connect reliable sensing interfaces with
-                real-world health monitoring and human–computer interaction.
-
-            </p>
+                    <div class="section-label">
+                        Research
+                    </div>
 
 
-
-            <div class="research-grid">
-
-
-                <!-- RESEARCH AREA 1 -->
-
-                <div class="research-card">
+                    <h2 class="section-title">
+                        Research Vision
+                    </h2>
 
 
-                    <h3>
-                        Wearable Bioelectronics & Biosensing
-                    </h3>
+                    <p class="section-description">
 
-
-                    <p>
-
-                        Development of wearable sensing platforms integrating
-                        microneedle interfaces, electrochemical sensing,
-                        analog front-end electronics, power management,
-                        embedded systems, and wireless communication for
-                        continuous biochemical and physiological monitoring.
+                        This section will explain the central research
+                        direction connecting my previous and future work.
 
                     </p>
 
+                </div>
+
+
+                <p class="vision-statement">
+
+                    A concise research vision will be placed here.
+                    Later, this paragraph will explain how my work in
+                    biointerfaces, electrophysiological sensing,
+                    biochemical sensing, and wearable system integration
+                    contributes to continuous health monitoring.
+
+                </p>
+
+
+
+                <div class="research-pillars">
+
+
+                    <article class="pillar-card">
+
+                        <div class="pillar-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Neural & Biological Interfaces
+                        </h3>
+
+                        <p>
+                            Short description of this research pillar.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="pillar-card">
+
+                        <div class="pillar-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Wearable Electrophysiology
+                        </h3>
+
+                        <p>
+                            Short description of this research pillar.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="pillar-card">
+
+                        <div class="pillar-number">
+                            03
+                        </div>
+
+                        <h3>
+                            Biochemical Biosensing
+                        </h3>
+
+                        <p>
+                            Short description of this research pillar.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="pillar-card">
+
+                        <div class="pillar-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Integrated Wearable Bioelectronics
+                        </h3>
+
+                        <p>
+                            Short description of this research pillar.
+                        </p>
+
+                    </article>
 
                 </div>
 
 
 
-                <!-- RESEARCH AREA 2 -->
+                <div class="research-path">
 
-                <div class="research-card">
-
-
-                    <h3>
-                        Wearable Electrophysiology
-                    </h3>
-
-
-                    <p>
-
-                        Design of low-noise wearable electrophysiological
-                        acquisition systems for EEG and EOG monitoring,
-                        including high-precision analog front ends,
-                        PCB design, embedded processing, Bluetooth
-                        communication, and real-time signal acquisition.
-
-                    </p>
-
+                    Research overview / research progression figure
+                    will be placed here later.
 
                 </div>
-
-
-
-                <!-- RESEARCH AREA 3 -->
-
-                <div class="research-card">
-
-
-                    <h3>
-                        Brain–Computer Interfaces
-                    </h3>
-
-
-                    <p>
-
-                        Exploration of implantable and wearable approaches
-                        for acquiring and interfacing with neural and
-                        electrophysiological signals, including
-                        large-scale neural recording, electrode
-                        implantation strategies, and human–computer
-                        interaction systems.
-
-                    </p>
-
-
-                </div>
-
 
             </div>
 
+        </section>
 
 
-            <!-- =================================================
-                 OPTIONAL RESEARCH OVERVIEW
-                 ================================================= -->
 
-            <div class="overview-container">
+        <!-- =====================================================
+             RESEARCH EXPERIENCE
+             ===================================================== -->
 
+        <section id="experience">
 
-                <h3>
-                    Research Overview
-                </h3>
+            <div class="container">
 
 
-                <img
-                    src="research-overview.png"
-                    alt="Overview of Qingqiao Cai's research"
-                    class="overview-image"
+                <div class="section-header">
 
-                    onerror="
-                        this.closest('.overview-container').style.display='none';
-                    "
-                >
+                    <div class="section-label">
+                        Experience
+                    </div>
 
 
-                <div class="figure-caption">
+                    <h2 class="section-title">
+                        Research Experience
+                    </h2>
 
-                    Research trajectory toward integrated wearable
-                    bioelectronic systems for continuous health monitoring.
+
+                    <p class="section-description">
+
+                        Selected research experiences related to
+                        bioelectronics, wearable sensing, and
+                        neural engineering.
+
+                    </p>
 
                 </div>
 
 
-            </div>
 
+                <div class="experience-list">
+
+
+
+                    <!-- EXPERIENCE 1 -->
+
+                    <article class="experience-card">
+
+                        <div class="experience-image">
+
+                            Project image / system figure
+                            <br>
+                            will be placed here.
+
+                        </div>
+
+
+                        <div class="experience-content">
+
+                            <div class="experience-meta">
+                                Research Experience 01
+                            </div>
+
+
+                            <h3>
+
+                                Wearable Microneedle
+                                Bioelectronic System
+
+                            </h3>
+
+
+                            <div class="experience-affiliation">
+
+                                University of Notre Dame
+                                · Research role · 2026
+
+                            </div>
+
+
+                            <p>
+
+                                A short project overview will be placed
+                                here. The final version will emphasize
+                                the research question, my responsibility,
+                                and the technical contribution.
+
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span class="tag">
+                                    Wearable Bioelectronics
+                                </span>
+
+                                <span class="tag">
+                                    Microneedles
+                                </span>
+
+                                <span class="tag">
+                                    Electrochemistry
+                                </span>
+
+                                <span class="tag">
+                                    PCB Design
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- EXPERIENCE 2 -->
+
+                    <article class="experience-card">
+
+                        <div class="experience-image">
+
+                            Project image / PCB / signal figure
+                            <br>
+                            will be placed here.
+
+                        </div>
+
+
+                        <div class="experience-content">
+
+                            <div class="experience-meta">
+                                Research Experience 02
+                            </div>
+
+
+                            <h3>
+
+                                Wearable EEG–EOG
+                                Monitoring System
+
+                            </h3>
+
+
+                            <div class="experience-affiliation">
+
+                                Sun Yat-sen University
+                                · Independent Research
+                                · 2025–Present
+
+                            </div>
+
+
+                            <p>
+
+                                A short project overview will be placed
+                                here. The final version will focus on
+                                system design, signal acquisition,
+                                hardware development, and debugging.
+
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span class="tag">
+                                    EEG
+                                </span>
+
+                                <span class="tag">
+                                    EOG
+                                </span>
+
+                                <span class="tag">
+                                    ADS1299
+                                </span>
+
+                                <span class="tag">
+                                    ESP32-S3
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- EXPERIENCE 3 -->
+
+                    <article class="experience-card">
+
+                        <div class="experience-image">
+
+                            Device / fabrication image
+                            <br>
+                            will be placed here.
+
+                        </div>
+
+
+                        <div class="experience-content">
+
+                            <div class="experience-meta">
+                                Research Experience 03
+                            </div>
+
+
+                            <h3>
+
+                                Implantable Brain–Computer
+                                Interface
+
+                            </h3>
+
+
+                            <div class="experience-affiliation">
+
+                                Sun Yat-sen University
+                                · Research Project
+
+                            </div>
+
+
+                            <p>
+
+                                A short description of the implantable
+                                neural interface project will be
+                                placed here later.
+
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span class="tag">
+                                    Neural Interfaces
+                                </span>
+
+                                <span class="tag">
+                                    PDMS
+                                </span>
+
+                                <span class="tag">
+                                    Microfabrication
+                                </span>
+
+                                <span class="tag">
+                                    3D Printing
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- EXPERIENCE 4 -->
+
+                    <article class="experience-card">
+
+                        <div class="experience-image">
+
+                            Optional fourth research experience image
+
+                        </div>
+
+
+                        <div class="experience-content">
+
+                            <div class="experience-meta">
+                                Research Experience 04
+                            </div>
+
+
+                            <h3>
+
+                                Additional Research Experience
+
+                            </h3>
+
+
+                            <div class="experience-affiliation">
+
+                                Institution · Role · Date
+
+                            </div>
+
+
+                            <p>
+
+                                This fourth research experience is
+                                currently kept as a placeholder.
+                                We can later decide whether it should
+                                remain on the homepage.
+
+                            </p>
+
+
+                            <div class="tags">
+
+                                <span class="tag">
+                                    Research Method
+                                </span>
+
+                                <span class="tag">
+                                    Technical Skill
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -1509,401 +1689,129 @@
 
         <section id="projects">
 
-
-            <h2 class="section-title">
-                Selected Projects
-            </h2>
+            <div class="container">
 
 
+                <div class="section-header">
 
-            <!-- =================================================
-                 PROJECT 1
-                 IMAGE FILE: microneedle.png
-                 ================================================= -->
-
-            <div class="project">
+                    <div class="section-label">
+                        Engineering
+                    </div>
 
 
-                <div>
+                    <h2 class="section-title">
+                        Selected Projects
+                    </h2>
 
 
-                    <a
-                        href="microneedle.png"
-                        target="_blank"
-                        class="project-image-link"
-                    >
+                    <p class="section-description">
 
-                        <img
-                            src="microneedle.png"
-                            alt="Wearable microneedle bioelectronic system"
-                            class="project-image"
-                        >
+                        Selected academic and engineering projects
+                        demonstrating technical breadth and
+                        system-building experience.
 
-                    </a>
-
+                    </p>
 
                 </div>
 
 
 
-                <div>
+                <div class="project-grid">
 
 
-                    <h3>
+                    <!-- PROJECT 1 -->
 
-                        Wearable Microneedle Bioelectronic System
-                        for Continuous Health Monitoring
+                    <article class="project-card">
 
-                    </h3>
+                        <div class="project-image">
 
+                            Project image
 
-
-                    <div class="project-meta">
-
-                        University of Notre Dame
-                        · Jul. 2026 – Present
-
-                    </div>
+                        </div>
 
 
+                        <div class="project-content">
 
-                    <p>
-
-                        Developing an integrated wearable microneedle
-                        bioelectronic platform for continuous
-                        electrochemical sensing and physiological monitoring.
-
-                    </p>
+                            <h3>
+                                Electrochemical Glucose
+                                Sensing System
+                            </h3>
 
 
+                            <p>
 
-                    <p>
+                                Project description will be added here.
 
-                        My work includes polymer microneedle fabrication
-                        and wearable hardware system development. I am
-                        designing a two-layer bioelectronic PCB integrating
-                        two electrochemical sensing channels, four
-                        open-circuit potential measurement channels,
-                        analog signal-conditioning circuits, power
-                        management, and Bluetooth communication.
+                            </p>
 
-                    </p>
+                        </div>
+
+                    </article>
 
 
 
-                    <div class="project-keywords">
+                    <!-- PROJECT 2 -->
 
-                        <strong>Keywords:</strong>
+                    <article class="project-card">
 
-                        Wearable bioelectronics ·
-                        Microneedles ·
-                        Electrochemical sensing ·
-                        Analog front end ·
-                        PCB design ·
-                        Wireless systems
+                        <div class="project-image">
 
-                    </div>
+                            Project image
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <h3>
+                                TCD Signal Analysis
+                            </h3>
+
+
+                            <p>
+
+                                Project description will be added here.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            Project image
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <h3>
+                                Additional Engineering Project
+                            </h3>
+
+
+                            <p>
+
+                                Project description will be added here.
+
+                            </p>
+
+                        </div>
+
+                    </article>
 
 
                 </div>
-
 
             </div>
-
-
-
-            <!-- =================================================
-                 PROJECT 2
-                 IMAGE FILE: eeg-eog.png
-                 ================================================= -->
-
-            <div class="project">
-
-
-                <div>
-
-
-                    <a
-                        href="eeg-eog.png"
-                        target="_blank"
-                        class="project-image-link"
-                    >
-
-                        <img
-                            src="eeg-eog.png"
-                            alt="Wearable EEG and EOG monitoring system"
-                            class="project-image"
-                        >
-
-                    </a>
-
-
-                </div>
-
-
-
-                <div>
-
-
-                    <h3>
-
-                        Wearable EEG–EOG Monitoring System
-                        for Human–Computer Interaction
-
-                    </h3>
-
-
-
-                    <div class="project-meta">
-
-                        Sun Yat-sen University
-                        · Jul. 2025 – Present
-
-                    </div>
-
-
-
-                    <p>
-
-                        Developing a wearable electrophysiological sensing
-                        platform for simultaneous EEG and EOG acquisition,
-                        targeting human–computer interaction and long-term
-                        physiological monitoring.
-
-                    </p>
-
-
-
-                    <p>
-
-                        I designed and iterated the core acquisition
-                        hardware using the ADS1299 and ESP32-S3,
-                        including the bio-signal acquisition front end,
-                        power-supply circuitry, four-layer PCB layout,
-                        and Bluetooth Low Energy communication.
-                        I also implemented real-time wireless data
-                        transmission and am developing a MATLAB-based
-                        signal-processing workflow.
-
-                    </p>
-
-
-
-                    <div class="project-keywords">
-
-                        <strong>Keywords:</strong>
-
-                        EEG ·
-                        EOG ·
-                        ADS1299 ·
-                        ESP32-S3 ·
-                        PCB design ·
-                        BLE ·
-                        Electrophysiology
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 PROJECT 3
-                 IMAGE FILE: glucose-sensor.png
-                 ================================================= -->
-
-            <div class="project">
-
-
-                <div>
-
-
-                    <a
-                        href="glucose-sensor.png"
-                        target="_blank"
-                        class="project-image-link"
-                    >
-
-                        <img
-                            src="glucose-sensor.png"
-                            alt="Electrochemical sweat glucose sensing system"
-                            class="project-image"
-                        >
-
-                    </a>
-
-
-                </div>
-
-
-
-                <div>
-
-
-                    <h3>
-
-                        Electrochemical Sweat Glucose Sensing System
-
-                    </h3>
-
-
-
-                    <div class="project-meta">
-
-                        Sun Yat-sen University
-                        · Oct. 2025 – Dec. 2025
-
-                    </div>
-
-
-
-                    <p>
-
-                        Built and evaluated an enzyme-based electrochemical
-                        system for sweat glucose detection, integrating
-                        electrode fabrication, signal-conditioning hardware,
-                        Arduino-based acquisition, Bluetooth communication,
-                        and mobile visualization.
-
-                    </p>
-
-
-
-                    <p>
-
-                        I led development of the signal-conditioning
-                        electronics, implementing current-to-voltage
-                        conversion and amplification circuits for low-level
-                        electrochemical currents. I also fabricated
-                        Prussian Blue-modified glucose oxidase electrodes
-                        and performed electrochemical characterization
-                        and concentration–current calibration.
-
-                    </p>
-
-
-
-                    <div class="project-keywords">
-
-                        <strong>Keywords:</strong>
-
-                        Electrochemical biosensing ·
-                        Glucose sensing ·
-                        Enzyme electrodes ·
-                        Transimpedance amplifier ·
-                        Bluetooth ·
-                        Mobile monitoring
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 PROJECT 4
-                 IMAGE FILE: bci.png
-                 ================================================= -->
-
-            <div class="project">
-
-
-                <div>
-
-
-                    <a
-                        href="bci.png"
-                        target="_blank"
-                        class="project-image-link"
-                    >
-
-                        <img
-                            src="bci.png"
-                            alt="Implantable brain-computer interface"
-                            class="project-image"
-                        >
-
-                    </a>
-
-
-                </div>
-
-
-
-                <div>
-
-
-                    <h3>
-
-                        Implantable Brain–Computer Interface
-                        for Large-Scale Neural Recording
-
-                    </h3>
-
-
-
-                    <div class="project-meta">
-
-                        Sun Yat-sen University
-                        · Mar. 2025 – May 2025
-
-                    </div>
-
-
-
-                    <p>
-
-                        Contributed to the development of an implantable
-                        brain–computer interface designed for large-scale
-                        neural recording through magnetically guided
-                        electrode implantation.
-
-                    </p>
-
-
-
-                    <p>
-
-                        My work focused on device and structural
-                        fabrication, including PDMS-based guide channels
-                        and magnetic head components. I developed
-                        reproducible channel-fabrication methods and
-                        fabricated tent-shaped electrode scaffolds using
-                        micro/nano stereolithography 3D printing to
-                        evaluate structural feasibility for large-area
-                        neural applications.
-
-                    </p>
-
-
-
-                    <div class="project-keywords">
-
-                        <strong>Keywords:</strong>
-
-                        Brain–computer interface ·
-                        Neural recording ·
-                        PDMS ·
-                        Microfabrication ·
-                        Magnetically guided implantation ·
-                        3D printing
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
 
         </section>
 
@@ -1915,75 +1823,229 @@
 
         <section id="publications">
 
-
-            <h2 class="section-title">
-                Selected Publications
-            </h2>
+            <div class="container">
 
 
+                <div class="section-header">
 
-            <div class="publication">
+                    <div class="section-label">
+                        Publications
+                    </div>
 
 
-                <div class="publication-year">
+                    <h2 class="section-title">
+                        Publications
+                    </h2>
 
-                    2026
+
+                    <p class="section-description">
+
+                        Peer-reviewed publications and selected
+                        scholarly work.
+
+                    </p>
 
                 </div>
 
 
 
-                <div>
+                <div class="publication-list">
 
 
-                    <div class="publication-title">
+                    <!-- PUBLICATION 1 -->
 
-                        Self-stratified Stretchable Passive Cooling
-                        Interface for Thermal Management of
-                        On-Skin Electronics
+                    <article class="publication-card">
 
-                    </div>
-
-
-
-                    <div class="publication-authors">
-
-                        J. Sun#, M. Liu#, C. Jiang#,
-                        <strong>Q. Cai</strong>,
-                        R. Cai, J. Li, Y. Xiao, Q. Xian,
-                        X. Sun, L. Jiang, C. Li, C. Y. Tso,
-                        X. Yu, Y. Zhou, Z. Peng, and J. Li
-
-                    </div>
+                        <div class="publication-year">
+                            2026
+                        </div>
 
 
+                        <div>
 
-                    <div class="publication-journal">
+                            <div class="publication-title">
 
-                        Soft Science, 6, 43 (2026)
+                                Publication title will be
+                                placed here
 
-                    </div>
+                            </div>
 
 
+                            <div class="publication-authors">
 
-                    <div class="publication-links">
+                                Author A, Author B,
+                                Qingqiao Cai, et al.
 
-                        <a
-                            href="https://doi.org/10.20517/ss.2026.33"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            DOI
-                        </a>
+                            </div>
 
-                    </div>
+
+                            <div class="publication-journal">
+
+                                Journal Name, Volume,
+                                Article Number, Year
+
+                            </div>
+
+
+                            <div class="publication-links">
+
+                                <a href="#">
+                                    DOI
+                                </a>
+
+                                <a href="#">
+                                    Google Scholar
+                                </a>
+
+                                <a href="#">
+                                    PDF
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
 
 
                 </div>
-
 
             </div>
 
+        </section>
+
+
+
+        <!-- =====================================================
+             EDUCATION & HONORS
+             ===================================================== -->
+
+        <section id="education">
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <div class="section-label">
+                        Background
+                    </div>
+
+
+                    <h2 class="section-title">
+                        Education & Honors
+                    </h2>
+
+                </div>
+
+
+
+                <div class="education-grid">
+
+
+                    <!-- EDUCATION -->
+
+                    <div class="info-card">
+
+                        <h3>
+                            Education
+                        </h3>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-title">
+
+                                Sun Yat-sen University
+
+                            </div>
+
+
+                            <div class="timeline-meta">
+
+                                B.E. in Biomedical Engineering
+                                · 2022–2027
+
+                            </div>
+
+
+                            <div class="timeline-description">
+
+                                GPA, academic focus,
+                                relevant information,
+                                and other details will
+                                be finalized later.
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <div class="timeline-title">
+
+                                Visiting Research Experience
+
+                            </div>
+
+
+                            <div class="timeline-meta">
+
+                                University / Department
+                                · 2026
+
+                            </div>
+
+
+                            <div class="timeline-description">
+
+                                Optional visiting research
+                                information can be placed here.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- HONORS -->
+
+                    <div class="info-card">
+
+                        <h3>
+                            Selected Honors
+                        </h3>
+
+
+                        <ul class="honor-list">
+
+                            <li>
+                                Selected Award / Scholarship
+                            </li>
+
+                            <li>
+                                Selected Competition Award
+                            </li>
+
+                            <li>
+                                Selected Academic Honor
+                            </li>
+
+                            <li>
+                                Additional Honor
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -1995,43 +2057,76 @@
 
         <section id="contact">
 
+            <div class="container">
 
-            <h2 class="section-title">
-                Contact
-            </h2>
-
+                <div class="contact-inner">
 
 
-            <div class="contact-box">
+                    <div class="section-label">
+                        Contact
+                    </div>
 
 
-                <p>
+                    <h2 class="section-title">
 
-                    I am interested in research opportunities and
-                    discussions related to wearable bioelectronics,
-                    biosensing, electrophysiological systems,
-                    and brain–computer interfaces.
+                        Get in Touch
 
-                </p>
+                    </h2>
 
 
+                    <p>
 
-                <p>
+                        A brief contact statement can be
+                        placed here later.
 
-                    <strong>Email:</strong>
+                    </p>
 
-                    <a
-                        class="email-address"
-                        href="mailto:qcai@nd.edu"
-                    >
-                        qcai@nd.edu
-                    </a>
 
-                </p>
+                    <div class="contact-links">
 
+                        <a
+                            class="button button-primary"
+                            href="mailto:caiqq8@outlook.com">
+
+                            Email
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="https://scholar.google.com/citations?hl=en&user=6-nJ2kcAAAAJ"
+                            target="_blank">
+
+                            Google Scholar
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="https://github.com/QingqiaoCai"
+                            target="_blank">
+
+                            GitHub
+
+                        </a>
+
+
+                        <a
+                            class="button"
+                            href="Qingqiao_Cai_CV.pdf"
+                            target="_blank">
+
+                            Curriculum Vitae
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
-
 
         </section>
 
@@ -2046,17 +2141,83 @@
 
     <footer>
 
+        <div class="container footer-inner">
 
-        <div class="container">
+            <div>
+                © 2026 Qingqiao Cai
+            </div>
 
-            © 2026 Qingqiao Cai
-            ·
-            Last updated August 2026
+
+            <div>
+                Biomedical Engineering · Academic Website
+            </div>
 
         </div>
 
-
     </footer>
+
+
+
+    <!-- =========================================================
+         NAVIGATION HIGHLIGHT SCRIPT
+         ========================================================= -->
+
+    <script>
+
+        const sections =
+            document.querySelectorAll(
+                "main section[id]"
+            );
+
+        const navLinks =
+            document.querySelectorAll(
+                '.nav-links a[href^="#"]'
+            );
+
+
+        const observer =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            navLinks.forEach(link => {
+                                link.classList.remove("active");
+                            });
+
+
+                            const activeLink =
+                                document.querySelector(
+                                    `.nav-links a[href="#${entry.target.id}"]`
+                                );
+
+
+                            if (activeLink) {
+                                activeLink.classList.add("active");
+                            }
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    rootMargin: "-30% 0px -60% 0px",
+                    threshold: 0
+                }
+
+            );
+
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+    </script>
 
 
 </body>
